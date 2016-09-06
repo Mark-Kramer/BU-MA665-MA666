@@ -9,4 +9,4 @@ C.Y.B.I.T.:  Ashley, Hana, Janis, Madhura, Iris
 
 
 
-while1: Catherine, Nathan, Trish, Sam, Kimberly
+while1: Catherine, Nathan, Trish, Sam S. , Kimberly
