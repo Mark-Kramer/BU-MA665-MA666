@@ -16,4 +16,4 @@ while1: Catherine, Nathan, Trish, Sam S. , Kimberly
 MATlab Newbs: Jon, Lisa, Kristyn, Jenny
 
 
-What happens in Vagus ... : Byron, Scott, Wei Zhong, Dae Kyoo
+What happens in Vagus ... : Byron, Scott, Wei Zhong, Daekyoo
