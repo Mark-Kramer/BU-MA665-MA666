@@ -1,8 +1,10 @@
-# MA665-MA666-Fall-2016
+# MA665-MA666-Fall-2018
 
 Getting started in this course:
 <ul>
   <li> Please read the syllabus. </li>
-  <li> Create an account on <a href="http://edx.org",target="_blank">edx.org</a>, if you don't already have one.
+  <li> Please make an account on [github](github.com) </li>
+  <li> Install Python on your computer. </li>
+  <li> Install [Jupyter notebook](https://jupyter.org/) </li>
 </ul>
 

@@ -61,9 +61,9 @@
 C=1;
 I=1;
 
-%   We also need to set the value for dt.  This defines the time step in the
-%   problem.  We must choose it small enough so that we don't miss anything
-%   interesting.  We'll choose:
+  We also need to set the value for dt.  This defines the time step in the
+  problem.  We must choose it small enough so that we don't miss anything
+  interesting.  We'll choose:
 
 dt=0.01;
 
@@ -83,11 +83,11 @@ V(1)=0.2;
 
 %Q:  Given the initial state V(1)=0.2, calculate V(2).  Then calcualte V(3).
 
-%   After the two calculations above, we've moved forward two time steps into
-%   the future, from t=0s to t=0.01s, and then from t=0.01s to t=0.02s.  But what
-%   if we want to know V at t=10s?  Then, this iteration-by-hand procedure becomes
-%   much too boring and error-prone.  So, what do we do?  Make the
-%   computer do it . . . 
+  After the two calculations above, we've moved forward two time steps into
+  the future, from t=0s to t=0.01s, and then from t=0.01s to t=0.02s.  But what
+  if we want to know V at t=10s?  Then, this iteration-by-hand procedure becomes
+  much too boring and error-prone.  So, what do we do?  Make the
+  computer do it . . . 
 
 %%  Part 2:  Numerical solutions - implementation
 %   Let's computerize this iteration-by-hand procedure to find V(1000).
@@ -109,7 +109,7 @@ figure(10)
 plot(V)
 
 %Q:  What happens to the voltage after 1000 steps?
-
+% 
 %   This plot is informative, but not great.  Really, we'd like to plot the
 %   voltage as a function of *time*, not steps or indices.  To do so, we
 %   need to define a time axis:
@@ -129,9 +129,9 @@ xlabel('Time [s]');  ylabel('V');
 %   Finally, let's put it all together . . .
 
 %%  Part 3:  I&F CODE (version 1)
-%   In Parts 1 and 2, we constructed parts of the I&F model in bits-and-pieces.
-%   Let's now collect all of this code, compute a numerical solution to
-%   the I&F model, and plot the results (with appropriate axes).
+  In Parts 1 and 2, we constructed parts of the I&F model in bits-and-pieces.
+  Let's now collect all of this code, compute a numerical solution to
+  the I&F model, and plot the results (with appropriate axes).
 
 clear                   %Q:  What is this?  See MATLAB Help.
 
