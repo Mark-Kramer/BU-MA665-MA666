@@ -5,3 +5,5 @@
 (lec) <a href="https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/">M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis 4)</a>
 
 (lec) <a href="http://klewel.com/conferences/epfl-neural-networks/index.php?talkID=1">W. Gerstner, Passive membrane and Integrate-and-Fire model (a)</a>
+
+(pynb) [Integrate and Fire Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/beta%20versions/Integrate%20and%20Fire%20Model/LIF.ipynb)
