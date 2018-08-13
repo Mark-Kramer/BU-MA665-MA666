@@ -1,5 +1,3 @@
-# Week 1
-
 ## Software
 
 (web) [Set up git](https://help.github.com/articles/set-up-git/)
