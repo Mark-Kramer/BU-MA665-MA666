@@ -1,5 +1,3 @@
-# Week 4 links
-
 ## Readings
 
 (pdf) 	[Chapter 3 @ Kramer & Eden, Case studies in neural data analysis, 2016.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Kramer%20%26%20Eden%20Chapter%203.pdf)
