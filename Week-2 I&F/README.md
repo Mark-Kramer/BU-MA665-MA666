@@ -1,5 +1,3 @@
-# Week 2 links
-
 ## Readings
 
 (web) <a href="http://lcn.epfl.ch/~gerstner/SPNM/node26.html">W. Gerstner, the integrate-and-fire model.</a>
