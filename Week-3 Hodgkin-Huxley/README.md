@@ -17,7 +17,7 @@
 
 (lec) <a href="https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/">M. Kramer, Introduction to the Hodgkin-Huxley neuron (Neural Spike Train Analysis 5)</a>
 
-  NOTE: The slides are available as PDF [here](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Kramer_Slides_SAMSI_Lecture_2.pdf).
+- NOTE: The slides for this lecture are available as PDF [here](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Kramer_Slides_SAMSI_Lecture_2.pdf).
 
 (lec) <a href="http://klewel.com/conferences/epfl-neural-networks/index.php?talkID=4">W. Gerstner, Detailed Neuron Model (a)</a>
 
