@@ -1,12 +1,16 @@
 # Week 1
 
-- [Set up git](https://help.github.com/articles/set-up-git/)
+## Software
 
-- [Install Python via Anaconda](https://www.anaconda.com/)
+(web) [Set up git](https://help.github.com/articles/set-up-git/)
 
-- Complete the [Introduction to Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/Introduction%20to%20Python/Python.ipynb)
+(web) [Install Python via Anaconda](https://www.anaconda.com/)
 
----
+## Code
+
+(pynb) [Introduction to Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/Introduction%20to%20Python/Python.ipynb)
+
+## Extra material
 
 - More Python resources
   - https://github.com/JeffPaine/beautiful_idiomatic_python
