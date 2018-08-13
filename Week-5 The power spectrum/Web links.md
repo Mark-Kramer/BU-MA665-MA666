@@ -1,15 +1,17 @@
-# Week 4 web links
+# Week 4 links
 
-Here's the <a href="http://www.mikexcohen.com/lectures.html">website</a> for all of the data analysis lecturelets by Mike X Cohen (MXC).  Some of these lecturelets are recommended to view:
+## Readings
 
-(MXC) <a href="http://www.mikexcohen.com/lecturelets/howtoviewTFplots/inspection.ogv">How to inspect time frequency plots</a>
+(pdf) 	[Chapter 3 @ Kramer & Eden, Case studies in neural data analysis, 2016.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Kramer%20%26%20Eden%20Chapter%203.pdf)
 
-(MXC) <a href="http://www.mikexcohen.com/lecturelets/sinewave/sinewaves.ogv">Sine waves in time and frequency</a>
+(pdf) 	[Kramer, SFN Short Course Document.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Kramer_SFN_Short_Course.pdf)
 
-(MXC) <a href="http://www.mikexcohen.com/lecturelets/dotproduct/dotproduct.ogv">The dot (a.k.a inner) product</a>
+(pdf)	  [Chapter 10 @ M. X. Cohen, Analyzing neural time series data, 2014.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Cohen%20Chapter%2010.pdf)
 
-(MXC) <a href="http://www.mikexcohen.com/lecturelets/fourier/fourier.ogv">The discrete-time Fourier transform</a>
+(pdf) 	[Chapter 11 @ M. X. Cohen, Analyzing neural time series data, 2014.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Cohen%20Chapter%2011.pdf)
 
-(MXC) <a href="http://www.mikexcohen.com/lecturelets/complexfourier/complexfourier.ogv">Complex sine waves and interpreting Fourier coefficients</a>
+(lib) 	Advanced: [Chapter 4 @ Percival & Walden, Spectral Analysis for Physical Applications.](https://www.cambridge.org/core/books/spectral-analysis-for-physical-applications/A9195239A8965A2C53D43EB2D1B80A33)
 
-(MXC) <a href="http://www.mikexcohen.com/lecturelets/frequencies/frequencies.ogv">Fourier transform frequencies and zero padding</a>
+## Videos & Code
+
+(pynb)  Tutorial: [Analysis of Rhythmic Activity in the Scalp EEG](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/Analysis%20of%20Rhythmic%20Activity%20in%20the%20Scalp%20EEG)
