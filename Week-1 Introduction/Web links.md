@@ -13,6 +13,7 @@
 ## Extra material
 
 - More Python resources
+
   - https://github.com/JeffPaine/beautiful_idiomatic_python
   - https://jakevdp.github.io/PythonDataScienceHandbook/
   - https://github.com/gregmalcolm/python_koans
