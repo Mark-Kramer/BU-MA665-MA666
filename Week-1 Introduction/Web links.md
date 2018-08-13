@@ -6,6 +6,8 @@
 
 - Complete the [Introduction to Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/Introduction%20to%20Python/Python.ipynb)
 
+---
+
 - More Python resources
   - https://github.com/JeffPaine/beautiful_idiomatic_python
   - https://jakevdp.github.io/PythonDataScienceHandbook/
