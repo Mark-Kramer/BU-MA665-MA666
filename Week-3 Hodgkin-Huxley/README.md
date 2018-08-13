@@ -1,6 +1,3 @@
-# Week 3 web links
-
-
 ## Readings
 
 (pdf)	[Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Izhikevich%20Chapter%202.pdf)
