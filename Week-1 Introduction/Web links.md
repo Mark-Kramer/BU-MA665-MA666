@@ -1,4 +1,4 @@
-# Week 1 web links
+# Week 1
 
 - [Set up git](https://help.github.com/articles/set-up-git/)
 
