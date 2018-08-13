@@ -1,3 +1,10 @@
 # Week 1 web links
 
 - [Introduction to Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/01.%20Introduction%20to%20Python/Python.ipynb)
+
+- https://github.com/JeffPaine/beautiful_idiomatic_python
+- https://jakevdp.github.io/PythonDataScienceHandbook/
+- https://github.com/gregmalcolm/python_koans
+- https://python-guide.readthedocs.io/en/latest/
+- https://www.youtube.com/watch?v=P5BHTrluu1M&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9
+- https://www.youtube.com/watch?v=anrOzOapJ2E
