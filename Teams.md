@@ -5,14 +5,14 @@
 
 * 2017
 
-tetranodus:  Stuart, Saul, Greg, Emily
+  * tetranodus:  Stuart, Saul, Greg, Emily
 
-J~E~M~S: Jessica, Elizabeth, Marek, Sam L.
+  * J~E~M~S: Jessica, Elizabeth, Marek, Sam L.
 
-C.Y.B.I.T.:  Ashley, Hana, Janis, Madhura, Iris
+  * C.Y.B.I.T.:  Ashley, Hana, Janis, Madhura, Iris
 
-while1: Catherine, Nathan, Trish, Sam S. , Kimberly
+  * while1: Catherine, Nathan, Trish, Sam S. , Kimberly
 
-MATlab Newbs: Jon, Lisa, Kristyn, Jenny
+  * MATlab Newbs: Jon, Lisa, Kristyn, Jenny
 
-What happens in Vagus ... : Byron, Scott, Wei Zhong, Daekyoo
+  * What happens in Vagus ... : Byron, Scott, Wei Zhong, Daekyoo
