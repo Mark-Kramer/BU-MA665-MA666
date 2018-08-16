@@ -22,4 +22,4 @@
 
 ## Code
 
-(pynb)  [The Hodgkin-Huxley Model](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/beta%20versions/Hodgkin%20Huxley%20Model)
+(pynb)  [The Hodgkin-Huxley Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/beta%20versions/Hodgkin%20Huxley%20Model/HH.ipynb)
