@@ -14,6 +14,8 @@ Christopher Conroy
 
 Lucius Kelton Wilmerding
 
+Allison Tipton
+
 Matt Dunne 
 
 Lucas Carstensen
