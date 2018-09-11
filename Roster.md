@@ -23,3 +23,5 @@ Lucas Carstensen
 William Li
 
 Zeynep Kahraman
+
+Kaitlyn Dorst
