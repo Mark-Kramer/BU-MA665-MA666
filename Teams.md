@@ -1,9 +1,9 @@
 # Teams
 
 * 2018
+  * Do you have the Handmaid?: Lucas, Ray, Stamati
   * Cajal 'Em Like We See 'Em: Kelton, Amy M., Kylie, Gabriela
   * Did you turn it off and on again?: Luis, Kaitlyn, Michael, Margaret
-  * Jing, Allison, Ying, Christopher
 
 * 2016
 
