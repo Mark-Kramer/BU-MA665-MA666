@@ -6,6 +6,7 @@
   * Did you turn it off and on again?: Luis, Kaitlyn, Michael, Margaret
   * Jing, Allison, Ying, Christopher, Guanying He
   * The Go-Git'ers: Ashley, Rifqi, Beverly, Spencer
+  * NameError: name 'team_name' is not defined: Tom, Matt, Shen
 
 * 2016
 
