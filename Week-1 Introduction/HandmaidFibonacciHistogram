@@ -1,0 +1,28 @@
+# the below script allows you to input a integer n s.t. n>0 and get the nth fibonacci number!
+
+print("This program prints n numbers in the Fibonacci sequence.")
+n = int(input("Enter positive integer n: "))
+curr = 0
+prev = 1
+    
+for i in range(n+1):
+    if curr >0:
+        print(curr)
+    curr, prev  = curr + prev, curr
+
+
+
+# Below is the histogram:
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+M = np.random.randn(10,1000)
+print(M)
+
+M[M>0] = 1
+print(M)
+
+Q=np.matrix.flatten(M)
+
+plt.hist(Q)
