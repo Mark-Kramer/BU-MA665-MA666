@@ -43,7 +43,7 @@ Vth = 1.0   #'spike' threshold
 #Create holder variable for each output fRate
 fRateVector = []
 #Define the range of current (I) values to test and plot
-iRange = np.linspace(0,10,11)
+iRange = np.linspace(0,10,100)
 
 #Test each I value
 for i in range(0,len(iRange)):
