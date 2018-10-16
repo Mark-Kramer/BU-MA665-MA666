@@ -1,0 +1,28 @@
+"""
+Created on Thu Oct  4 13:07:02 2018
+
+@author: Amy
+"""
+
+#finding the f v I curve
+#this takes VERY long time to run...
+
+import matplotlib.pyplot as plt
+import numpy as np
+import HH_functions
+from scipy.signal import find_peaks 
+
+I = np.arange(0,50,.5)#create a vector for input currents
+T0=1000 # time in ms 
+fr = np.zeros(len(I)) #create empty array for spike rate
+
+for i in range (0,len(I)):
+    [V,m,h,n,t]=HH_functions.HH(i,T0) #compute HH functions at each input current
+    V=np.reshape(V,-1)
+    fr[i]= len(find_peaks(V)[0]) #number of spikes in 1s gives firing rate in Hz
+
+# plot firing rate as function of current
+plt.plot(I,fr)
+plt.title('F-I Curve for HH')
+plt.ylabel('Firing Rate [Hz]')
+plt.xlabel('Input current [Amp]')
