@@ -1,0 +1,67 @@
+# imports
+import numpy as np
+import math
+%matplotlib
+import matplotlib.pyplot as plt
+from scipy.optimize import curve_fit
+from scipy import interpolate
+
+from HH_functions import HH
+
+T0 = 200
+
+# calculate the firing rate and plot it at different intensities:
+I0 = np.linspace(0,50,25)
+n_spikes = []
+
+# loop through the inputs
+for input in I0:
+    local_max = []
+    # generate the data
+    [V,m,h,n,t]=HH(input,T0)
+    # loop through V and get local maxima
+    for i in range(np.size(V)-1):
+        if (np.round(V[i],5) > np.round(V[i-1],5)) and (np.round(V[i],5) > np.round(V[i+1],5)):
+            local_max.append(i)
+    peaks = V[local_max] # get the local max peaks
+    true_peaks = peaks[peaks>=0] # threshold these to get real peaks and not false local maxima 
+    n_spikes.append(np.size(true_peaks)/T0) # convert to firing rate 
+    print(input) # just to estimate amount of time left before this is done running
+
+############
+# Plotting #
+############
+
+# raw data points
+plt.plot(I0,np.asarray(n_spikes),'b.',label='raw data')
+plt.title('Multiple Fits for Firing Rate of Hodgkin-Huxley Neuron')
+plt.xlabel('Input Currents')
+plt.ylabel('Firing Rate')
+
+# sigmoidal fit
+def sigmoid(x, x0, k, L):
+     y = L / (1 + np.exp(-k*(x-x0)))
+     return y
+popt, pcov = curve_fit(sigmoid, I0, np.asarray(n_spikes))
+plt.plot(I0, sigmoid(I0, *popt), 'r-', label='sigmoid')
+
+# polynomial fit
+my_fit = np.poly1d(np.polyfit(I0, np.asarray(n_spikes), 4))
+xp = np.linspace(0, 50, 100)
+plt.plot(xp, my_fit(xp), 'g-', label='4th degree polynomial')
+
+# interpolation
+f = interpolate.interp1d(I0,np.asarray(n_spikes),'slinear')
+xnew = np.arange(0, 50, 0.001)
+ynew = f(xnew)   # use interpolation function returned by `interp1d`
+plt.plot(xnew, ynew, 'y--',label='first order spline interpolation')
+
+# least squares fit:
+def costfunc(x, a, b, c):
+    return a * np.exp(-b * x) + c
+popt, pcov = curve_fit(costfunc, I0, np.asarray(n_spikes))
+plt.plot(I0, costfunc(I0, *popt), 'm', label='least squares fit')
+
+
+plt.legend()
+plt.show()
