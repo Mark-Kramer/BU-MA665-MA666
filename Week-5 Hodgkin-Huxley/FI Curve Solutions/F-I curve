@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct 18 11:28:19 2018
+
+@author: gabrielarodriguez
+"""
+
+import numpy as np 
+import math 
+import matplotlib.pyplot as plt
+from HH_functions import HH 
+from scipy.signal import find_peaks
+
+T = 100
+I0 = 0
+If = 100
+
+firing_rate = np.zeros([100,1])
+I = np.linspace (I0,If,num=100)
+
+for i in range(I0,If):
+    [V,m,h,n,t] = HH(i,T)
+    V=np.reshape(V,-1)
+    Peaks_Voltage = find_peaks(V)
+    peaks = Peaks_Voltage[0]
+    tau = t[peaks[1]]-t[peaks[0]]
+    firing_rate[i] = 1/tau
+    
+plt.plot(I,firing_rate)    
