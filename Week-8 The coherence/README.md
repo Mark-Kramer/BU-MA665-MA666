@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf) [Chapter 5 @ Kramer & Eden, Case studies in neural data analysis, 2016.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-6%20The%20coherence/Readings/Kramer%20%26%20Eden%20Chapter%205.pdf)
+(pdf) [Chapter 5 @ Kramer & Eden, Case studies in neural data analysis, 2016.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-8%20The%20coherence/Readings/Kramer%20%26%20Eden%20Chapter%205.pdf)
 
 (pdf) [Kramer, SFN Short Course Document.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-6%20The%20coherence/Readings/Kramer_SFN_Short_Course.pdf)
 
