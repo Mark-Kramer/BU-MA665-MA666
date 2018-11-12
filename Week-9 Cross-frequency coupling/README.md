@@ -8,6 +8,6 @@
 
 ## Code & Videos
 
-(pynb) Tutorial: [Cross-Frequency Coupling](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/Cross-Frequency-Coupling/Cross-Frequency-Coupling.ipynb)
+(pynb) Tutorial: [Cross-Frequency Coupling](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/5.%20Cross-Frequency%20Coupling/Cross-Frequency%20Coupling.ipynb)
 
 
