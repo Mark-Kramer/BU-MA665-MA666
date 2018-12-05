@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf) [Lecture Slides]()
+(pdf) [Lecture Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-12%20Backpropagation/Readings/MA666%20Backpropagation.pdf)
 
 ## Videos
 
