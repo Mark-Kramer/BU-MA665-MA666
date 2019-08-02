@@ -12,7 +12,7 @@
 
 (lec) [M. Kramer, Introduction to the Hodgkin-Huxley neuron (Neural Spike Train Analysis 5)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/)
 
-- NOTE: The slides for this lecture are available as PDF [here](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Kramer_Slides_SAMSI_Lecture_2.pdf).
+- NOTE: The slides for this lecture are available as [PDF](/Topic-3%20Hodgkin-Huxley/Reading/Kramer_Slides_SAMSI_Lecture_2.pdf).
 
 (lec) [W. Gerstner, Biophysics of Neurons](https://youtu.be/IpKthrlfGjQ)
 
