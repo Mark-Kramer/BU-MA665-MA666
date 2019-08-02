@@ -8,6 +8,8 @@
 
 ## Code & Videos
 
-(pynb) Tutorial: [Spike-field coherence](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/beta%20versions/Spike-Field%20Coherence/Analysis%20of%20Spike-Field%20Coherence.ipynb)
+(pynb) Python (includes text and code) [Spike-field coherence](https://mark-kramer.github.io/Case-Studies-Python/intro.html)
+
+(mat) [MATLAB code only for Chapter 11 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter11/Chapter_11.m) 
 
 
