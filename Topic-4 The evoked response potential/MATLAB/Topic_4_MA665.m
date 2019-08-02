@@ -1,6 +1,6 @@
-%%  MA665 - Topic 4:  EEG and ERPs
-%   This tutorial follows closely the Chapter 2 handout on Blackboard.  Our
-%   goal in this lab is to continue using MATLAB, and explore analysis
+%%  MA665 - Topic 4: EEG and ERPs
+%   This tutorial follows closely the Chapter 2 of "Case Studies in Neural Data
+%   Analysis". Our goal is to continue using MATLAB, and explore analysis
 %   methods for ERP data.  We will consider an example of the Central
 %   Limit Theorem, and how we can perform a bootstrap procedure to
 %   construct error bars for trial based EEG data.
@@ -18,14 +18,14 @@
 %   Our first objective is to load the data.  Please download the data from
 %   here,
 %
-%   http://math.bu.edu/people/mak/book/EEG.mat
+%   https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter2/Ch2-EEG-1.mat
 %
 %   The MATLAB file contains EEG data collected by our collaborator during a
 %   trial based experiment.  In this experiment, the same stimulus was
 %   applied in multiple trials, and the brain response observed.  Let's load
 %   these data in MATLAB, and see what we find,
 
-load('EEG.mat')
+load('Ch2-EEG-1.mat')
 
 %IN LAB Q:  What do you observe?  What are some important features of the
 %data?
