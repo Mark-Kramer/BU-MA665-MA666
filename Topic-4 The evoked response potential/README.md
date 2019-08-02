@@ -4,4 +4,6 @@
 
 ## Code & Videos
 
-(pynb)  Tutorial: [The event-related potential](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/The%20Event-Related%20Potential)
+(pynb)  [The event-related potential in Python](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/The%20Event-Related%20Potential) - includes videos.
+
+(mat)   [The event-related potential in MATLAB]()
