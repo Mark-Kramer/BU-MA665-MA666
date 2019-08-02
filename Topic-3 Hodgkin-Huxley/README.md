@@ -6,20 +6,26 @@
 
 (pdf)	[Hodgkin-Huxley 1-page cheat sheet](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Hodgkin-Huxley%20Cheat%20Sheet.pdf)
 
-(web)	[W. Gerstner, Detailed Neuron Models (sections 2.1 & 2.2)](http://lcn.epfl.ch/~gerstner/SPNM/node12.html)
-
 (pdf)	Advanced: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Hodgking%20and%20Huxley%20J%20Physiol%201952.pdf)
 
 ## Videos
 
-(lec) <a href="https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/">M. Kramer, Introduction to the Hodgkin-Huxley neuron (Neural Spike Train Analysis 5)</a>
+(lec) [M. Kramer, Introduction to the Hodgkin-Huxley neuron (Neural Spike Train Analysis 5)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/)
 
 - NOTE: The slides for this lecture are available as PDF [here](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Kramer_Slides_SAMSI_Lecture_2.pdf).
 
-(lec) <a href="http://klewel.com/conferences/epfl-neural-networks/index.php?talkID=4">W. Gerstner, Detailed Neuron Model (a)</a>
+(lec) [W. Gerstner, Biophysics of Neurons](https://youtu.be/IpKthrlfGjQ)
 
-(lec) <a href="http://klewel.com/conferences/epfl-neural-networks/index.php?talkID=5">W. Gerstner, Detailed Neuron Model (b)</a>
+(lec) [W. Gerstner, Reversal potential and Nernst equation](https://youtu.be/H0LMf2caFRM)
+
+(lec) [W. Gerstner, Hodgkin-Huxley Model](https://youtu.be/lCa-yAW5kyw)
+
+(lec) [W. Gerstner, Threshold in the Hodgkin-Huxley Model](https://youtu.be/O82nsT9ejqs)
+
+(lec) [W. Gerstner, Detailed Neuron Model](https://youtu.be/tFBw1Fcezx4)
 
 ## Code
 
-(pynb)  [The Hodgkin-Huxley Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/beta%20versions/Hodgkin%20Huxley%20Model/HH.ipynb)
+(pynb)  [The Hodgkin-Huxley Model in Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/beta%20versions/Hodgkin%20Huxley%20Model/HH.ipynb)
+
+(mat)   [The Hodgkin-Huxley Model in MATLAB]()
