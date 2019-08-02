@@ -1,7 +1,5 @@
 ## Readings
 
-(web) <a href="http://lcn.epfl.ch/~gerstner/SPNM/node26.html">W. Gerstner, the integrate-and-fire model.</a>
-
 (pdf) [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-2%20I%26F/Readings/Abbott%20Brain%20Res%20Bull%201999.pdf)
 
 (pdf) [Chapter 8, pages 267-269 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-2%20I%26F/Readings/Izhikevich%20Chapter%208.pdf)
@@ -14,8 +12,16 @@
 
 (lec) <a href="https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/">M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis 4)</a>
 
-(lec) <a href="http://klewel.com/conferences/epfl-neural-networks/index.php?talkID=1">W. Gerstner, Passive membrane and Integrate-and-Fire model (a)</a>
+*NOTE* Slides available as PDF in READINGS
+
+(lec) [W. Gerstner, Introduction to Neuronal Dynamics](https://youtu.be/uE9_1b4gE3A)
+
+(lec) [W. Gerstner, Passive membrane](https://youtu.be/l3hvrx33lZc)
+
+(lec) [W. Gerstner, Integrate-and-Fire model](https://youtu.be/gU9UzFeg8f4)
 
 ## Code
 
 (pynb) [Integrate and Fire Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/beta%20versions/Integrate%20and%20Fire%20Model/LIF.ipynb)
+
+(mat)  Topic-2 I&F/MATLAB on BU-MA665-MA666
