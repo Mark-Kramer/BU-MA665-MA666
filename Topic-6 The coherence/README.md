@@ -12,4 +12,4 @@
 
 (pynb) Python (includes text and code) [The Cross Covariance and Cohernece](https://mark-kramer.github.io/Case-Studies-Python/intro.html)
 
-(mat)  [MATLAB code only for Chapter 5 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter5/Chapter_5.m) 
+(mat)  MATLAB (code only) [for Chapter 5 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter5/Chapter_5.m) 
