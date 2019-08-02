@@ -12,7 +12,7 @@
 
 (lec) [M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis 4)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi)
 
-*NOTE* Slides available as PDF in READINGS
+  Slides available as [PDF](/Topic-2%20I%26F/Readings/Kramer_Slides_SAMSI_Lecture_1.pdf).
 
 (lec) [W. Gerstner, Introduction to Neuronal Dynamics](https://youtu.be/uE9_1b4gE3A)
 
