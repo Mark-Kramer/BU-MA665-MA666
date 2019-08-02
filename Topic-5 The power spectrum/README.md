@@ -14,9 +14,9 @@
 
 ## Videos & Code
 
-(pynb)  Python (includes text, code, and videos): [The Power Spectrum (Part 1)](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/Analysis%20of%20Rhythmic%20Activity%20in%20the%20Scalp%20EEG)
+(pynb)  Python (includes text, code, and videos): [The Power Spectrum (Part 1)](https://mark-kramer.github.io/Case-Studies-Python/)
 
-(pynb)  Python (includes text and code): [The Power Spectrum (Part 2)](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/Analysis%20of%20Rhythmic%20Activity%20in%20the%20Scalp%20EEG)
+(pynb)  Python (includes text and code): [The Power Spectrum (Part 2)](https://mark-kramer.github.io/Case-Studies-Python/)
 
 (mat)   [MATLAB code only for Chapter 3 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter3/Chapter_3.m)
 
