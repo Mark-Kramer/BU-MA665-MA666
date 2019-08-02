@@ -8,6 +8,9 @@
 
 ## Code & Videos
 
-(pynb) Tutorial: [Cross-Frequency Coupling](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/5.%20Cross-Frequency%20Coupling/Cross-Frequency%20Coupling.ipynb)
+(pynb)  Python (includes text, code, and videos): [Cross-Frequency Coupling](https://mark-kramer.github.io/Case-Studies-Python/intro.html)
+
+(mat)  [MATLAB code only for Chapter 8 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter8/Chapter_8.m) 
+
 
 
