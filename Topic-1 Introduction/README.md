@@ -12,9 +12,9 @@
 
 ## Code
 
-(pynb) 	[Introduction to Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/Introduction%20to%20Python/Python.ipynb)
+(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/)
 
-(mat)	[Introduction to MATLAB]()
+(mat)	[Introduction to MATLAB](/Topic-1%20Introduction/MATLAB/Topic_1_MA665.m)
 
 
 ## Extra material
