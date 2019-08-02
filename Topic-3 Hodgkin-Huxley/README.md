@@ -26,6 +26,6 @@
 
 ## Code
 
-(pynb)  Python (includes text and code):[The Hodgkin-Huxley Model in Python](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A02/)
+(pynb)  Python (includes text and code): [The Hodgkin-Huxley Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A02/)
 
-(mat)   [The Hodgkin-Huxley Model in MATLAB](/Topic-3%20Hodgkin-Huxley/MATLAB/)
+(mat)   MATLAB (includes text and code): [The Hodgkin-Huxley Model](/Topic-3%20Hodgkin-Huxley/MATLAB/)
