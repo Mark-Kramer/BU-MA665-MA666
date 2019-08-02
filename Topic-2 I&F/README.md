@@ -1,12 +1,12 @@
 ## Readings
 
-(pdf) [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-2%20I%26F/Readings/Abbott%20Brain%20Res%20Bull%201999.pdf)
+(pdf) [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4](/Topic-2%20I%26F/Readings/Abbott%20Brain%20Res%20Bull%201999.pdf)
 
-(pdf) [Chapter 8, pages 267-269 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-2%20I%26F/Readings/Izhikevich%20Chapter%208.pdf)
+(pdf) [Chapter 8, pages 267-269 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Topic-2%20I%26F/Readings/Izhikevich%20Chapter%208.pdf)
 
-(pdf)	[Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-2%20I%26F/Readings/Koch%20Chapter%201.pdf)
+(pdf)	[Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](/Topic-2%20I%26F/Readings/Koch%20Chapter%201.pdf)
 
-(pdf)	[Chapter 14, pages 330-341 @ C. Koch, Biophysics of computation, 1998.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-2%20I%26F/Readings/Koch%20Chapter%2014.pdf)
+(pdf)	[Chapter 14, pages 330-341 @ C. Koch, Biophysics of computation, 1998.](/Topic-2%20I%26F/Readings/Koch%20Chapter%2014.pdf)
 
 ## Videos
 
