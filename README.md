@@ -1,4 +1,4 @@
-# MA665-MA666 Fall 2018
+# MA665-MA666 Fall 2019
 
 Getting started in this course:
 
