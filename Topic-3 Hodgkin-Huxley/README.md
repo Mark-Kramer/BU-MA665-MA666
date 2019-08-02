@@ -1,12 +1,12 @@
 ## Readings
 
-(pdf)	[Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Izhikevich%20Chapter%202.pdf)
+(pdf)	[Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Topic-3%20Hodgkin-Huxley/Reading/Izhikevich%20Chapter%202.pdf)
 
-(pdf)	[Chapter 6, pages 142-159 @ C. Koch, Biophysics of computation, 1998.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Koch%20Chapter%206.pdf)
+(pdf)	[Chapter 6, pages 142-159 @ C. Koch, Biophysics of computation, 1998.](/Topic-3%20Hodgkin-Huxley/Reading/Koch%20Chapter%206.pdf)
 
-(pdf)	[Hodgkin-Huxley 1-page cheat sheet](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Hodgkin-Huxley%20Cheat%20Sheet.pdf)
+(pdf)	[Hodgkin-Huxley 1-page cheat sheet](Topic-3%20Hodgkin-Huxley/Reading/Hodgkin-Huxley%20Cheat%20Sheet.pdf)
 
-(pdf)	Advanced: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-3%20Hodgkin-Huxley/Reading/Hodgking%20and%20Huxley%20J%20Physiol%201952.pdf)
+(pdf)	Advanced: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](Topic-3%20Hodgkin-Huxley/Reading/Hodgking%20and%20Huxley%20J%20Physiol%201952.pdf)
 
 ## Videos
 
