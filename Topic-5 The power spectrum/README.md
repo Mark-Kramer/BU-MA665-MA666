@@ -12,4 +12,6 @@
 
 ## Videos & Code
 
-(pynb)  Tutorial: [Analysis of Rhythmic Activity in the Scalp EEG](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/Analysis%20of%20Rhythmic%20Activity%20in%20the%20Scalp%20EEG)
+(pynb)  Python Tutorial (includes text, code, and videos): [Analysis of Rhythmic Activity in the Scalp EEG](https://github.com/Mark-Kramer/Case-Studies-Python/tree/master/Analysis%20of%20Rhythmic%20Activity%20in%20the%20Scalp%20EEG)
+
+(mat)   [MATLAB code only](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter3/Chapter_3.m)
