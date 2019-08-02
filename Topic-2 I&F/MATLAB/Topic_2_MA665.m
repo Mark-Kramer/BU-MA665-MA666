@@ -1,5 +1,5 @@
-%%  MA665 - Topic 2:  The integrate and fire neuron
-%   In this Lab we will use MATLAB to simulate the integrate and fire
+%%  MA665 - Topic 2: The integrate and fire neuron
+%   In the code below we will use MATLAB to simulate the integrate and fire
 %   (I&F) neuron model.  We'll investigate, in particular, how the spiking
 %   activity varies as we adjust the input current I.  We will also update
 %   the model to include "leakiness".
@@ -168,9 +168,3 @@ xlabel('Time [s]');  ylabel('Voltage [mV]')
 
 %IN LAB Q:  Adjust the parameter I.  What happens to V(t) if I=10?  If
 %I=100?
-
-%%  Part 6:  The Leaky I&F model.
-%   We'll conclude lab today with a discussion of the leaky integrate and
-%   fire model.  As for the I&F model, we'll use knowledge of biophysics to
-%   motivate the form of this model.
-
