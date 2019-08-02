@@ -10,7 +10,7 @@
 
 ## Videos
 
-(lec) <a href="https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/">M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis 4)</a>
+(lec) [M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis 4)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi)
 
 *NOTE* Slides available as PDF in READINGS
 
