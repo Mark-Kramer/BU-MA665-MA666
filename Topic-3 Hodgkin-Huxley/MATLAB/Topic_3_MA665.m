@@ -1,5 +1,5 @@
-%%  MA665 - Topic 3:  The Hodgkin-Huxley equations and their simplification.
-%   In this lab we will use MATLAB to simulate the Hodgkin-Huxley
+%%  MA665 - Topic 3:  The Hodgkin-Huxley equations.
+%   In this code, we will use MATLAB to simulate the Hodgkin-Huxley
 %   neuron model.  This model is arguably the *most* important
 %   computational model in neuroscience.  We'll focus today
 %   on simulating this model and understanding its pieces.
@@ -13,7 +13,7 @@
 %   try to set a good example, but won't always . . . 
 
 %%  Part 1:  The Hodgkin-Huxley (HH) equation code.
-%   Download the MATLAB file (available on Blackboard),
+%   Download the MATLAB file (available on the repository),
 %
 %   HH0.m
 %
