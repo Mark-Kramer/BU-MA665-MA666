@@ -1,11 +1,10 @@
-%%  MA665 - Topic 1 1:  MATLAB Tutorial.
+%%  MA665 - Topic 1:  MATLAB Tutorial.
 %   This tutorial follows closely Chapter 2 of the textbook 'MATLAB for
-%   Neuroscientists', and this week's handout on Blackboard.  If you already know
-%   MATLAB, I suggest you quickly work through this tutorial, and confirm you're
+%   Neuroscientists' and Chapter 1 of 'Case Studeis in Neural Data Analysis'. If you
+%   already know MATLAB, I suggest you quickly work through this tutorial, and confirm you're
 %   up to speed.  If you've never used MATLAB (or any other programming
-%   language) then I encourage you to work through this tutorial, all
-%   of the handout (they're similar), and all of Chapter 2 of 'MATLAB for
-%   Neuroscientists'.  We will use MATLAB throughout
+%   language) then I encourage you to work through this tutorial, and all of Chapter 1
+%   'Case Studeis in Neural Data Analysis'.  We will use MATLAB throughout
 %   this course.  And, you'll probably find MATLAB useful in other courses
 %   here at BU, as well as throughout your graduate career as a
 %   neuroscientist.
@@ -561,7 +560,7 @@ b = my_new_function(a);
 %%  Example 20:  Saving your work in MATLAB.
 %   NOTE:  The function 'my_new_function.m' is a MATLAB function that we can
 %   execute.  The file we are currently editing is *also* a MATLAB file
-%   (notice the '.m' extension of the file 'Lab_1_MA665.m').  This file is
+%   (notice the '.m' extension of the file 'Topic_1_MA665.m').  This file is
 %   called a MATLAB 'script'.  It's usually useful to define scripts of your
 %   own to save the work you're doing.  To do so, click on the following:
 %
@@ -583,19 +582,19 @@ b = my_new_function(a);
 %
 %   Vist the webpage,
 %
-%       http://math.bu.edu/people/mak/book/Ch1_data.mat
+%       https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter1/Ch1-example-data.mat
 %
-%   and download the file "Ch1_data.mat".  We'd now like to open this data set.  The
+%   and download the file "Ch1-example-data.mat".  We'd now like to open this data set.  The
 %   first step is to direct MATLAB to the same directory that contains the
 %   downloaded file.  To do this, click on the '...' icon in the upper
 %   right of the MATLAB Command Window.
 %
 %   Once you're in the correct directory, type >>
 
-clear                  %First clear the workspace,
-load Ch1_data.mat          %Then load the data.
+clear                               %First clear the workspace,
+load Ch1-example-data.mat           %Then load the data.
 
-%   This command reads in the data stored in the file "Ch1_data.mat".
+%   This command reads in the data stored in the file "Ch1-example-data.mat".
 
 %Q:  What variables now exist in your workspace?  What is the size of
 %variable 't1' and 'v1'?  Plot v1 versus t1 to get a sense for how
