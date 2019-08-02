@@ -1,8 +1,8 @@
 ## Readings
 
-(pdf) 	[Chapter 3 @ Kramer & Eden, Case studies in neural data analysis, 2016.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Kramer%20%26%20Eden%20Chapter%203.pdf)
+(pdf) 	[Chapter 3 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Topic-5%20The%20power%20spectrum/Readings/Kramer%20%26%20Eden%20Chapter%203.pdf)
 
-(pdf)   [Chapter 4 @ Kramer & Eden, Case studies in neural data analysis, 2016.]()
+(pdf)   [Chapter 4 @ Kramer & Eden, Case studies in neural data analysis, 2016.](Topic-5%20The%20power%20spectrum/Readings/Kramer%20%26%20Eden%20Chapter%204.pdf)
 
 (pdf) 	[Kramer, SFN Short Course Document.](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Week-5%20The%20power%20spectrum/Readings/Kramer_SFN_Short_Course.pdf)
 
