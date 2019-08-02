@@ -18,6 +18,6 @@
 
 (pynb)  Python (includes text and code): [The Power Spectrum (Part 2)](https://mark-kramer.github.io/Case-Studies-Python/)
 
-(mat)   [MATLAB code only for Chapter 3 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter3/Chapter_3.m)
+(mat)   MATLAB (code only) [for Chapter 3 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter3/Chapter_3.m)
 
-(mat)   [MATLAB code only for Chapter 4 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter4/Chapter_4.m)
+(mat)   MATLAB (code only) [for Chapter 4 @ Kramer & Eden](https://github.com/Mark-Kramer/Case-Studies-Kramer-Eden/blob/master/Chapter4/Chapter_4.m)
