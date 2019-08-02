@@ -22,6 +22,6 @@
 
 ## Code
 
-(pynb) [Integrate and Fire Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A03/LIF.ipynb)
+(pynb) Python (code and text) [Integrate and Fire Model](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A03/LIF.ipynb)
 
-(mat)  Topic-2 I&F/MATLAB on BU-MA665-MA666
+(mat)  MATLAB (code and text) [Integrate and Fire Model](/Topic-2%20I%26F/MATLAB/Topic_2_MA665.m)
