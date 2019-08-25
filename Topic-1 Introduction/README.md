@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf)	**MATLAB**: Chapter 1 @ Kramer & Eden, Case studies in neural data analysis, 2016.
+(pdf)	**MATLAB**: [Chapter 1 @ Kramer & Eden, Case studies in neural data analysis, 2016](/Topic-1%20Introduction/Readings/Kramer%20and%20Eden%20Chapter%201.pdf).
 
 ## Software
 
