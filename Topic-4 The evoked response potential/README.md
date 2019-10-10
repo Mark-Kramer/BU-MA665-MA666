@@ -1,3 +1,6 @@
+## Trouble rendering Jupyter notebooks?
+Paste the notebook URL in [nbviewer](https://nbviewer.jupyter.org/).
+
 ## Readings
 
 (pdf)	[Chapter 2 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Topic-4%20The%20evoked%20response%20potential/Readings/Kramer_Eden_Chapter_2.pdf)
