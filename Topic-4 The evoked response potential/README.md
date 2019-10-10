@@ -7,7 +7,9 @@ Paste the notebook URL in [nbviewer](https://nbviewer.jupyter.org/).
 
 ## Code & Videos
 
-(pynb) [Python in-class example code](ERP-for-class-Part-1.ipynb)
+(pynb) [Python in-class example code (Part 1)](ERP-for-class-Part-1.ipynb)
+
+(pynb) [Python in-class example code (Part 2)](ERP-for-class-Part-2.ipynb)
 
 (pynb) Python (includes text, code, and videos): [The event-related potential in Python](https://mark-kramer.github.io/Case-Studies-Python/)
 
