@@ -1,10 +1,15 @@
+## Trouble rendering Jupyter notebooks?
+Paste the notebook URL in [nbviewer](https://nbviewer.jupyter.org/).
+
 ## Readings
 
 (pdf)	[Chapter 2 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Topic-4%20The%20evoked%20response%20potential/Readings/Kramer_Eden_Chapter_2.pdf)
 
 ## Code & Videos
 
-(pynb) [Python in-class example code](ERP-for-class-Part-1.ipynb)
+(pynb) [Python in-class example code (Part 1)](ERP-for-class-Part-1.ipynb)
+
+(pynb) [Python in-class example code (Part 2)](ERP-for-class-Part-2.ipynb)
 
 (pynb) Python (includes text, code, and videos): [The event-related potential in Python](https://mark-kramer.github.io/Case-Studies-Python/)
 
