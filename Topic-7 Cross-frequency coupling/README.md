@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf) [Chapter 8 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Topic-7%20Cross-frequency%20coupling/Readings/Kramer_Eden_Ch8.pdf)
+(pdf) [Chapter 7 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Topic-7%20Cross-frequency%20coupling/Readings/Kramer_Eden_Ch8.pdf)
 
 (pdf) [Tort et al, J Neurophysiol, 2010.](/Topic-7%20Cross-frequency%20coupling/Readings/Tort%20et%20al%20J%20Neurophysiol%202010.pdf)
 
