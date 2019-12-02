@@ -18,8 +18,6 @@
 
 ## Tutorial
 
-(pynb) [Training a Perceptron](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A04/perceptron.ipynb)
-
-(pynb) [Backpropagation](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A01/Backpropagation/Backpropagation.ipynb)
+(pynb) [Backpropagation](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A01/backprop.ipynb)
 
 
