@@ -15,9 +15,3 @@
 (mp4)  [MIT 6.034 F10 Artificial Intelligence, Lecture 12A](https://archive.org/details/MIT6.034F10/MIT6_034F10_lec12A_300k.mp4)
 
 (mp4)  [MIT 6.034 F10 Artificial Intelligence, Lecture 12B](https://archive.org/details/MIT6.034F10/MIT6_034F10_lec12B_300k.mp4)
-
-## Tutorial
-
-(pynb) [Backpropagation](https://github.com/Mark-Kramer/Case-Studies-Python/blob/master/content/A01/backprop.ipynb)
-
-
