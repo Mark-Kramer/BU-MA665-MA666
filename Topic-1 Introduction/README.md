@@ -1,7 +1,5 @@
 ## Readings
 
-(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/01.html)
-
 (pdf)   [Goldman and Fee, “Computational Training for the next Generation of Neuroscientists”, 2017](/Readings/Goldman_Fee_2017.pdf)
 
 (pdf)   [Marder, “Understanding Brains: Details, Intuition, and Big Data”, 2015](/Readings/Marder_2015.pdf)
@@ -13,6 +11,10 @@
 (web) 	[Install Python via Anaconda](https://www.anaconda.com/)
 
 (web)   [Quick Start Case Studies](https://mark-kramer.github.io/Case-Studies-Python/intro.html#quick-start-to-learning-python-for-neural-data-analysis)
+
+## Code
+
+(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/01.html)
 
 ## Extra material
 
