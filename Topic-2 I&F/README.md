@@ -2,7 +2,7 @@
 
 (pdf) [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4](/Readings/Abbott_1999.pdf)
 
-(pdf) [Chapter 8, pages 267-269 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_08.pdf)
+(pdf) [Chapter 8, pages 267-269 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_8.pdf)
 
 (pdf)	[Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_1.pdf)
 
