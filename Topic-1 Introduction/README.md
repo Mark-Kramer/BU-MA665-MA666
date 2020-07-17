@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf)	**MATLAB**: [Chapter 1 @ Kramer & Eden, Case studies in neural data analysis, 2016](/Topic-1%20Introduction/Readings/Kramer%20and%20Eden%20Chapter%201.pdf).
+(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/)
 
 ## Software
 
@@ -8,13 +8,7 @@
 
 (web) 	[Install Python via Anaconda](https://www.anaconda.com/)
 
-(web) 	[Install MATLAB](http://www.bu.edu/tech/services/cccs/desktop/distribution/mathsci/matlab/)
-
 ## Code
-
-(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/)
-
-(mat)	[Introduction to MATLAB](/Topic-1%20Introduction/MATLAB/Topic_1_MA665.m)
 
 
 ## Extra material
