@@ -14,4 +14,4 @@
 
 ## Code
 
-(pynb) Python (code and text) [Integrate and Fire Model](https://mark-kramer.github.io/Case-Studies-Python/IF.html)
+(pynb) [Integrate and Fire Model](https://mark-kramer.github.io/Case-Studies-Python/IF.html)
