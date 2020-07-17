@@ -14,9 +14,6 @@
 
 (web)   [Quick Start Case Studies](https://mark-kramer.github.io/Case-Studies-Python/intro.html#quick-start-to-learning-python-for-neural-data-analysis)
 
-## Code
-
-
 ## Extra material
 
 - More Python resources
