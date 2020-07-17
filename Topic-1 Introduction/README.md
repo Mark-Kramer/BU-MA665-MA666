@@ -1,6 +1,6 @@
 ## Readings
 
-(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/)
+(pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/01.html)
 
 ## Software
 
