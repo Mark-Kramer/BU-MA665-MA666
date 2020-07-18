@@ -4,9 +4,9 @@ Either: (pdf)	[Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neur
 
 or (pdf)	[Chapter 6, pages 142-159 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_6.pdf)
 
-(pdf)	[Hodgkin-Huxley 1-page cheat sheet](/Reading/Hodgkin-Huxley_Cheat_Sheet.pdf)
+(pdf)	[Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
 
-(pdf)	Advanced: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgking_Huxley_1952.pdf)
+(pdf)	Advanced: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgkin_Huxley_1952.pdf)
 
 ## Videos
 
