@@ -10,6 +10,6 @@
 
 ## Videos & Code
 
-(pynb)  Python (includes text, code, and videos): [The Power Spectrum (Part 1)](https://mark-kramer.github.io/Case-Studies-Python/03.html)
+(pynb)  Includes text, code, and videos: [The Power Spectrum (Part 1)](https://mark-kramer.github.io/Case-Studies-Python/03.html)
 
-(pynb)  Python (includes text and code): [The Power Spectrum (Part 2)](https://mark-kramer.github.io/Case-Studies-Python/04.html)
+(pynb)  Includes text and code: [The Power Spectrum (Part 2)](https://mark-kramer.github.io/Case-Studies-Python/04.html)
