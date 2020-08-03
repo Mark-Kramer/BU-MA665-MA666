@@ -1,8 +1,8 @@
 ## Readings
 
-Either: (pdf)	[Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
-
-or (pdf)	[Chapter 6, pages 142-159 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_6.pdf)
+Either: 
+- (pdf)	[Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
+- or (pdf)	[Chapter 6, pages 142-159 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_6.pdf)
 
 (pdf)	[Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
 
