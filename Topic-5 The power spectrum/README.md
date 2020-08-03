@@ -4,7 +4,7 @@
 
 (pdf)   [Chapter 4 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Readings/Kramer_Eden_Chapter_4.pdf)
 
-(pdf) 	[Kramer, SFN Short Course Document.](/Topic-5%20The%20power%20spectrum/Readings/Kramer_SFN_Short_Course.pdf)
+(pdf) 	[Kramer, SFN Short Course Document.](/Readings/Kramer_SFN_Short_Course.pdf)
 
 (lib) 	Very Advanced: [Chapter 4 @ Percival & Walden, Spectral Analysis for Physical Applications.](https://www.cambridge.org/core/books/spectral-analysis-for-physical-applications/A9195239A8965A2C53D43EB2D1B80A33)
 
