@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf)   [Goldman and Fee, “Computational Training for the next Generation of Neuroscientists”, 2017](/Readings/Goldman_Fee_2017.pdf)
+(pdf)   [Gerstner, "Theory and simulation in neuroscience", 2012](/Readings/Gerstner_2012.pdf)
 
 (pdf)   [Marder, “Understanding Brains: Details, Intuition, and Big Data”, 2015](/Readings/Marder_2015.pdf)
 
