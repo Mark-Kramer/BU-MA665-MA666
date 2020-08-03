@@ -16,4 +16,4 @@ Either:
 
 ## Code
 
-(pynb)  Python (includes text and code): [The Hodgkin-Huxley Model](https://mark-kramer.github.io/Case-Studies-Python/HH.html)
+(pynb)  Python (includes text, video, and code): [The Hodgkin-Huxley Model](https://mark-kramer.github.io/Case-Studies-Python/HH.html)
