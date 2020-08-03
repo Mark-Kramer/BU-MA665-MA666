@@ -4,7 +4,7 @@
 
 ## Code & Videos
 
-(pynb) Includes text, code, and videos: [The event-related potential in Python](https://mark-kramer.github.io/Case-Studies-Python/)
+(pynb) Includes text, code, and videos: [The event-related potential in Python](https://mark-kramer.github.io/Case-Studies-Python/02.html)
 
 (pynb) [Python in-class example code (Part 1)](ERP-for-class-Part-1.ipynb)
 
