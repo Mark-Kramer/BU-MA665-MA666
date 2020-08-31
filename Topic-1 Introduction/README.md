@@ -6,6 +6,8 @@
 
 ## Software
 
+(web)   [Set up Microsoft OneNote](http://www.bu.edu/tech/services/cccs/desktop/distribution/microsoft/studentoffice/)
+
 (web) 	[Set up GitHub Desktop](https://desktop.github.com/)
 
 (web) 	[Install Python via Anaconda](https://www.anaconda.com/)
