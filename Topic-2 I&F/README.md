@@ -15,3 +15,5 @@
 ## Code
 
 (pynb) Includes text, video, and code: [Integrate and Fire Model](https://mark-kramer.github.io/Case-Studies-Python/IF.html)
+
+(py)   Function to run the [IF](IF.py) model.
