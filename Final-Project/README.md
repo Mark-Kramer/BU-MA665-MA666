@@ -9,7 +9,7 @@ Simulate a HH neuron
 
 
 
-### Team Model
+## Team Model
 Create function `HH.py` with
 - **inputs** `A_tonic, A_sin, A_noise, T, K`, where
 	- `A_tonic`: [scalar] amplitude of tonic current drive,
@@ -27,7 +27,7 @@ Create function `HH.py` with
 Note: `N` is the length of the `t` vector, i.e., the number of bins on the time axis.
 
 
-### Team Analyze
+## Team Analyze
 Create function `analyze.py` with
 - **inputs** `V`, `spike_times`, `I`, and `t`, where
 	- `V`: [matrix K,N] membrane voltage of neuron for each trial.
@@ -45,4 +45,16 @@ Create function `analyze.py` with
 	
 	and, a plot of each trial-averaged (auto)spectrum and the two coherences.
 	
-### Team Theory
+## Team Theory
+Consider these current drive scenarios:
+- **tonic-only current drive**
+- **noise-only current drive**
+- **sinusoidal-only current drive**
+- **tonic + noise + sinusoidal current drive**
+
+For each scenario,
+- determine the appropriate inputs to `HH.py`
+- predict and describe (in pictures and words) the expected outputs of `analyze.py`
+- work with Team Model to run `HH.py`
+- work with Team Analyze to analyze the HH model output.
+
