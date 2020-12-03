@@ -11,9 +11,12 @@ Simulate a HH neuron
 
 ### Team Model
 - Create function `HH.py` with
-	- inputs `A_tonic, A_sin, A_noise, T, K`
-	where `A_tonic`: amplitude of tonic input,
-	A_sin, A_noise, T, K`
+	- inputs `A_tonic, A_sin, A_noise, T, K`, where
+		- `A_tonic`: amplitude of tonic current drive,
+		- `A_sin`: amplidue of sinusoidal current drive (fix period at 8 Hz).
+		- `A_noise`:  amplidue of noise current input (Gaussian random noise with 0 mean).
+		- `T`:  total time of simulation in seconds (e.g., 1 s).
+		- `K`:  number of trials to simulate (e.g., 100).
 
 
 and outputs `V`, `spike_times`, `I`, and `t`
