@@ -2,12 +2,17 @@
 
 Our goal for the next two lectures is to: (1) simulate the HH neuron with different types of driving current, (2) analyze the resulting dynamics, and (3) characterize the relationship between the HH dynamics and the driving current. To do so, we’ll divide into 3 teams, each with a different mandate (see below). Our goal is for each team to complete its objective, and then put assemble the pieces to draw scientific conclusions.
 
-
 ## Scenario / Question
 
-Simulate a HH neuron 
+What is the relationship between the HH model dynamics and different types of current input? To answer this, we'll divide the input `I` into 3 parts:
+- `I_tonic`: constant input
+- `I_sin`: sinusoidal input with mean 0 and frequency 8 Hz.
+- `I_noise`: noise input with mean 0.
 
+so that
+	`I` = `I_tonic + I_sin + I_noise`
 
+Our goal is to characterize the relationship between the simulated membrane voltage (`V`) and spike train (`spike_train`) to the input current. To do so, for different `I` configurations, we'll simulate the HH model for 1 s, and analyze the results using tools we've developed. We'll divide and conquer, working in teams to create components used by other teams.
 
 ## Team Model
 Create function `HH.py` with
@@ -47,9 +52,9 @@ Create function `analyze.py` with
 	
 ## Team Theory
 Consider these current drive scenarios:
-- **tonic-only current drive**
-- **noise-only current drive**
-- **sinusoidal-only current drive**
+- **tonic-only current drive** (+ small noise)
+- **noise-only current drive** (i.e., large noise only)
+- **sinusoidal-only current drive** (+ small noise)
 - **tonic + noise + sinusoidal current drive**
 
 For each scenario,
