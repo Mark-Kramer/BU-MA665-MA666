@@ -10,14 +10,39 @@ Simulate a HH neuron
 
 
 ### Team Model
-- Create function `HH.py` with
-	- inputs `A_tonic, A_sin, A_noise, T, K`, where
-		- `A_tonic`: amplitude of tonic current drive,
-		- `A_sin`: amplidue of sinusoidal current drive (fix period at 8 Hz).
-		- `A_noise`:  amplidue of noise current input (Gaussian random noise with 0 mean).
-		- `T`:  total time of simulation in seconds (e.g., 1 s).
-		- `K`:  number of trials to simulate (e.g., 100).
+Create function `HH.py` with
+- **inputs** `A_tonic, A_sin, A_noise, T, K`, where
+	- `A_tonic`: [scalar] amplitude of tonic current drive,
+	- `A_sin`: [scalar] amplidue of sinusoidal current drive (fix period at 8 Hz).
+	- `A_noise`:  [scalar] amplidue of noise current input (Gaussian random noise with 0 mean).
+	- `T`:  [scalar] total time of simulation in seconds (e.g., 1 s).
+	- `K`:  [scalar] number of trials to simulate (e.g., 100).
+
+- and **outputs** `V`, `spike_times`, `I`, and `t`, where
+	- `V`: [matrix K,N] membrane voltage of neuron for each trial.
+	- `spike_train`: [matrix K,N] the spike train for each trial.
+	- `I`: [matrix K,N] the total current drive from all sources (tonic + sinusoidal + noise) for each trial.
+	- `t`: [vector N] a time axis with units seconds.
+
+Note: `N` is the length of the `t` vector, i.e., the number of bins on the time axis.
 
 
-and outputs `V`, `spike_times`, `I`, and `t`
+### Team Analyze
+Create function `analyze.py` with
+- **inputs** `V`, `spike_times`, `I`, and `t`, where
+	- `V`: [matrix K,N] membrane voltage of neuron for each trial.
+	- `spike_train`: [matrix K,N] the spike train for each trial.
+	- `I`: [matrix K,N] the total current drive from all sources (tonic + sinusoidal + noise) for each trial.
+	- `t`: [vector N] a time axis with units seconds.
 
+- and **outputs** `Svv`, `Snn`, `Sii`, `Civ`, `Cin`, `faxis`
+	- `Svv`: [vector N/2+1] trial-averaged (auto)spectrum of membrane voltage `V` for each trial. 
+	- `Snn`: [vector N/2+1] trial-averaged (auto)spectrum of spike train `spike_train` for each trial.
+	- `Sii`: [vector N/2+1] trial-averaged (auto)spectrum of total current drive `I` for each trial. 
+	- `Civ`: [vector N/2+1] coherence between total current drive `I` and membrane voltage `V` 
+	- `Cin`: [vector N/2+1] coherence between total current drive `I` and spike train `spike_train`
+	- `faxis`: [vector N/2+1] a frequency axis for plotting with units seconds, 
+	
+	and, a plot of each trial-averaged (auto)spectrum and the two coherences.
+	
+### Team Theory
