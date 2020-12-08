@@ -1,6 +1,6 @@
 ## Final Project
 
-Our goal for the next two lectures is to: (1) simulate the HH neuron with different types of driving current, (2) analyze the resulting dynamics, and (3) characterize the relationship between the HH dynamics and the driving current. To do so, we’ll divide into 3 teams, each with a different mandate (see below). Our goal is for each team to complete its objective, and then put assemble the pieces to draw scientific conclusions.
+Our goal for the next two lectures is to: (1) simulate the HH neuron with different types of driving current, (2) analyze the resulting dynamics, and (3) characterize the relationship between the HH dynamics and the driving current. To do so, we’ll divide into 3 teams, each with a different mandate (see below). Our goal is for each team to complete its objective, and then assemble the pieces to draw scientific conclusions.
 
 ## Scenario / Question
 
@@ -12,7 +12,7 @@ What is the relationship between the HH model dynamics and different types of cu
 so that
 	`I` = `I_tonic + I_sin + I_noise`
 
-Our goal is to characterize the relationship between the simulated membrane voltage (`V`) and spike train (`spike_train`) to the input current. To do so, for different `I` configurations, we'll simulate the HH model for 1 s, and analyze the results using tools we've developed. We'll divide and conquer, working in teams to create components used by other teams.
+Our goal is to characterize the relationship between the simulated membrane voltage (`V`) and spike train (`spike_train`) to the input current. To do so, for different `I` configurations, we'll simulate the HH model for 5 s, and analyze the results using tools we've developed. We'll divide and conquer, working in teams to create components used by other teams.
 
 ## Team Model
 Create function `HH.py` with
