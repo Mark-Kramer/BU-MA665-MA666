@@ -60,6 +60,6 @@ Consider these current drive scenarios:
 For each scenario,
 - determine the appropriate inputs to `HH.py`
 - predict and describe (in pictures and words) the expected outputs of `analyze.py`
-- work with Team Model to run `HH.py`
+- work with Team Model to run `HH`
 - work with Team Analyze to `analyze` the HH model output.
 
