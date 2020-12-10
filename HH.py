@@ -9,14 +9,15 @@ Created on Tue Dec  8 12:53:18 2020
 import numpy as np
 
 
-def HH(A_tonic, A_sin, A_noise, T, K, gM=0):
-    dt = 0.00001
-    t = np.arange(0, T, dt)
+def HH(A_tonic, A_sin, A_noise, T, K): # T input in [s]
+    T0 = T*1000                        # Convert [s] --> [ms]
+    dt = 0.01                          # Units of [ms]
+    t = np.arange(0, T0, dt)           # [ms]
     
     N = t.size
     
     I = np.zeros([K,N])
-    I_sin = A_sin * np.sin(2 * np.pi * 8 * t)
+    I_sin = A_sin * np.sin(2 * np.pi * 8 * t/1000)
     
     V = np.zeros([K,N])
     
@@ -30,12 +31,11 @@ def HH(A_tonic, A_sin, A_noise, T, K, gM=0):
         
     spike_train = count_spikes(V)
     
-    return [V, spike_train, I, t]
-
+    return [V, spike_train, I, t/1000]  # Output in [s]
 
 
 def singleTrial(I0,T0,gM=0):
-    dt = 0.00001;
+    dt = 0.01;
     T  = int(np.ceil(T0/dt))  # [ms]
     gNa0 = 120   # [mS/cm^2]
     ENa  = 115;  # [mV]
@@ -103,7 +103,6 @@ def alphaKM(V):
 
 def betaKM(V):
     return 1.25* 0.01 * np.exp((-V-43)/18)
-
 
 
 
