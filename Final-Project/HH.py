@@ -8,7 +8,6 @@ Created on Tue Dec  8 12:53:18 2020
 
 import numpy as np
 
-
 def HH(A_tonic, A_sin, A_noise, T, K): # T input in [s]
     T0 = T*1000                        # Convert [s] --> [ms]
     dt = 0.01                          # Units of [ms]
@@ -26,7 +25,7 @@ def HH(A_tonic, A_sin, A_noise, T, K): # T input in [s]
         I_trial = I_noise + I_sin + A_tonic
         I[i,] = I_trial
         
-        [v, _, _, _, _] = singleTrial(I_trial, T, gM)
+        [v, _, _, _, _] = singleTrial(I_trial, T0, gM=0)
         V[i,] = v.flatten()
         
     spike_train = count_spikes(V)
@@ -70,7 +69,7 @@ def singleTrial(I0,T0,gM=0):
 def count_spikes(V):
     [K, N] = V.shape
     spikes = np.zeros(V.shape)
-    threshold = 30
+    threshold = 20
     
     for j in range(K):
         for i in range(N-1):
