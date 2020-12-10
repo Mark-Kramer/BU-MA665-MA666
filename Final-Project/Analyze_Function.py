@@ -42,11 +42,11 @@ def analyze(V,spike_train, I, t, plots=True):
     Sin = np.mean(Sin,0)
     
     # Taking the real part
-    Snn = Snn[0:int(N/2)].real
-    Svv = Svv[0:int(N/2)].real
-    Sii = Sii[0:int(N/2)].real
-    Siv = Siv[0:int(N/2)].real
-    Sin = Sin[0:int(N/2)].real
+    Snn = Snn[0:int(N/2)]
+    Svv = Svv[0:int(N/2)]
+    Sii = Sii[0:int(N/2)]
+    Siv = Siv[0:int(N/2)]
+    Sin = Sin[0:int(N/2)]
     
     faxis = np.arange(0,fNQ,df)             # frequency axis
     
@@ -55,11 +55,11 @@ def analyze(V,spike_train, I, t, plots=True):
     Cin = (Sin * np.conj(Sin))/(Sii*Snn)    # coherence between I and spike train
     
     results = dict()                        # dictionary for storing outputs
-    results['Snn']   = Snn
-    results['Svv']   = Svv
-    results['Sii']   = Sii
-    results['Civ']   = Siv
-    results['Cin']   = Sin
+    results['Snn']   = Snn.real
+    results['Svv']   = Svv.real
+    results['Sii']   = Sii.real
+    results['Civ']   = Civ.real
+    results['Cin']   = Cin.real
     results['faxis'] = faxis
     
     # Plots
