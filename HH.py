@@ -9,7 +9,7 @@ Created on Tue Dec  8 12:53:18 2020
 import numpy as np
 
 
-def HH(A_tonic, A_sin, A_noise, T, K):
+def HH(A_tonic, A_sin, A_noise, T, K, gM=0):
     dt = 0.00001
     t = np.arange(0, T, dt)
     
@@ -25,7 +25,7 @@ def HH(A_tonic, A_sin, A_noise, T, K):
         I_trial = I_noise + I_sin + A_tonic
         I[i,] = I_trial
         
-        [v, _, _, _, _] = singleTrial(I_trial, T)
+        [v, _, _, _, _] = singleTrial(I_trial, T, gM)
         V[i,] = v.flatten()
         
     spike_train = count_spikes(V)
@@ -34,7 +34,7 @@ def HH(A_tonic, A_sin, A_noise, T, K):
 
 
 
-def singleTrial(I0,T0):
+def singleTrial(I0,T0,gM=0):
     dt = 0.00001;
     T  = int(np.ceil(T0/dt))  # [ms]
     gNa0 = 120   # [mS/cm^2]
@@ -67,7 +67,7 @@ def singleTrial(I0,T0):
 def count_spikes(V):
     [K, N] = V.shape
     spikes = np.zeros(V.shape)
-    threshold = 20
+    threshold = 30
     
     for j in range(K):
         for i in range(N-1):
@@ -96,7 +96,10 @@ def betaN(V):
     return 0.125*np.exp(-(V+65)/80)
 
 def alphaM(V):
-    return 0.02 / 
+    return 1.5 * 0.02 / (1 + np.exp((-V-20)/5))
+
+def betaM(V):
+    return 1.25* 0.01 * np.exp((-V-43)/18)
 
 
 
