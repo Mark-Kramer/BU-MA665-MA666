@@ -4,6 +4,10 @@
 
 (pdf)   [Marder, “Understanding Brains: Details, Intuition, and Big Data”, 2015](/Readings/Marder_2015.pdf)
 
+(pdf)   [Wilson et al, "Good enough practices in scientific computing", 2017](/Readings/Wilson_2017.pdf)
+
+(pdf)   [Riquelme and Gjorgjieva, "Towards readable code in neuroscience", 2021](/Readings/Riquelme_2021.pdf)
+
 ## Software
 
 (web)   [Set up Microsoft OneNote](http://www.bu.edu/tech/services/cccs/desktop/distribution/microsoft/studentoffice/)
@@ -18,9 +22,11 @@
 
 (pynb) 	[Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/01.html)
 
+(py)    [100 numpy exercises](https://github.com/rougier/numpy-100)
+
 ## Extra material
 
-- More Python resources
+More Python resources
 
   - https://github.com/JeffPaine/beautiful_idiomatic_python
   - https://jakevdp.github.io/PythonDataScienceHandbook/
