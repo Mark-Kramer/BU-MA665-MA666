@@ -26,6 +26,6 @@
 
 [assignment-ERP.py](assignment-ERP.py)
 
-  - [ERP_2.mat](data/ERP_2.mat)
-  - [ERP_3.mat](data/ERP_3.mat)
-  - [ERP_4.mat](data/ERP_4.mat)
+  - [ERP_2.mat](data/EEG_2.mat)
+  - [ERP_3.mat](data/EEG_3.mat)
+  - [ERP_4.mat](data/EEG_4.mat)
