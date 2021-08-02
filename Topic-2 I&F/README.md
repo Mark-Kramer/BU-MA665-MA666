@@ -23,13 +23,12 @@
 (py)   Function to run the [IF](IF.py) model.
 
 ## Discussion
-##### Discussion topics for the integrate and fire model, and its extensions.
 
 1. Describe the main components of the IF model. Draw it (in some way).
 2. Describe the main components of the LIF model. Draw it (in some way).
 3. Describe the differences and similarities between the IF and LIF models.
 4. The IF model is meant to mimic a neurons activity. Describe what is realistic about the IF model? What is unrealistic?
-5. Describe the roles of the IF model parameters Vreset and Vthreshold.
+5. Describe the roles of the IF model parameters `Vreset` and `Vthreshold`.
 6. Consider the IF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
     1. How does an increase in capacitance (C) impact the dynamics?
     2. Can you interpret this physically?
@@ -38,7 +37,6 @@
     2. How does an increase in the capacitance (C) impact the dynamics?
 
 ## Challenges
-##### Computer challenges for the integrate and fire model, and its extensions.
 
 1. Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
 2. How does an increase in the resistance (R) impact the dynamics?

@@ -123,60 +123,62 @@ $(document).ready(function () {
 
 <div id="readings" class="section level2">
 <h2>Readings</h2>
-<p>(pdf) <a href="/Readings/Abbott_1999.pdf">Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4.</a></p>
-<p>(pdf) <a href="/Readings/Izhikevich_Chapter_8.pdf">Chapter 8, pages 267-269 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.</a></p>
-<p>(pdf) <a href="/Readings/Koch_Chapter_1.pdf">Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.</a></p>
+<p>(pdf) <a href="/Readings/Kramer_Eden_Chapter_3.pdf">Chapter 3 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></p>
+<p>(pdf) <a href="/Readings/Kramer_Eden_Chapter_4.pdf">Chapter 4 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></p>
+<p>(pdf) <a href="/Readings/Kramer_SFN_Short_Course.pdf">Kramer, SFN Short Course Document.</a></p>
+<p>(lib) Very Advanced: <a href="https://www.cambridge.org/core/books/spectral-analysis-for-physical-applications/A9195239A8965A2C53D43EB2D1B80A33">Chapter 4 @ Percival &amp; Walden, Spectral Analysis for Physical Applications.</a></p>
 </div>
 <div id="videos" class="section level2">
 <h2>Videos</h2>
-<p>(lec) <a href="https://youtu.be/KFv45vFILbw">IF Part 1</a></p>
-<p>(lec) <a href="https://youtu.be/irgfUILDLR0">IF Part 2</a></p>
-<!--  (lec) [M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi)
-
-  Slides available as [PDF](/Readings/Kramer_Slides_SAMSI_Lecture_1.pdf). !-->
+<p>(lec) <a href>POW Part 1</a></p>
+<p>(lec) <a href>POW Part 2</a></p>
+<p>(lec) <a href>POW Part 3</a></p>
+<p>(lec) <a href>POW Part 4</a></p>
 </div>
 <div id="code" class="section level2">
 <h2>Code</h2>
-<p>(pynb) Includes text, video, and code: <a href="https://mark-kramer.github.io/Case-Studies-Python/IF.html">Integrate and Fire Model</a></p>
-<p>(py) Function to run the <a href="IF.py">IF</a> model.</p>
+<p>(pynb) Includes text, code, and videos: <a href="https://mark-kramer.github.io/Case-Studies-Python/03.html">The Power Spectrum (Part 1)</a></p>
+<p>(pynb) Includes text and code: <a href="https://mark-kramer.github.io/Case-Studies-Python/04.html">The Power Spectrum (Part 2)</a></p>
 </div>
 <div id="discussion" class="section level2">
 <h2>Discussion</h2>
-<div id="discussion-topics-for-the-integrate-and-fire-model-and-its-extensions." class="section level5">
-<h5>Discussion topics for the integrate and fire model, and its extensions.</h5>
 <ol style="list-style-type: decimal">
-<li>Describe the main components of the IF model. Draw it (in some way).</li>
-<li>Describe the main components of the LIF model. Draw it (in some way).</li>
-<li>Describe the differences and similarities between the IF and LIF models.</li>
-<li>The IF model is meant to mimic a neurons activity. Describe what is realistic about the IF model? What is unrealistic?</li>
-<li>Describe the roles of the IF model parameters Vreset and Vthreshold.</li>
-<li>Consider the IF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
-<ol style="list-style-type: decimal">
-<li>How does an increase in capacitance (C) impact the dynamics?</li>
-<li>Can you interpret this physically?</li>
-</ol></li>
-<li>Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
-<ol style="list-style-type: decimal">
-<li>How does an increase in the resistance (R) impact the dynamics?</li>
-<li>How does an increase in the capacitance (C) impact the dynamics?</li>
-</ol></li>
+<li>Define the frequency resolution. How do you “improve” it?</li>
+<li>Define the Nyquist frequency. How do you “improve” it?</li>
+<li>Consider the case in which a collaborator demands a frequency resolution of 0.0001 Hz. How much data must be recorded? What are the disadvantages of recording the data required?</li>
+<li>Describe in words (or equations) what the Fourier transform does?</li>
+<li>What are the units on the power spectrum axes?</li>
+<li>What is “negative power” (i.e., decibels)?</li>
+<li>Given a time series, estimate (in your head) the power spectrum.</li>
+<li>Given a power spectrum, estimate (in your head) the time series that created it.</li>
 </ol>
-</div>
+<p>(pynb) <a href="Power-spectrum-for-class-Part1.ipynb" class="uri">Power-spectrum-for-class-Part1.ipynb</a></p>
+<p>(pynb) <a href="Power-spectrum-for-class-Part2.ipynb" class="uri">Power-spectrum-for-class-Part2.ipynb</a></p>
 </div>
 <div id="challenges" class="section level2">
 <h2>Challenges</h2>
-<div id="computer-challenges-for-the-integrate-and-fire-model-and-its-extensions." class="section level5">
-<h5>Computer challenges for the integrate and fire model, and its extensions.</h5>
 <ol style="list-style-type: decimal">
-<li>Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.</li>
-<li>How does an increase in the resistance (R) impact the dynamics?</li>
-<li>Determine how the firing rate of the IF model varies with input I. Plot the firing rate vs I (the “f-I curve”).</li>
-<li>Determine how the firing rate of the LIF model varies with input I. Plot the firing rate vs I (the “f-I curve”).</li>
-<li>Develop a simulation of the quadratic integrate and fire neuron: <code>C dV/dt = V^2+I</code></li>
-<li>Plot examples of the output of your model for different values of input I. Determine the f-I curve.</li>
-<li>[ADVANCED] Simulate the Izhikevich neuron. Provide examples of two different types of spiking activity.</li>
+<li>Load the file: <code>EEG-2.mat</code>, available on the Github repository into Python.
+<ol style="list-style-type: decimal">
+<li>What is the sampling interval?</li>
+<li>What is the total duration of the recording (T)?</li>
+<li>What is the frequency resolution (df)?</li>
+<li>What is the Nyquist frequency (fNQ)?</li>
+<li>Plot the data and visually inspect it. Describe briefly (in a sentence or two) what rhythms - if any - you see in the data.</li>
+<li>Plot the spectrum versus frequency. You may choose to plot the spectrum on a decibel scale, or not. Defend your choice!</li>
+<li>Plot the spectrogram as a function of frequency and time. You will need to choose the interval size and the overlap between intervals. Do the rhythms in these data appear to change in time?</li>
+<li>Interpret (in a few sentences) the spectrum and spectrogram, and describe the rhythms present in the signal. Compare your visual inspection of the data to the spectrum results - do the analyses agree or disagree?</li>
+</ol></li>
+<li>Repeat Question (1) for the data set <code>EEG-3.mat</code>. Be sure to address each sub-question.</li>
+<li>Repeat Question (1) for the data set <code>EEG-4.mat</code>. Be sure to address each sub-question.</li>
+<li><p>Repeat Question (1) for the data set <code>EEG-5.mat</code>. Be sure to address each sub-question.</p></li>
+<li>Consider the function <code>x(t) =  sin(2 pi t2)</code>.
+<ol style="list-style-type: decimal">
+<li>Simulate this function in Python using a sampling interval of dt = 0.001 ms, and t = (0, 10) s.</li>
+<li>Compute the spectrum, and compute the spectrogram.</li>
+<li>Explain the results you find in each case, and how these results compare to your expectations.</li>
+</ol></li>
 </ol>
-</div>
 </div>
 
 
