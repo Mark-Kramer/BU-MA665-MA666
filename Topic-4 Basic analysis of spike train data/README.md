@@ -18,32 +18,31 @@ N/A
 
 ## Computer challenges
 
-1.  In lab we studied an example of spike train data.  Let's now consider a
+#### 1.  Analyze another data set.
+In lab we studied an example of spike train data.  Let's now consider a
   second data set with the following properties:
-
 ```
   Number of trials:  1000
   Duration of each trial:  500 ms
   Samping rate:  1000 Hz.
 ```
   You can download this data set `Ch3_d2.mat`
-
-  1. Load this data set and calculate the average number of
+  
+1. Load this data set and calculate the average number of
 spikes per trial, the average firing rate, the average ISI, and the Fano
 factor.
-  2. Compute and plot the SNH, ISI histogram, and PSTH and indicate the
+2. Compute and plot the SNH, ISI histogram, and PSTH and indicate the
 average value of each measure on each plot.
-  3. Compare the results for 'd1' and 'd2'.  How are
+3. Compare the results for 'd1' and 'd2'.  How are
 they similar?  How do they differ?
-  4. Using all of the tools at your disposal, conclude that either d1
+4. Using all of the tools at your disposal, conclude that either d1
 and d2 display similar activity, or d1 and d2 display different activity.
-  5. Describe briefly in words (a few sentences) how the activity in d2 behaves.
-  6. We've assumed throughout our analysis a sampling
+5. Describe briefly in words (a few sentences) how the activity in d2 behaves.
+6. We've assumed throughout our analysis a sampling
 window of size T=500 ms - the length of each trial.  Is this the best
 choice for d1 and d2?  Why?  Briefly justify your conclusion.
 
-2. Simulating spike trains as coin flips.
-
+### 2. Simulating spike trains as coin flips.
 In this problem we'll simulate spike train data by performing "coin
   flips".  We discussed this idea in class.  To perform the coin flips,
   we'll draw numbers from a binomial distribution.  We'll perform a coin
