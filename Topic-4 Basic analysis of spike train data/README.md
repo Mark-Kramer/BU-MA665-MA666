@@ -1,6 +1,6 @@
 ## Readings
 
-(pdf) [Mainen & Sejnowski, Science (1995) vol. 268, pp. 1503-6.](/Readings/Maimem_1995.pdf)
+(pdf) [Mainen & Sejnowski, Science (1995) vol. 268, pp. 1503-6.](/Readings/Mainen_1995.pdf)
 
 ## Videos
 
