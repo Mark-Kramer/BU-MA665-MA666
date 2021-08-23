@@ -24,6 +24,8 @@ Either:
 
 (pynb)  Includes text, video, and code: [The Hodgkin-Huxley Model](https://mark-kramer.github.io/Case-Studies-Python/HH.html)
 
+(py)    [HH_functions.py](HH_functions.py)
+
 ## Discussion
 
 1. How is the HH model different from / similar to the IF and LIF models?
