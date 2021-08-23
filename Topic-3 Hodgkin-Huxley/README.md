@@ -10,11 +10,11 @@ Either:
 
 ## Videos
 
-(lec) [HH Part 1](https://youtu.be/yQvw8v8zyPA)
+(lec) HH Part 1 - See OneNote
 
-(lec) [HH Part 2](https://youtu.be/kEtqK6oKWvQ)
+(lec) HH Part 2 - See OneNote
 
-(lec) [HH Part 3](https://youtu.be/wLlRKc9HMjg)
+(lec) HH Part 3 - See OneNote
 
 <!-- (lec) [M. Kramer, Introduction to the Hodgkin-Huxley neuron (Neural Spike Train Analysis 5)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi/)
 
