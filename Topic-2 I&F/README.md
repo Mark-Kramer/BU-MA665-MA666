@@ -8,9 +8,9 @@
 
 ## Videos
 
-(lec) [IF Part 1](https://youtu.be/KFv45vFILbw)
+(lec) IF Part 1 - See OneNote
 
-(lec) [IF Part 2](https://youtu.be/irgfUILDLR0)
+(lec) IF Part 2 - See OneNote
 
 <!--  (lec) [M. Kramer, Introduction to the integrate and fire model (Neural Spike Train Analysis)](https://www.samsi.info/news-and-media/27-jul-drs-m-kramer-and-u-eden-samsi)
 
