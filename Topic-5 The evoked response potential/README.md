@@ -4,13 +4,13 @@
 
 ## Videos
 
-(lec) [ERP Part 1]()
+(lec) ERP Part 1 - see OneNote
 
-(lec) [ERP Part 2]()
+(lec) ERP Part 2 - see OneNote
 
-(lec) [ERP Part 3]()
+(lec) ERP Part 3 - see OneNote
 
-(lec) [ERP Part 4]()
+(lec) ERP Part 4 - see OneNote
 
 ## Code
 
