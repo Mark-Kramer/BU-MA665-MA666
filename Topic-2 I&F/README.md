@@ -33,9 +33,8 @@
     1. How does an increase in capacitance (C) impact the dynamics?
     2. Can you interpret this physically?
 7. Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
-    1. How does an increase in the resistance (R) impact the dynamics?
-    2. How does an increase in the capacitance (C) impact the dynamics?
-
+    1. How does an increase in the capacitance (C) impact the dynamics?
+    2. How does an increase in the resistance (R) impact the dynamics?
 ## Challenges
 
 1. Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
