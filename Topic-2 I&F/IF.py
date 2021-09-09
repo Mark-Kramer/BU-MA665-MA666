@@ -11,12 +11,12 @@ def IF(I,C,plot):                #Input important parameters, and an option to p
     dt=0.01                      #Set the timestep.
     V = np.zeros([1000,1])       #Initialize V.
     V[0]=0.2;                    #Set the initial condition.
-    
+
     for k in range(0,999):       #March forward in time,
         V[k+1] = V[k] + dt*(I/C) #Update the voltage,
         if V[k+1] > Vth:         #... and check if the voltage exceeds the threshold.
             V[k+1] = Vreset      #... if so, reset the voltage
-    
+            
     t = np.arange(0,len(V))*dt   #Define the time axis.
     
     if plot:                     #If the plot flag is on, plot V vs t.
