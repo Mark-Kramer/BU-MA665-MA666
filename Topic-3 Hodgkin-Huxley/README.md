@@ -39,8 +39,8 @@ Either:
     1. Define each term.
     2. How does this current behave for different values of V? 
 9. Consider the current: `I_Na=g_Na m^3 h (V-E_Na)`
-  1. Define each term.
-  2. How does this current behave for different values of V?
+    1. Define each term.
+    2. How does this current behave for different values of V?
 10. Describe an action potential.
 11. Describe how the HH model behaves when the input current I is really small, really big …
 
