@@ -45,11 +45,11 @@ Either:
 ## Challenges
 
 1. Explain each line of the Python code that simulates the HH model.
-2. Describe an action potential.
-3. Describe how the HH model behaves when the input current I is really small, really big …
-3. Determine how the firing rate of the HH model varies with input current I. Plot the firing rate vs I (the “f-I curve”).
-4. How do the dynamics change as you increases / decrease the potassium conductance?
-5. How do the dynamics change as you increases / decrease the sodium conductance?
-6. Visualize the dynamics of the HH model in the three dimensional space (n,m,V). Describe how these dynamics change with changes in the input current I.
-7. [ADVANCED] Simulate the FitzHugh-Nagumo model.
+3. Describe how the HH model behaves when the input current I is small.
+4. Describe an action potential (i.e., describe how the HH model behaves when the input current I is large).
+5. Determine how the firing rate of the HH model varies with input current I. Plot the firing rate vs I (the “f-I curve”).
+6. How do the dynamics change as you increases / decrease the potassium conductance?
+7. How do the dynamics change as you increases / decrease the sodium conductance?
+8. Visualize the dynamics of the HH model in the three dimensional space (n,m,V). Describe how these dynamics change with changes in the input current I.
+9. [ADVANCED] Simulate the FitzHugh-Nagumo model.
 
