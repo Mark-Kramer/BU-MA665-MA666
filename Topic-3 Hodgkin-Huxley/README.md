@@ -41,15 +41,15 @@ Either:
 9. Consider the current: `I_Na=g_Na m^3 h (V-E_Na)`
     1. Define each term.
     2. How does this current behave for different values of V?
-10. Describe an action potential.
-11. Describe how the HH model behaves when the input current I is really small, really big …
 
 ## Challenges
 
 1. Explain each line of the Python code that simulates the HH model.
-2. Determine how the firing rate of the HH model varies with input current I. Plot the firing rate vs I (the “f-I curve”).
-3. How do the dynamics change as you increases / decrease the potassium conductance?
-4. How do the dynamics change as you increases / decrease the sodium conductance?
-5. Visualize the dynamics of the HH model in the three dimensional space (n,m,V). Describe how these dynamics change with changes in the input current I.
-6. [ADVANCED] Simulate the FitzHugh-Nagumo model.
+2. Describe an action potential.
+3. Describe how the HH model behaves when the input current I is really small, really big …
+3. Determine how the firing rate of the HH model varies with input current I. Plot the firing rate vs I (the “f-I curve”).
+4. How do the dynamics change as you increases / decrease the potassium conductance?
+5. How do the dynamics change as you increases / decrease the sodium conductance?
+6. Visualize the dynamics of the HH model in the three dimensional space (n,m,V). Describe how these dynamics change with changes in the input current I.
+7. [ADVANCED] Simulate the FitzHugh-Nagumo model.
 
