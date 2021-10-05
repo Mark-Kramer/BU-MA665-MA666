@@ -56,7 +56,7 @@ In this problem we'll simulate spike train data by performing "coin
 ```
 n_trials=100;
 T = 500;
-data = zeros([n_trials, T]);
+data = np.zeros([n_trials, T]);
 ```
 
 Note that, we define the variable `data` to initially consist of all zeros.  We may think of this as an empty matrix, not yet consisting of any spike data.  Our goal is to fill in this matrix with observations ... which we'll now do.
