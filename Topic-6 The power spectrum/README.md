@@ -10,13 +10,13 @@
 
 ## Videos
 
-(lec) [POW Part 1]()
+(lec) POW Part 1 - see OneNote
 
-(lec) [POW Part 2]()
+(lec) POW Part 2 - see OneNote
 
-(lec) [POW Part 3]()
+(lec) POW Part 3 - see OneNote
 
-(lec) [POW Part 4]()
+(lec) POW Part 4 - see OneNote
 
 ## Code
 
@@ -55,7 +55,7 @@
 7. Repeat Question (1) for the data set `EEG-4.mat`. Be sure to address each sub-question.
 8. Repeat Question (1) for the data set `EEG-5.mat`. Be sure to address each sub-question.
 
-9. Consider the function `x(t) =  sin(2 pi t2)`.
+9. Consider the function `x(t) =  sin(2 pi t^2)`. That's a "t squared" input in the `sin` function.
     1. Simulate this function in Python using a sampling interval of dt = 0.001 ms, and t = (0, 10) s.
     2. Compute the spectrum, and compute the spectrogram.
     3. Explain the results you find in each case, and how these results compare to your expectations.
