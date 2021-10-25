@@ -25,6 +25,8 @@
 3.	Why might cross-frequency coupling be useful in the brain?
 4.	Given a signal, do you expect to find cross-frequency coupling?
 
+(pynb) [Cross-frequency-coupling-for-class-Data-Example.ipynb](Cross-frequency-coupling-for-class-Data-Example.ipynb)
+
 ## Challenges
 
 1.	Load the file `LFP-2.mat` available at the GitHub repository into Python. You will find two variables. The variable `LFP` corresponds to an LFP recording. The variable `t` corresponds to the time axis, in units of seconds. Use these data to answer the following questions.
