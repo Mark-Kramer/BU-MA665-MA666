@@ -36,6 +36,8 @@
 
 7. Given two example signals, what do you expect for the coherence?
 
+(pynb) [Cross-covariance-and-coherence-for-class-Data-Example.ipynb](Cross-covariance-and-coherence-for-class-Data-Example.ipynb)
+
 (pynb) [Cross-covariance-and-coherence-for-class-Part-1.ipynb](Cross-covariance-and-coherence-for-class-Part-1.ipynb)
 
 (pynb) [Cross-covariance-and-coherence-for-class-Part-2.ipynb](Cross-covariance-and-coherence-for-class-Part-2.ipynb)
