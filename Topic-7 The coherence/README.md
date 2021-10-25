@@ -18,7 +18,7 @@
 
 ## Code
 
-(pynb) Includes text, code [The Cross Covariance and Cohernece](https://mark-kramer.github.io/Case-Studies-Python/intro.html)
+(pynb) Includes text, code [The Cross Covariance and Cohernece](https://mark-kramer.github.io/Case-Studies-Python/05.html)
 
 ## Discussion
 
