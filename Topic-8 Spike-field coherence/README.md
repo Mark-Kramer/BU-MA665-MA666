@@ -32,22 +32,22 @@ Computer challenges for the spike-field cohernece
 
 3.	In this question, we consider a simple example that illustrates a fundamental feature of spike-field coherence. Let’s consider the case in which the field is a 10 Hz sinusoid plus Gaussian noise, and the spike train is drawn from a binomial distribution. For a binomial distribution, the probability of a spike at any time is not related to previous spiking behavior. In this case, we also assume no relation between the field and point process. Therefore, we expect to find no spike-field coherence. Let’s simulate some synthetic data in Python, compute the spike-field coherence, and see what we find.
 
-As a first step, create 100 trials of multiscale data, each trial of 1 s duration with a sampling rate of 1000 Hz. Then define the synthetic data. To do so, create in each trial a field, which here will be a sinusoid; and a spike train, which here will be drawn from a binomial distribution with a probability `p` of a spike in each sampling interval:
+    As a first step, create 100 trials of multiscale data, each trial of 1 s duration with a sampling rate of 1000 Hz. Then define the synthetic data. To do so, create in each trial a field, which here will be a sinusoid; and a spike train, which here will be drawn from a binomial distribution with a probability `p` of a spike in each sampling interval:
 
-```
-N  = 1000         # Number of data points in 1 s.
-dt = 1/1000;      # Sampling interval 0.001 s.
+    ```
+    N  = 1000         # Number of data points in 1 s.
+    dt = 1/1000;      # Sampling interval 0.001 s.
 
-# simulated spike data for one trial.
-m  = 1
-p  = 0.01
-n  = np.random.binomial(m, p, N)
+    # simulated spike data for one trial.
+    m  = 1
+    p  = 0.01
+    n  = np.random.binomial(m, p, N)
 
-# simulated sinusoidal field + noise for one trial.
-y = np.sin(2.0*np.pi*np.arange(N)*dt * 10)+0.1*np.random.randn(1,N);
-```
+    # simulated sinusoidal field + noise for one trial.
+    y = np.sin(2.0*np.pi*np.arange(N)*dt * 10)+0.1*np.random.randn(1,N);
+    ```
 
-With these synthetic multiscale data defined, repeat the analysis we performed in class. In particular,
+    With these synthetic multiscale data defined, repeat the analysis we performed in class. In particular,
     1. Visualize the data. What rhythms do you observe? Do you detect associations between the LFP and spikes?
     2. Plot the spectrum versus frequency for these data. Are the dominant rhythms in the spectrum consistent with your visual inspection of the data?
     3. Compute and display the spike-field coherence. Do you find evidence for spike-field coherence?
