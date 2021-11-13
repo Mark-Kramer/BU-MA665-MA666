@@ -20,7 +20,7 @@
 
 (pynb) [Training a Perceptron (Part 1)](training-a-perceptron-Part-1.ipynb)
 
-(pynb) [Training a Perceptron (Part 1)](training-a-perceptron-Part-2.ipynb)
+(pynb) [Training a Perceptron (Part 2)](training-a-perceptron-Part-2.ipynb)
 
 (pynb) [Backpropagation Example](backpropagation-example.ipynb)
 
