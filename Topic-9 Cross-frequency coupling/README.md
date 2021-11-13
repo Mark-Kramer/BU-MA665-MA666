@@ -1,20 +1,15 @@
 ## Readings
 
-(pdf) [Chapter 7 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Readings/Kramer_Eden_Chapter8.pdf)
+(pdf) [Chapter 7 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Readings/Kramer_Eden_Chapter_8.pdf)
 
 (pdf) [Tort et al, J Neurophysiol, 2010.](/Readings/Tort_J_Neurophysiol_2010.pdf)
 
 (pdf) [Hyafil et al, Trends Neurosci, 2015.](/Readings/Hyafil_TINS_2015.pdf)
 
-## Videos
-
-(lec) CFC Part 1 - see OneNote
-
-(lec) CFC Part 2 - see OneNote
 
 ## Code
 
-(pynb)  Python (includes text, code, and videos): [Cross-Frequency Coupling](https://mark-kramer.github.io/Case-Studies-Python)
+(pynb)  Python (includes text, code, and videos): [Cross-Frequency Coupling](https://mark-kramer.github.io/Case-Studies-Python/07.html)
 
 ## Discussion
 

@@ -6,6 +6,12 @@
 
 (pdf) [Pesaran et al, Nat Neuro, 2018.](/Readings/Pesaran_2018.pdf)
 
+## Videos
+
+(lec) SFC Part 1 - see OneNote
+
+(lec) SFC Part 2 - see OneNote
+
 ## Code
 
 (pynb) Includes text and code, [Spike-field coherence](https://mark-kramer.github.io/Case-Studies-Python/11.html)
