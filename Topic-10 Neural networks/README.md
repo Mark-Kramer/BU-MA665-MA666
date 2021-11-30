@@ -26,7 +26,7 @@
 
 ## Challenges
 
-1. Load the file `training_and_testing_values.mat` available on the course repository. You will find that this `.mat` file contains a dictionary with the following important variables:
+**1.** Load the file `training_and_testing_values.mat` available on the course repository. You will find that this `.mat` file contains a dictionary with the following important variables:
 
 Training Data:
 
@@ -52,7 +52,7 @@ b. What is the slope of the line?
 
 c. What is the intercept?
 
-2. Load the file `training_and_testing_values_3.mat` available on the course repository. You will find that this `.mat` file contains a dictionary with the following important variables:
+**2.** Load the file `training_and_testing_values_3.mat` available on the course repository. You will find that this `.mat` file contains a dictionary with the following important variables:
 
 Training Data:
 
