@@ -34,7 +34,7 @@ Training Data:
 
 `correct_answer `	= vector of 0’s and 1’s.
 
-These three variables define the training data. For each (x,y)-coordinate, the `correct_answer` indicates whether the point is above (1) or below (0) the line. There are 1000 example (x,y)-cooridates, each with a correct classification.
+These three variables define the training data. For each (x,y)-coordinate, the `correct_answer` indicates whether the point is above (1) or below (0) the line. There are 2000 example (x,y)-cooridates, each with a correct classification.
 
 Testing Data:
 
