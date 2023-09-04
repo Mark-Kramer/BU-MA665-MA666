@@ -14,6 +14,8 @@
 
 (web) 	[Set up GitHub Desktop](https://desktop.github.com/)
 
+(web)   [Set up ChatGPT](https://chat.openai.com/auth/login)
+
 (web) 	[Install Python via Anaconda](https://www.anaconda.com/)
 
 (web)   [Quick Start Case Studies](https://mark-kramer.github.io/Case-Studies-Python/intro.html#quick-start-to-learning-python-for-neural-data-analysis)
