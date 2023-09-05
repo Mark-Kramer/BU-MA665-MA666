@@ -34,5 +34,5 @@ More Python resources
   - https://jakevdp.github.io/PythonDataScienceHandbook/
   - https://github.com/gregmalcolm/python_koans
   - https://python-guide.readthedocs.io/en/latest/
-  - https://www.youtube.com/watch?v=P5BHTrluu1M&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9
-  - https://www.youtube.com/watch?v=anrOzOapJ2E
+  - [Python Boot Camp, Berkeley Institute for Data Science](https://www.youtube.com/watch?v=P5BHTrluu1M&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)
+  - [Transforming Code Into Beautiful, Idiomatic Python](https://www.youtube.com/watch?v=anrOzOapJ2E)
