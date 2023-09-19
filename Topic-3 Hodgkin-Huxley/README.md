@@ -35,10 +35,10 @@ Either:
 5. Sketch the model equations, in schematic form, to capture the “essence” of the behavior (don’t worry about the detailed values for parameters).
 6. Which gating variables are depolarization activated / depolarization inactivated? 
 7. Sketch the steady-state curves for the gating variables.
-8. Consider the current: `I_K=g_K n^4  (V-E_K)`
+8. Consider the current: `I_K=g_K n^4  (E_K-V)`
     1. Define each term.
     2. How does this current behave for different values of V? 
-9. Consider the current: `I_Na=g_Na m^3 h (V-E_Na)`
+9. Consider the current: `I_Na=g_Na m^3 h (E_Na-V)`
     1. Define each term.
     2. How does this current behave for different values of V?
 
