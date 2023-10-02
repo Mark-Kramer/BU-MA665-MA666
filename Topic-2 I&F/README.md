@@ -35,10 +35,11 @@
 7. Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
     1. How does an increase in the capacitance (C) impact the dynamics?
     2. How does an increase in the resistance (R) impact the dynamics?
+
 ## Challenges
 
-1. Consider the LIF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
-2. How does an increase in the resistance (R) impact the dynamics?
+1. Consider the LIF model. Plot (in Python) voltage (V) versus time (t) for a small input current, for a large input current.
+2. Plot simulations (in Python) of the LIF model to show how an increase in the resistance (R) impacts the dynamics?
 3. Determine how the firing rate of the IF model varies with input I. Plot the firing rate vs I (the “f-I curve”).
 4. Determine how the firing rate of the LIF model varies with input I. Plot the firing rate vs I (the “f-I curve”).
 5. Develop a simulation of the quadratic integrate and fire neuron: `C dV/dt = V^2+I`
