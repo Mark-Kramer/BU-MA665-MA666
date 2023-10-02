@@ -2,6 +2,8 @@
 
 (pdf) [Mainen & Sejnowski, Science (1995) vol. 268, pp. 1503-6.](/Readings/Mainen_1995.pdf)
 
+(pdf) *ADVANCED:* [Kramer & Eden, J Neurosci Methods (2010) 190, no. 1, 149–52.](/Readings/Kramer_Eden_2010.pdf)
+
 ## Videos
 
 N/A
