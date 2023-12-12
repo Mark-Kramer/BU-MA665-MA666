@@ -8,7 +8,7 @@ N/A
 
 ## Discussion
 
-(pynb) [Regression Example](Regression_Example.ipynb)
+(pynb) [Regression Example](METER_Example.ipynb)
 
 ## Challenges
 
