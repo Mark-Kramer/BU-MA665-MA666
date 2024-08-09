@@ -26,6 +26,7 @@
 
 ## Discussion
 
+0. Why brain rhythms?
 1. Define the frequency resolution.  How do you “improve” it?
 2. Define the Nyquist frequency.  How do you “improve” it?
 3. Consider the case in which a collaborator demands a frequency resolution of 0.0001 Hz.  How much data must be recorded?  What are the disadvantages of recording the data required?

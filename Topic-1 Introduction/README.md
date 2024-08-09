@@ -14,6 +14,8 @@
 
 (web) 	[Set up GitHub Desktop](https://desktop.github.com/)
 
+(web)   [Set up ChatGPT](https://chat.openai.com/auth/login)
+
 (web) 	[Install Python via Anaconda](https://www.anaconda.com/)
 
 (web)   [Quick Start Case Studies](https://mark-kramer.github.io/Case-Studies-Python/intro.html#quick-start-to-learning-python-for-neural-data-analysis)
@@ -32,5 +34,5 @@ More Python resources
   - https://jakevdp.github.io/PythonDataScienceHandbook/
   - https://github.com/gregmalcolm/python_koans
   - https://python-guide.readthedocs.io/en/latest/
-  - https://www.youtube.com/watch?v=P5BHTrluu1M&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9
-  - https://www.youtube.com/watch?v=anrOzOapJ2E
+  - [Python Boot Camp, Berkeley Institute for Data Science](https://www.youtube.com/watch?v=P5BHTrluu1M&list=PLKW2Azk23ZtSeBcvJi0JnL7PapedOvwz9)
+  - [Transforming Code Into Beautiful, Idiomatic Python](https://www.youtube.com/watch?v=anrOzOapJ2E)
