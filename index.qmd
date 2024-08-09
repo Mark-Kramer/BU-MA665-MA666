@@ -13,3 +13,12 @@ title: "BU MA665 MA666 (Fall 2024)"
 - Code:  [Integrate & Fire Neuron in Python](IF.html)
 
 # Hodgkin-Huxley Neuron
+- Read:  [Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
+- Read:  [Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
+- Optional Advanced Read: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgkin_Huxley_1952.pdf)
+- Lecture [Slides](/Slides/HH_Lecture_1.pdf)
+- Code:  [Hodgkin-Huxley Neuron in Python](HH.html)
+
+# Perceptron
+- Lecture [Slides](/Slides/Perceptron_1.pdf)
+- Code:  [Training a Perceptron in Python](Perceptron.html)

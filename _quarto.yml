@@ -12,6 +12,10 @@ website:
         text: Introduction
       - href: IF.html
         text: I&F
+      - href: HH.html
+        text: HH
+      - href: Perceptron.html
+        text: Perceptron
 
 
 format:

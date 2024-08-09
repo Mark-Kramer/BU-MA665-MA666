@@ -14,5 +14,3 @@ title: "Introduction"
 # Code
 - [Introduction to Python](https://mark-kramer.github.io/Case-Studies-Python/01.html)
 - [100 numpy exercises](https://github.com/rougier/numpy-100)
-
-
