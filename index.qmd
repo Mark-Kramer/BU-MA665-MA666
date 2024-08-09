@@ -1,7 +1,11 @@
 ---
-title: "BU MA665 MA666"
+title: "BU MA665 MA666 (Fall 2024)"
 ---
 
-This is a Quarto website.
+# Introduction
+- Read the [syllabus](https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Syllabus). 
+- Please complete items in the [Introduction](/Topic-1%20Introduction).
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+# Integrate & Fire Neuron
+- Read:  [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4.](/Readings/Abbott_1999.pdf)
+- Code:  [Integrate & Fire Neuron in Python](IF.html)

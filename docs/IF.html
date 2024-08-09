@@ -175,33 +175,35 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link active" data-scroll-target="#preliminaries">Preliminaries</a></li>
-  <li><a href="#numerical-solutions---introduction" id="toc-numerical-solutions---introduction" class="nav-link" data-scroll-target="#numerical-solutions---introduction">Numerical solutions - Introduction</a></li>
-  <li><a href="#numerical-solutions---implementation" id="toc-numerical-solutions---implementation" class="nav-link" data-scroll-target="#numerical-solutions---implementation">Numerical solutions - Implementation</a></li>
-  <li><a href="#if-code-version-1" id="toc-if-code-version-1" class="nav-link" data-scroll-target="#if-code-version-1">I&amp;F CODE (version 1)</a></li>
-  <li><a href="#voltage-threshold" id="toc-voltage-threshold" class="nav-link" data-scroll-target="#voltage-threshold">Voltage threshold</a></li>
-  <li><a href="#if-code-version-2" id="toc-if-code-version-2" class="nav-link" data-scroll-target="#if-code-version-2">I&amp;F CODE (version 2)</a></li>
+  <li><a href="#preliminaries" id="toc-preliminaries" class="nav-link active" data-scroll-target="#preliminaries"><span class="header-section-number">1</span> Preliminaries</a></li>
+  <li><a href="#numerical-solutions---introduction" id="toc-numerical-solutions---introduction" class="nav-link" data-scroll-target="#numerical-solutions---introduction"><span class="header-section-number">2</span> Numerical solutions - Introduction</a></li>
+  <li><a href="#numerical-solutions---implementation" id="toc-numerical-solutions---implementation" class="nav-link" data-scroll-target="#numerical-solutions---implementation"><span class="header-section-number">3</span> Numerical solutions - Implementation</a></li>
+  <li><a href="#if-code-version-1" id="toc-if-code-version-1" class="nav-link" data-scroll-target="#if-code-version-1"><span class="header-section-number">4</span> I&amp;F CODE (version 1)</a></li>
+  <li><a href="#voltage-threshold" id="toc-voltage-threshold" class="nav-link" data-scroll-target="#voltage-threshold"><span class="header-section-number">5</span> Voltage threshold</a></li>
+  <li><a href="#if-code-version-2" id="toc-if-code-version-2" class="nav-link" data-scroll-target="#if-code-version-2"><span class="header-section-number">6</span> I&amp;F CODE (version 2)</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><div class="quarto-title-block"><div class="quarto-title-tools-only"><h1></h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 
 
 
 
-<p>format: html: code-fold: true code-tools: true jupyter: python 3 number-sections: true</p>
 <p>In this notebook we will use Python to simulate the integrate and fire (I&amp;F) neuron model. We’ll investigate, in particular, how the spiking activity varies as we adjust the input current <span class="math inline">\(I\)</span>.</p>
-<section id="preliminaries" class="level2">
-<h2 class="anchored" data-anchor-id="preliminaries">Preliminaries</h2>
+<section id="preliminaries" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="preliminaries"><span class="header-section-number">1</span> Preliminaries</h2>
 <p>Before beginning, let’s load in the Python package we’ll need:</p>
 <div id="cell-3" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
-<section id="numerical-solutions---introduction" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-solutions---introduction">Numerical solutions - Introduction</h2>
+<section id="numerical-solutions---introduction" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="numerical-solutions---introduction"><span class="header-section-number">2</span> Numerical solutions - Introduction</h2>
 <p>How do we compute a numerical solution to the integrate and fire model? The basic idea is to rearrange the differential equation to get <span class="math inline">\(V(t+1)\)</span> on the left hand side, and <span class="math inline">\(V(t)\)</span> on the right hand side. Then, if we know what’s happening at time <span class="math inline">\(t\)</span>, we can solve for what’s happening at time <span class="math inline">\(t+1\)</span>.</p>
 <p>For example, consider the differential equation:</p>
 <p><span class="math display">\[
@@ -234,12 +236,18 @@ window.Quarto = {
 <p>Notice that, in this expression, we use our current value of the voltage V(t) and the model (I/C) to determine the next value of the voltage V(t+1).</p>
 <p>Now, let’s program this equation in Python. First, let’s set the values for the parameters <span class="math inline">\(I\)</span> and <span class="math inline">\(C\)</span>.</p>
 <div id="cell-5" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>C<span class="op">=</span><span class="fl">1.0</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>I<span class="op">=</span><span class="fl">1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>We also need to set the value for <span class="math inline">\(dt\)</span>. This defines the time step for our model. We must choose it small enough so that we don’t miss anything interesting. We’ll choose:</p>
 <div id="cell-7" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>dt<span class="op">=</span><span class="fl">0.01</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Let’s assume the units of time are seconds. So, we step forward in time by <span class="math inline">\(0.01\)</span> s.</p>
 <p>The right hand side of our equation is nearly defined, but we’re still missing one thing, <span class="math inline">\(V(t)\)</span>.</p>
@@ -256,8 +264,11 @@ window.Quarto = {
 <p>So here’s an easier question: what <em>initial</em> value do we assign to <span class="math inline">\(V(t)\)</span>?</p>
 <p>To start, we’ll create an array of zeros to hold our results for <span class="math inline">\(V\)</span>:</p>
 <div id="cell-11" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>V <span class="op">=</span> np.zeros([<span class="dv">1000</span>,<span class="dv">1</span>])</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>V.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>(1000, 1)</code></pre>
 </div>
@@ -265,7 +276,10 @@ window.Quarto = {
 <p>This array <code>V</code> consists of 1000 rows and 1 column. We can think of each row entry as corresponding to a discrete step in time. Our goal is to fill-in the values of <code>V</code> (i.e., step forward in time), in a way consistent with our model.</p>
 <p>Let’s choose an initial value for <code>V</code> of 0.2, which in our simple model we’ll assume represents the rest state.</p>
 <div id="cell-13" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>V[<span class="dv">0</span>]<span class="op">=</span><span class="fl">0.2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -279,14 +293,17 @@ window.Quarto = {
 </div>
 <p>After the two calculations above, we’ve moved forward two time steps into the future, from <span class="math inline">\(t=0\)</span> s to <span class="math inline">\(t=0.01\)</span> s, and then from <span class="math inline">\(t=0.01\)</span> s to <span class="math inline">\(t=0.02\)</span> s. But what if we want to know <span class="math inline">\(V\)</span> at <span class="math inline">\(t=10\)</span> s? Then, this iteration-by-hand procedure becomes much too boring and error-prone. So, what do we do? Let’s make the computer do it …</p>
 </section>
-<section id="numerical-solutions---implementation" class="level2">
-<h2 class="anchored" data-anchor-id="numerical-solutions---implementation">Numerical solutions - Implementation</h2>
+<section id="numerical-solutions---implementation" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="numerical-solutions---implementation"><span class="header-section-number">3</span> Numerical solutions - Implementation</h2>
 <p>Let’s computerize this iteration-by-hand procedure to find <code>V[999]</code>.</p>
 <p>To do so, we’ll use a <a href="https://wiki.python.org/moin/ForLoop">for-loop</a>.</p>
 <p>Here’s what it looks like:</p>
 <div id="cell-17" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">999</span>):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    V[k<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> V[k] <span class="op">+</span> dt<span class="op">*</span>(I<span class="op">/</span>C)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -310,7 +327,10 @@ window.Quarto = {
 </div>
 <p>Execute this for-loop and examine the results in vector <code>V</code>. To do so, let’s plot <code>V</code>:</p>
 <div id="cell-21" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(V);</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -324,7 +344,10 @@ window.Quarto = {
 </div>
 <p>This plot is informative, but not great. Really, we’d like to plot the voltage as a function of <em>time</em>, not steps or indices. To do so, we need to define a time axis:</p>
 <div id="cell-24" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>,<span class="bu">len</span>(V))<span class="op">*</span>dt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -338,20 +361,28 @@ window.Quarto = {
 </div>
 <p>Now, with <em>time</em> defined, let’s redo the plot of the voltage with the axes labeled appropriately.</p>
 <div id="cell-27" class="cell" data-execution_count="15">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(t,V)</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xlabel('Time [s]');</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.ylabel('V');</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <p>Finally, let’s put it all together . . .</p>
 </section>
-<section id="if-code-version-1" class="level2">
-<h2 class="anchored" data-anchor-id="if-code-version-1">I&amp;F CODE (version 1)</h2>
+<section id="if-code-version-1" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="if-code-version-1"><span class="header-section-number">4</span> I&amp;F CODE (version 1)</h2>
 <p>So far, we constructed parts of the I&amp;F model in bits-and-pieces. Let’s now collect all the code, compute a numerical solution to the I&amp;F model, and plot the results (with appropriate axes).</p>
 <p>First, let’s clear all the variables:</p>
 <div id="cell-31" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>reset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div id="cell-32" class="cell" data-execution_count="18">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -369,6 +400,7 @@ window.Quarto = {
 <span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.plot(t,V)                         #Plot the results.</span></span>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.xlabel('Time [s]')</span></span>
 <span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.ylabel('Voltage [mV]');</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -381,8 +413,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="voltage-threshold" class="level2">
-<h2 class="anchored" data-anchor-id="voltage-threshold">Voltage threshold</h2>
+<section id="voltage-threshold" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="voltage-threshold"><span class="header-section-number">5</span> Voltage threshold</h2>
 <p>Notice, our model is missing something important: <strong>the reset</strong>.</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -410,25 +442,34 @@ window.Quarto = {
 </div>
 </div>
 <div id="cell-38" class="cell" data-execution_count="19">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Vth <span class="op">=</span> <span class="dv">1</span><span class="op">;</span>        <span class="co">#Define the voltage threshold.</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>Vreset <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>     <span class="co">#Define the reset voltage.</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">999</span>):            <span class="co">#March forward in time,</span></span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    V[k<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> V[k] <span class="op">+</span> dt<span class="op">*</span>(I<span class="op">/</span>C)      <span class="co">#Update the voltage,</span></span>
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">### ADD SOMETHING HERE??? --------------------------</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 </section>
-<section id="if-code-version-2" class="level2">
-<h2 class="anchored" data-anchor-id="if-code-version-2">I&amp;F CODE (version 2)</h2>
+<section id="if-code-version-2" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="if-code-version-2"><span class="header-section-number">6</span> I&amp;F CODE (version 2)</h2>
 <p>Now, let’s put it all together to make a complete I&amp;F model (with a thershold and reset), simulate it, and plot the result.</p>
 <div id="cell-40" class="cell" data-execution_count="21">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>reset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 <div class="cell-output cell-output-stdin">
 <pre><code>Once deleted, variables cannot be recovered. Proceed (y/[n])?  y</code></pre>
 </div>
 </div>
 <div id="cell-41" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">### ADD YOUR CODE!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -554,6 +595,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
