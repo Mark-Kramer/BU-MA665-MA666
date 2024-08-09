@@ -16,6 +16,8 @@ website:
         text: HH
       - href: Perceptron.html
         text: Perceptron
+      - href: Backpropagation.html
+        text: Backprop
 
 
 format:

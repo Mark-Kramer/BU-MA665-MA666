@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BU MA665 MA666 (Fall 2024) – BU MA665 MA666</title>
+<title>Backpropagation – BU MA665 MA666</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -89,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -109,7 +143,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Perceptron</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Backpropagation.html"> 
+    <a class="nav-link active" href="./Backpropagation.html" aria-current="page"> 
 <span class="menu-text">Backprop</span></a>
   </li>  
 </ul>
@@ -128,11 +162,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#integrate-fire-neuron" id="toc-integrate-fire-neuron" class="nav-link" data-scroll-target="#integrate-fire-neuron">Integrate &amp; Fire Neuron</a></li>
-  <li><a href="#hodgkin-huxley-neuron" id="toc-hodgkin-huxley-neuron" class="nav-link" data-scroll-target="#hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</a></li>
-  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
-  <li><a href="#backpropagation" id="toc-backpropagation" class="nav-link" data-scroll-target="#backpropagation">Backpropagation</a></li>
+  <li><a href="#steps-to-backpropagation" id="toc-steps-to-backpropagation" class="nav-link active" data-scroll-target="#steps-to-backpropagation"><span class="header-section-number">1</span> Steps to backpropagation</a></li>
+  <li><a href="#load-example-data" id="toc-load-example-data" class="nav-link" data-scroll-target="#load-example-data"><span class="header-section-number">2</span> Load example data</a></li>
+  <li><a href="#for-training-first-define-two-useful-functions" id="toc-for-training-first-define-two-useful-functions" class="nav-link" data-scroll-target="#for-training-first-define-two-useful-functions"><span class="header-section-number">3</span> For training, first define two useful functions:</a></li>
+  <li><a href="#now-train-the-neural-network-with-these-in_true-out_true-data." id="toc-now-train-the-neural-network-with-these-in_true-out_true-data." class="nav-link" data-scroll-target="#now-train-the-neural-network-with-these-in_true-out_true-data."><span class="header-section-number">4</span> Now, train the neural network with these (<code>in_true</code>, <code>out_true</code>) data.</a></li>
+  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges"><span class="header-section-number">5</span> Challenges</a></li>
   </ul>
 </nav>
     </div>
@@ -141,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BU MA665 MA666 (Fall 2024)</h1>
+<div class="quarto-title-block"><div><h1 class="title">Backpropagation</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -158,45 +192,129 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
-<ul>
-<li>Read the <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Syllabus">syllabus</a>.</li>
-<li>Please complete items in the <a href="introduction.html">Introduction</a>.</li>
-</ul>
+<p>In this notebook, we’ll implement a quick representation of the backpropagation algorithm for the simple two node network.</p>
+<div id="cell-2" class="cell" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.io <span class="im">import</span> loadmat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="steps-to-backpropagation" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Steps to backpropagation</h1>
+<p>We outlined 4 steps to perform backpropagation,</p>
+<ol type="1">
+<li>Choose random initial weights.</li>
+<li>Train the neural network on given input and output data.</li>
+<li>Update the weights.</li>
+<li>Repeat steps 2 &amp; 3 many times.</li>
+</ol>
+<p>Let’s now implement these steps in an example data set.</p>
 </section>
-<section id="integrate-fire-neuron" class="level1">
-<h1>Integrate &amp; Fire Neuron</h1>
-<ul>
-<li>Read: <a href="./Readings/Abbott_1999.pdf">Abbott, Brain Res Bull (1999) vol.&nbsp;50 (5-6) pp.&nbsp;303-4.</a></li>
-<li>Read: <a href="./Readings/Koch_Chapter_1.pdf">Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.</a></li>
-<li>Lecture <a href="./Slides/IF_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="IF.html">Integrate &amp; Fire Neuron in Python</a></li>
-</ul>
+<section id="load-example-data" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Load example data</h1>
+<p>The training data is <a href="./Data/backpropagation_example_data.mat">backpropagation_example_data.mat</a>. Get these data, and load them:</p>
+<div id="cell-5" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the .mat file</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> loadmat(<span class="st">'backpropagation_example_data.mat'</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the variables from the loaded data</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>in_true  <span class="op">=</span> data[<span class="st">'in_true'</span>].squeeze()</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>out_true <span class="op">=</span> data[<span class="st">'out_true'</span>].squeeze()  <span class="co"># .squeeze() removes any unnecessary dimensions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Here we acquire two variables:</p>
+<p><code>in_true</code>: the true input to the hidden two-node neural network</p>
+<p><code>out_true</code>: the true output of the hidden two-ndoe neural network</p>
+<p>The two-node neural network is hidden because we don’t know the weights (<code>w[0]</code>, <code>w[1]</code>, and <code>w[2]</code>).</p>
+<p>Instead, all we observe are the pairs of inputs and outputs to this hidden neural network.</p>
+<p>Let’s look at some of these data:</p>
+<div id="cell-8" class="cell" data-execution_count="18">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.transpose([in_true, out_true]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[[ -5.07721176   8.86495629]
+ [ -4.42151036   8.78851213]
+ [  8.43023852   6.07694085]
+ ...
+ [ -1.09949946   8.25391663]
+ [  2.72521796   7.36458545]
+ [-10.04105911   9.21913802]]</code></pre>
+</div>
+</div>
+<p>These data were created by sending the inputs (<code>in_true</code>, the first column above) into a two-node neural network to produce the outputs (<code>out_true</code>, the second column above).</p>
+<p>Again, we do not know the weights of this network … that’s what we’d like to find.</p>
+<p>To do so, we’ll use these data to train a neural network through back propagation.</p>
 </section>
-<section id="hodgkin-huxley-neuron" class="level1">
-<h1>Hodgkin-Huxley Neuron</h1>
-<ul>
-<li>Read: <a href="./Readings/Izhikevich_Chapter_2.pdf">Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.</a></li>
-<li>Read: <a href="./Readings/Hodgkin-Huxley_Cheat_Sheet.pdf">Hodgkin-Huxley 1-page cheat sheet</a></li>
-<li>Optional Advanced Read: <a href="./Readings/Hodgkin_Huxley_1952.pdf">Hodgkin and Huxley, J Physiol (Lond) (1952) vol.&nbsp;117 (4) pp.&nbsp;500-44.</a></li>
-<li>Lecture <a href="./Slides/HH_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="HH.html">Hodgkin-Huxley Neuron in Python</a></li>
-</ul>
+<section id="for-training-first-define-two-useful-functions" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> For training, first define two useful functions:</h1>
+<div id="cell-11" class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sigmoid(x):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>np.exp(<span class="op">-</span>x))     <span class="co"># Define the sigmoid anonymous function.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> feedforward(w, s0):         <span class="co"># Define feedforward solution.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> w[<span class="dv">0</span>]<span class="op">*</span>s0                <span class="co"># ... activity of first neuron,</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    s1 <span class="op">=</span> sigmoid(x1)            <span class="co"># ... output of first neuron,</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    x2 <span class="op">=</span> w[<span class="dv">1</span>]<span class="op">*</span>s1                <span class="co"># ... activity of second neuron,</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    s2 <span class="op">=</span> sigmoid(x2)            <span class="co"># ... output of second neuron,</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    out<span class="op">=</span> w[<span class="dv">2</span>]<span class="op">*</span>s2                <span class="co"># Output of neural network.</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out,s1,s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="perceptron" class="level1">
-<h1>Perceptron</h1>
-<ul>
-<li>Lecture <a href="./Slides/Perceptron_1.pdf">Slides</a></li>
-<li>Code: <a href="Perceptron.html">Training a Perceptron in Python</a></li>
-</ul>
+<section id="now-train-the-neural-network-with-these-in_true-out_true-data." class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Now, train the neural network with these (<code>in_true</code>, <code>out_true</code>) data.</h1>
+<div id="cell-13" class="cell" data-execution_count="14">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>w     <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>]                  <span class="co"># Choose initial values for the weights.</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.01</span>                    <span class="co"># Set the learning constant.</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> np.size(in_true)<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> np.zeros([K,<span class="dv">4</span>])        <span class="co"># Define a variable to hold the results of each iteration.    </span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> np.arange(K):</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    s0     <span class="op">=</span> in_true[k]          <span class="co"># Define the input,</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    target <span class="op">=</span> out_true[k]         <span class="co"># ... and the target output.</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Step 2. Calculate feedforward solution to get output.</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Step 3. Update the weights.</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    w0 <span class="op">=</span> w[<span class="dv">0</span>]<span class="op">;</span> w1 <span class="op">=</span> w[<span class="dv">1</span>]<span class="op">;</span> w2 <span class="op">=</span> w[<span class="dv">2</span>]<span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    w[<span class="dv">2</span>] <span class="op">=</span> <span class="st">"SOMETHING"</span> </span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    w[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"SOMETHING"</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    w[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"SOMETHING"</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save the results of this step. --------------------------------------</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Here we save the 3 weights, and the neural network output.</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># results[k,:] = [w[0],w[1],w[2],  out]</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the NN weights and error during training </span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.clf()</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,2], label='w2')</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,1], label='w1')</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,0], label='w0')</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,3]-target, label='error')</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.legend()                       #Include a legend,</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xlabel('Iteration number');    #... and axis label.</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the NN weights</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co"># print(results[-1,0:3])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section>
-<section id="backpropagation" class="level1">
-<h1>Backpropagation</h1>
-<ul>
-<li>Lecture <a href="./Slides/Backpropagation_1.pdf">Slides</a></li>
-<li>Code: <a href="Backpropagation.html">Backpropagation in a Simple Neural Network in Python</a></li>
-</ul>
+<section id="challenges" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Challenges</h1>
+<ol type="1">
+<li>Complete the code above to determine the weights (<code>w[0]</code>, <code>w[1]</code>, and <code>w[2]</code>) of the hidden two-node neural network.</li>
+</ol>
 
 
 </section>
@@ -291,6 +409,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);

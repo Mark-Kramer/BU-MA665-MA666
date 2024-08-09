@@ -22,3 +22,7 @@ title: "BU MA665 MA666 (Fall 2024)"
 # Perceptron
 - Lecture [Slides](/Slides/Perceptron_1.pdf)
 - Code:  [Training a Perceptron in Python](Perceptron.html)
+
+# Backpropagation
+- Lecture [Slides](/Slides/Backpropagation_1.pdf)
+- Code:  [Backpropagation in a Simple Neural Network in Python](Backpropagation.html)
