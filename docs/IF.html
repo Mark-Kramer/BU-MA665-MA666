@@ -156,8 +156,12 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
+    <a class="nav-link" href="./introduction.html"> 
+<span class="menu-text">Introduction</span></a>
+  </li>  
+  <li class="nav-item">
     <a class="nav-link active" href="./IF.html" aria-current="page"> 
-<span class="menu-text">IF</span></a>
+<span class="menu-text">I&amp;F</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -181,6 +185,8 @@ window.Quarto = {
   <li><a href="#if-code-version-1" id="toc-if-code-version-1" class="nav-link" data-scroll-target="#if-code-version-1"><span class="header-section-number">4</span> I&amp;F CODE (version 1)</a></li>
   <li><a href="#voltage-threshold" id="toc-voltage-threshold" class="nav-link" data-scroll-target="#voltage-threshold"><span class="header-section-number">5</span> Voltage threshold</a></li>
   <li><a href="#if-code-version-2" id="toc-if-code-version-2" class="nav-link" data-scroll-target="#if-code-version-2"><span class="header-section-number">6</span> I&amp;F CODE (version 2)</a></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion"><span class="header-section-number">7</span> Discussion</a></li>
+  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges"><span class="header-section-number">8</span> Challenges</a></li>
   </ul>
 </nav>
     </div>
@@ -191,8 +197,8 @@ window.Quarto = {
 
 
 <p>In this notebook we will use Python to simulate the integrate and fire (I&amp;F) neuron model. We’ll investigate, in particular, how the spiking activity varies as we adjust the input current <span class="math inline">\(I\)</span>.</p>
-<section id="preliminaries" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="preliminaries"><span class="header-section-number">1</span> Preliminaries</h2>
+<section id="preliminaries" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Preliminaries</h1>
 <p>Before beginning, let’s load in the Python package we’ll need:</p>
 <div id="cell-3" class="cell" data-execution_count="1">
 <details class="code-fold">
@@ -202,8 +208,8 @@ window.Quarto = {
 </details>
 </div>
 </section>
-<section id="numerical-solutions---introduction" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="numerical-solutions---introduction"><span class="header-section-number">2</span> Numerical solutions - Introduction</h2>
+<section id="numerical-solutions---introduction" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Numerical solutions - Introduction</h1>
 <p>How do we compute a numerical solution to the integrate and fire model? The basic idea is to rearrange the differential equation to get <span class="math inline">\(V(t+1)\)</span> on the left hand side, and <span class="math inline">\(V(t)\)</span> on the right hand side. Then, if we know what’s happening at time <span class="math inline">\(t\)</span>, we can solve for what’s happening at time <span class="math inline">\(t+1\)</span>.</p>
 <p>For example, consider the differential equation:</p>
 <p><span class="math display">\[
@@ -293,8 +299,8 @@ window.Quarto = {
 </div>
 <p>After the two calculations above, we’ve moved forward two time steps into the future, from <span class="math inline">\(t=0\)</span> s to <span class="math inline">\(t=0.01\)</span> s, and then from <span class="math inline">\(t=0.01\)</span> s to <span class="math inline">\(t=0.02\)</span> s. But what if we want to know <span class="math inline">\(V\)</span> at <span class="math inline">\(t=10\)</span> s? Then, this iteration-by-hand procedure becomes much too boring and error-prone. So, what do we do? Let’s make the computer do it …</p>
 </section>
-<section id="numerical-solutions---implementation" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="numerical-solutions---implementation"><span class="header-section-number">3</span> Numerical solutions - Implementation</h2>
+<section id="numerical-solutions---implementation" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Numerical solutions - Implementation</h1>
 <p>Let’s computerize this iteration-by-hand procedure to find <code>V[999]</code>.</p>
 <p>To do so, we’ll use a <a href="https://wiki.python.org/moin/ForLoop">for-loop</a>.</p>
 <p>Here’s what it looks like:</p>
@@ -370,8 +376,8 @@ window.Quarto = {
 </div>
 <p>Finally, let’s put it all together . . .</p>
 </section>
-<section id="if-code-version-1" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="if-code-version-1"><span class="header-section-number">4</span> I&amp;F CODE (version 1)</h2>
+<section id="if-code-version-1" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> I&amp;F CODE (version 1)</h1>
 <p>So far, we constructed parts of the I&amp;F model in bits-and-pieces. Let’s now collect all the code, compute a numerical solution to the I&amp;F model, and plot the results (with appropriate axes).</p>
 <p>First, let’s clear all the variables:</p>
 <div id="cell-31" class="cell">
@@ -413,8 +419,8 @@ window.Quarto = {
 </div>
 </div>
 </section>
-<section id="voltage-threshold" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="voltage-threshold"><span class="header-section-number">5</span> Voltage threshold</h2>
+<section id="voltage-threshold" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Voltage threshold</h1>
 <p>Notice, our model is missing something important: <strong>the reset</strong>.</p>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -453,8 +459,8 @@ window.Quarto = {
 </details>
 </div>
 </section>
-<section id="if-code-version-2" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="if-code-version-2"><span class="header-section-number">6</span> I&amp;F CODE (version 2)</h2>
+<section id="if-code-version-2" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> I&amp;F CODE (version 2)</h1>
 <p>Now, let’s put it all together to make a complete I&amp;F model (with a thershold and reset), simulate it, and plot the result.</p>
 <div id="cell-40" class="cell" data-execution_count="21">
 <details class="code-fold">
@@ -501,6 +507,31 @@ window.Quarto = {
 </div>
 </div>
 </div>
+</section>
+<section id="discussion" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Discussion</h1>
+<ol type="1">
+<li>Describe the main components of the IF model. Draw it (in some way).</li>
+<li>Describe the main components of the LIF model. Draw it (in some way).</li>
+<li>Describe the differences and similarities between the IF and LIF models.</li>
+<li>The IF model is meant to mimic a neurons activity. Describe what is realistic about the IF model? What is unrealistic?</li>
+<li>Describe the roles of the IF model parameters <code>Vreset</code> and <code>Vthreshold</code>.</li>
+<li>Consider the IF model. Sketch voltage (V) versus time (t) for a small input current, for a large input current.
+<ol type="1">
+<li>How does an increase in capacitance (C) impact the dynamics?</li>
+<li>Can you interpret this physically?</li>
+</ol></li>
+</ol>
+</section>
+<section id="challenges" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Challenges</h1>
+<ol type="1">
+<li>Consider the <em>LIF</em> model. Plot (in Python) voltage (V) versus time (t) for a small input current, for a large input current.</li>
+<li>How does an increase in the capacitance (C) impact the dynamics of the LIF model?</li>
+<li>How does an increase in the resistance (R) impact the dynamics of the LIF model?</li>
+<li>Determine how the firing rate of the LIF model varies with input I. Plot the firing rate versus I (i.e., plot the “f-I curve”).</li>
+<li><strong>ADVANCED</strong>. Simulate the <a href="./Readings/Izhikevich_2003.pdf">Izhikevich neuron</a>. Provide examples of two different types of spiking activity.</li>
+</ol>
 
 
 </section>

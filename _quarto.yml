@@ -8,8 +8,10 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: introduction.qmd
+        text: Introduction
       - href: IF.html
-        text: IF
+        text: I&F
 
 
 format:
