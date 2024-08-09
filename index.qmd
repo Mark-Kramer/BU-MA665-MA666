@@ -9,4 +9,7 @@ title: "BU MA665 MA666 (Fall 2024)"
 # Integrate & Fire Neuron
 - Read:  [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4.](/Readings/Abbott_1999.pdf)
 - Read:  [Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_1.pdf)
+- Lecture [Slides](/Slides/IF_Lecture_1.pdf)
 - Code:  [Integrate & Fire Neuron in Python](IF.html)
+
+# Hodgkin-Huxley Neuron

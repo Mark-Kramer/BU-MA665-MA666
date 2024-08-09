@@ -53,7 +53,7 @@
     "href": "index.html",
     "title": "BU MA665 MA666 (Fall 2024)",
     "section": "",
-    "text": "Introduction\n\nRead the syllabus.\nPlease complete items in the Introduction.\n\n\n\nIntegrate & Fire Neuron\n\nRead: Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4.\nRead: Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.\nCode: Integrate & Fire Neuron in Python"
+    "text": "Introduction\n\nRead the syllabus.\nPlease complete items in the Introduction.\n\n\n\nIntegrate & Fire Neuron\n\nRead: Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4.\nRead: Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.\nLecture Slides\nCode: Integrate & Fire Neuron in Python\n\n\n\nHodgkin-Huxley Neuron"
   },
   {
     "objectID": "about.html",
