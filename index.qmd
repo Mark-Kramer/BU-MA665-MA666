@@ -1,28 +1,39 @@
 ---
-title: "BU MA665 MA666 (Fall 2024)"
+title: "BU MA665 + MA666 (Fall 2024)"
 ---
 
-# Introduction
-- Read the [syllabus](https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Syllabus). 
-- Please complete items in the [Introduction](introduction.html).
+# MA665
 
-# Integrate & Fire Neuron
-- Read:  [Abbott, Brain Res Bull (1999) vol. 50 (5-6) pp. 303-4.](/Readings/Abbott_1999.pdf)
+### Introduction
+- Read the [syllabus](/Readings/MA665_MA666_Syllabus.pdf)
+- Please complete items in the [Introduction](introduction.html)
+
+### Integrate \& Fire Neuron
+- Read:  [Abbott, Brain Res Bull, 1999, pages 303-4.](/Readings/Abbott_1999.pdf)
 - Read:  [Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_1.pdf)
 - Lecture [Slides](/Slides/IF_Lecture_1.pdf)
 - Code:  [Integrate & Fire Neuron in Python](IF.html)
 
-# Hodgkin-Huxley Neuron
+### Hodgkin-Huxley Neuron
 - Read:  [Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
 - Read:  [Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
 - Optional Advanced Read: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgkin_Huxley_1952.pdf)
 - Lecture [Slides](/Slides/HH_Lecture_1.pdf)
 - Code:  [Hodgkin-Huxley Neuron in Python](HH.html)
 
-# Perceptron
+### Perceptron
 - Lecture [Slides](/Slides/Perceptron_1.pdf)
 - Code:  [Training a Perceptron in Python](Perceptron.html)
 
-# Backpropagation
+### Backpropagation
 - Lecture [Slides](/Slides/Backpropagation_1.pdf)
 - Code:  [Backpropagation in a Simple Neural Network in Python](Backpropagation.html)
+
+### Regression
+- Read: Chapter 3 of [An Introduction to Statistical Learning](https://link.springer.com/book/10.1007/978-1-4614-7138-7) (*Free via BU Library*)
+- Lecture [Slides](/Slides/Regression_1.pdf)
+- Code:  [Regression Example in Python](Regression.html)
+
+---
+# MA666
+

@@ -18,6 +18,8 @@ website:
         text: Perceptron
       - href: Backpropagation.html
         text: Backprop
+      - href: Regression.html
+        text: Regression
 
 
 format:

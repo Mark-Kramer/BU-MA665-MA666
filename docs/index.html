@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BU MA665 MA666 (Fall 2024) – BU MA665 MA666</title>
+<title>BU MA665 + MA666 (Fall 2024) – BU MA665 MA666</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -112,6 +112,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./Backpropagation.html"> 
 <span class="menu-text">Backprop</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Regression.html"> 
+<span class="menu-text">Regression</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -128,11 +132,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#ma665" id="toc-ma665" class="nav-link active" data-scroll-target="#ma665">MA665</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
   <li><a href="#integrate-fire-neuron" id="toc-integrate-fire-neuron" class="nav-link" data-scroll-target="#integrate-fire-neuron">Integrate &amp; Fire Neuron</a></li>
   <li><a href="#hodgkin-huxley-neuron" id="toc-hodgkin-huxley-neuron" class="nav-link" data-scroll-target="#hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</a></li>
   <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
   <li><a href="#backpropagation" id="toc-backpropagation" class="nav-link" data-scroll-target="#backpropagation">Backpropagation</a></li>
+  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a></li>
+  </ul></li>
+  <li><a href="#ma666" id="toc-ma666" class="nav-link" data-scroll-target="#ma666">MA666</a></li>
   </ul>
 </nav>
     </div>
@@ -141,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BU MA665 MA666 (Fall 2024)</h1>
+<h1 class="title">BU MA665 + MA666 (Fall 2024)</h1>
 </div>
 
 
@@ -158,24 +167,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level1">
-<h1>Introduction</h1>
+<section id="ma665" class="level1">
+<h1>MA665</h1>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
 <ul>
-<li>Read the <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Syllabus">syllabus</a>.</li>
-<li>Please complete items in the <a href="introduction.html">Introduction</a>.</li>
+<li>Read the <a href="./Readings/MA665_MA666_Syllabus.pdf">syllabus</a></li>
+<li>Please complete items in the <a href="introduction.html">Introduction</a></li>
 </ul>
 </section>
-<section id="integrate-fire-neuron" class="level1">
-<h1>Integrate &amp; Fire Neuron</h1>
+<section id="integrate-fire-neuron" class="level3">
+<h3 class="anchored" data-anchor-id="integrate-fire-neuron">Integrate &amp; Fire Neuron</h3>
 <ul>
-<li>Read: <a href="./Readings/Abbott_1999.pdf">Abbott, Brain Res Bull (1999) vol.&nbsp;50 (5-6) pp.&nbsp;303-4.</a></li>
+<li>Read: <a href="./Readings/Abbott_1999.pdf">Abbott, Brain Res Bull, 1999, pages 303-4.</a></li>
 <li>Read: <a href="./Readings/Koch_Chapter_1.pdf">Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.</a></li>
 <li>Lecture <a href="./Slides/IF_Lecture_1.pdf">Slides</a></li>
 <li>Code: <a href="IF.html">Integrate &amp; Fire Neuron in Python</a></li>
 </ul>
 </section>
-<section id="hodgkin-huxley-neuron" class="level1">
-<h1>Hodgkin-Huxley Neuron</h1>
+<section id="hodgkin-huxley-neuron" class="level3">
+<h3 class="anchored" data-anchor-id="hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</h3>
 <ul>
 <li>Read: <a href="./Readings/Izhikevich_Chapter_2.pdf">Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.</a></li>
 <li>Read: <a href="./Readings/Hodgkin-Huxley_Cheat_Sheet.pdf">Hodgkin-Huxley 1-page cheat sheet</a></li>
@@ -184,19 +195,32 @@ ul.task-list li input[type="checkbox"] {
 <li>Code: <a href="HH.html">Hodgkin-Huxley Neuron in Python</a></li>
 </ul>
 </section>
-<section id="perceptron" class="level1">
-<h1>Perceptron</h1>
+<section id="perceptron" class="level3">
+<h3 class="anchored" data-anchor-id="perceptron">Perceptron</h3>
 <ul>
 <li>Lecture <a href="./Slides/Perceptron_1.pdf">Slides</a></li>
 <li>Code: <a href="Perceptron.html">Training a Perceptron in Python</a></li>
 </ul>
 </section>
-<section id="backpropagation" class="level1">
-<h1>Backpropagation</h1>
+<section id="backpropagation" class="level3">
+<h3 class="anchored" data-anchor-id="backpropagation">Backpropagation</h3>
 <ul>
 <li>Lecture <a href="./Slides/Backpropagation_1.pdf">Slides</a></li>
 <li>Code: <a href="Backpropagation.html">Backpropagation in a Simple Neural Network in Python</a></li>
 </ul>
+</section>
+<section id="regression" class="level3">
+<h3 class="anchored" data-anchor-id="regression">Regression</h3>
+<ul>
+<li>Read: Chapter 3 of <a href="https://link.springer.com/book/10.1007/978-1-4614-7138-7">An Introduction to Statistical Learning</a> (<em>Free via BU Library</em>)</li>
+<li>Lecture <a href="./Slides/Regression_1.pdf">Slides</a></li>
+<li>Code: <a href="Regression.html">Regression Example in Python</a></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="ma666" class="level1">
+<h1>MA666</h1>
 
 
 </section>
