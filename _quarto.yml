@@ -20,6 +20,8 @@ website:
         text: Backprop
       - href: Regression.html
         text: Regression
+      - href: Rhythms_1.html
+        text: Rhythms 1
 
 
 format:

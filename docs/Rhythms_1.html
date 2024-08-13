@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BU MA665 + MA666 (Fall 2024) – BU MA665 MA666</title>
+<title>Rhythms 1 – BU MA665 MA666</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -89,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -117,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Regression</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Rhythms_1.html"> 
+    <a class="nav-link active" href="./Rhythms_1.html" aria-current="page"> 
 <span class="menu-text">Rhythms 1</span></a>
   </li>  
 </ul>
@@ -136,20 +170,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ma665" id="toc-ma665" class="nav-link active" data-scroll-target="#ma665">MA665</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#integrate-fire-neuron" id="toc-integrate-fire-neuron" class="nav-link" data-scroll-target="#integrate-fire-neuron">Integrate &amp; Fire Neuron</a></li>
-  <li><a href="#hodgkin-huxley-neuron" id="toc-hodgkin-huxley-neuron" class="nav-link" data-scroll-target="#hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</a></li>
-  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
-  <li><a href="#backpropagation" id="toc-backpropagation" class="nav-link" data-scroll-target="#backpropagation">Backpropagation</a></li>
-  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a></li>
-  </ul></li>
-  <li><a href="#ma666" id="toc-ma666" class="nav-link" data-scroll-target="#ma666">MA666</a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-rhythms" id="toc-introduction-to-rhythms" class="nav-link" data-scroll-target="#introduction-to-rhythms">Introduction to Rhythms</a></li>
-  <li><a href="#analyzing-rhythms" id="toc-analyzing-rhythms" class="nav-link" data-scroll-target="#analyzing-rhythms">Analyzing Rhythms</a></li>
-  </ul></li>
+  <li><a href="#making-sinusoids" id="toc-making-sinusoids" class="nav-link active" data-scroll-target="#making-sinusoids"><span class="header-section-number">1</span> Making sinusoids</a></li>
+  <li><a href="#orthogonality-of-sinusoids" id="toc-orthogonality-of-sinusoids" class="nav-link" data-scroll-target="#orthogonality-of-sinusoids"><span class="header-section-number">2</span> Orthogonality of sinusoids</a></li>
+  <li><a href="#decomposing-a-sinusoid-into-one-component" id="toc-decomposing-a-sinusoid-into-one-component" class="nav-link" data-scroll-target="#decomposing-a-sinusoid-into-one-component"><span class="header-section-number">3</span> Decomposing a sinusoid into one component</a></li>
+  <li><a href="#decomposing-a-sinusoid-into-many-components" id="toc-decomposing-a-sinusoid-into-many-components" class="nav-link" data-scroll-target="#decomposing-a-sinusoid-into-many-components"><span class="header-section-number">4</span> Decomposing a sinusoid into many components</a></li>
   </ul>
 </nav>
     </div>
@@ -158,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BU MA665 + MA666 (Fall 2024)</h1>
+<div class="quarto-title-block"><div><h1 class="title">Rhythms 1</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
 </div>
 
 
@@ -175,77 +199,208 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="ma665" class="level1">
-<h1>MA665</h1>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Read the <a href="./Readings/MA665_MA666_Syllabus.pdf">syllabus</a></li>
-<li>Please complete items in the <a href="introduction.html">Introduction</a></li>
-</ul>
+<p>In this notebook we will simulate rhythmic activity as a first step in our understanding of brain rhythms.</p>
+<div id="90b0e4f7-34de-4e79-bca3-35cf6ddd41e2" class="cell" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load modules</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.io <span class="im">as</span> sio</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="making-sinusoids" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Making sinusoids</h1>
+<p>It’s relatively easy to make sinusoids in Python, using built-in commands. There are many ways to do so, and we’ll start here by constructing a time axis. Consider the following:</p>
+<div id="c4ce8627-f4a3-43a1-804f-6ff06100234e" class="cell" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.001</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> The variable t defines a time axis. When does time start? When does time end? What is the sampling interval (i.e., the time between samples)?</p>
+</div>
+</div>
+</div>
+<p>Now, let’s define a new variable that represents a sinusoid,</p>
+<div id="4f0b6d21-41a7-4321-9850-47279dbf714b" class="cell" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.sin(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> Is “x” a sinusoid? What is the frequency of the oscillation?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> How would you update “x” to create a sine function that oscillates at 10 Hz?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> How would you create a <em>cosine</em> function that oscillates at 14 Hz?</p>
+</div>
+</div>
+</div>
 </section>
-<section id="integrate-fire-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="integrate-fire-neuron">Integrate &amp; Fire Neuron</h3>
-<ul>
-<li>Read: <a href="./Readings/Abbott_1999.pdf">Abbott, Brain Res Bull, 1999, pages 303-4.</a></li>
-<li>Read: <a href="./Readings/Koch_Chapter_1.pdf">Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.</a></li>
-<li>Lecture <a href="./Slides/IF_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="IF.html">Integrate &amp; Fire Neuron in Python</a></li>
-</ul>
+<section id="orthogonality-of-sinusoids" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Orthogonality of sinusoids</h1>
+<p>An important feature of sinusoids is orthogonality.</p>
+<p>Briefly, if we multiply together two cosine functions, and sum the resulting product, we get zero unless the frequencies match.</p>
+<p>Let’s illustrate this idea in Python. To do so, first define two sinusoids,</p>
+<div id="78327266-8bcf-4120-aa9e-87fde9065025" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>f1 <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x1 <span class="op">=</span> np.cos(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t<span class="op">*</span>f1)<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>f2 <span class="op">=</span> <span class="dv">2</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>x2 <span class="op">=</span> np.cos(<span class="dv">2</span><span class="op">*</span>np.pi<span class="op">*</span>t<span class="op">*</span>f2)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> What is the frequency of each sinusoid? Plot these sinusoids to see how they behave.</p>
+</div>
+</div>
+</div>
+<p>To check orthogonality, we want to multiply together these two cosine functions, point-by-point at each time, then sum their product over all time.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> How do we perform this operation in Python? Do so, and report what you find.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> How does this result change for different choices of f1 and f2?</p>
+</div>
+</div>
+</div>
 </section>
-<section id="hodgkin-huxley-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</h3>
-<ul>
-<li>Read: <a href="./Readings/Izhikevich_Chapter_2.pdf">Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.</a></li>
-<li>Read: <a href="./Readings/Hodgkin-Huxley_Cheat_Sheet.pdf">Hodgkin-Huxley 1-page cheat sheet</a></li>
-<li><em>Optional Advanced Read</em>: <a href="./Readings/Hodgkin_Huxley_1952.pdf">Hodgkin and Huxley, J Physiol (Lond) (1952) vol.&nbsp;117 (4) pp.&nbsp;500-44.</a></li>
-<li>Lecture <a href="./Slides/HH_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="HH.html">Hodgkin-Huxley Neuron in Python</a></li>
-</ul>
+<section id="decomposing-a-sinusoid-into-one-component" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Decomposing a sinusoid into one component</h1>
+<p>We’ll now consider a more complicated signal. Please download the data <a href="./Data/Rhythms_1.mat">Rhythms_1.mat</a> and load the data,</p>
+<div id="45d9ba16-cb28-4969-972c-28e817300ff2" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> sio.loadmat(<span class="st">'Data/Rhythms_1.mat'</span>)       <span class="co"># Load the experimental data</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>d1   <span class="op">=</span> data[<span class="st">'d1'</span>]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>t    <span class="op">=</span> data[<span class="st">'t'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> What variables appear? What are the dimensions of each? What is the sampling interval? What is the total duration of the data?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> By visual inspection of the data, what frequencies dominate the signal?</p>
+</div>
+</div>
+</div>
+<p>Now, we’d like to “compare” sinusoids with known frequency to the data.</p>
+<p>In doing so, our goal is to identify those sinusoids that “best match” the data; this will reveal the rhythms that appear in the signal, which we will ultimately display graphically in a power spectrum.</p>
+<p>To begin this process, we’ll specify a handful of frequencies to consider.</p>
+<p>Let’s start with a sine function oscillating at 1 Hz.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> Define a 1 Hz sine function that lasts for the duration of the data, and has the same sampling interval (i.e., the same time axis as the data).</p>
+</div>
+</div>
+</div>
+<p>With the sine function now defined, let’s “compare” it to the data</p>
+<p>To do so, we multiply point-by-point the data and sine function and sum the result.</p>
+<p>Because we’re approximating an integral, we’ll need to include the differential (dt) in the sum.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> How do we compute this integral?</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> Consider your result for this integral. Does the 1 Hz sine function make a significant contribution to the data? Is the result of this integral consistent with your visual inspection of the data?</p>
+</div>
+</div>
+</div>
 </section>
-<section id="perceptron" class="level3">
-<h3 class="anchored" data-anchor-id="perceptron">Perceptron</h3>
-<ul>
-<li>Read: <a href="./Readings/NYT_1958.pdf">Electronic Brain Teaches Itself, New York Times, 13 July 1958</a></li>
-<li>Read: <a href="./Readings/OConnor_2022.pdf">Undercover Algorithm, O’Connor, 2022</a></li>
-<li>Lecture <a href="./Slides/Perceptron_1.pdf">Slides</a></li>
-<li>Code: <a href="Perceptron.html">Training a Perceptron in Python</a></li>
-</ul>
-</section>
-<section id="backpropagation" class="level3">
-<h3 class="anchored" data-anchor-id="backpropagation">Backpropagation</h3>
-<ul>
-<li>Lecture <a href="./Slides/Backpropagation_1.pdf">Slides</a></li>
-<li>Code: <a href="Backpropagation.html">Backpropagation in a Simple Neural Network in Python</a></li>
-</ul>
-</section>
-<section id="regression" class="level3">
-<h3 class="anchored" data-anchor-id="regression">Regression</h3>
-<ul>
-<li>Read: Chapter 3 of <a href="https://link.springer.com/book/10.1007/978-1-4614-7138-7">An Introduction to Statistical Learning</a> (<em>Free via BU Library</em>)</li>
-<li>Lecture <a href="./Slides/Regression_1.pdf">Slides</a></li>
-<li>Code: <a href="Regression.html">Regression Example in Python</a></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="ma666" class="level1">
-<h1>MA666</h1>
-<section id="introduction-to-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-rhythms">Introduction to Rhythms</h3>
-<ul>
-<li>Read: <a href="./Readings/NYT_1976.pdf">Jell-O Test Finds Lifelike Signals, New York Times, 6 March 1976</a></li>
-<li>Read: <a href="./Readings/Buzsaki_Science_2004.pdf">Neuronal Oscillations in Cortical Networks</a></li>
-<li>Lecture 1 <a href="./Slides/Rhythms_1.pdf">Slides</a></li>
-<li>Lecture 2 <a href="./Slides/Rhythms_2.pdf">Slides</a></li>
-<li>Code: <a href="Rhythms_1.html">Rhythms Introduction</a></li>
-</ul>
-</section>
-<section id="analyzing-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-rhythms">Analyzing Rhythms</h3>
+<section id="decomposing-a-sinusoid-into-many-components" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Decomposing a sinusoid into many components</h1>
+<p>Now, we’ve compared a single sinusoid - the 1 Hz sine function - to the data.</p>
+<p>In this case, we’ve found that the corresponding integral is small.</p>
+<p>However, we’re not interested in <em>only</em> this sinusoid; we’d really like to consider a range of sinusoids (both sine and cosine functions) oscillating at different frequencies.</p>
+<p>Our goal in this part of notebook is to do so, and compare the data to sinusoids at different frequencies.</p>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> Compare the data to sinusoids at integer frequencies {1,2,3, …, 10} Hz. Save your results for each frequency of the cosine function in a variable called “A”, and the results for each frequency of the sine function in a variable called “B”.</p>
+<p><em>HINT</em>: There are many ways to compute these comparisons. You might perform each computation “by hand” (e.g., compute A at 1 Hz, B at 1 Hz, A at 2 Hz, B at 2 Hz, . . . ). In doing so, you’ll notice a lot of repetition. Is there a more efficient way to perform so many similar computations?</p>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -338,6 +493,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);

@@ -17,11 +17,13 @@ title: "BU MA665 + MA666 (Fall 2024)"
 ### Hodgkin-Huxley Neuron
 - Read:  [Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
 - Read:  [Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
-- Optional Advanced Read: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgkin_Huxley_1952.pdf)
+- *Optional Advanced Read*: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgkin_Huxley_1952.pdf)
 - Lecture [Slides](/Slides/HH_Lecture_1.pdf)
 - Code:  [Hodgkin-Huxley Neuron in Python](HH.html)
 
 ### Perceptron
+- Read: [Electronic Brain Teaches Itself, New York Times, 13 July 1958](/Readings/NYT_1958.pdf)
+- Read: [Undercover Algorithm, O'Connor, 2022](/Readings/OConnor_2022.pdf)
 - Lecture [Slides](/Slides/Perceptron_1.pdf)
 - Code:  [Training a Perceptron in Python](Perceptron.html)
 
@@ -37,3 +39,11 @@ title: "BU MA665 + MA666 (Fall 2024)"
 ---
 # MA666
 
+### Introduction to Rhythms
+- Read: [Jell-O Test Finds Lifelike Signals, New York Times, 6 March 1976](/Readings/NYT_1976.pdf)
+- Read: [Neuronal Oscillations in Cortical Networks](/Readings/Buzsaki_Science_2004.pdf)
+- Lecture 1 [Slides](/Slides/Rhythms_1.pdf)
+- Lecture 2 [Slides](/Slides/Rhythms_2.pdf)
+- Code: [Rhythms Introduction](Rhythms_1.html)
+
+### Analyzing Rhythms
