@@ -23,7 +23,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 
 ### Perceptron
 - Read: [Electronic Brain Teaches Itself, New York Times, 13 July 1958](/Readings/NYT_1958.pdf)
-- Read: [Perceptron Tested for Photo Analysis](/Readings/Klass_1961)
+- Read: [Perceptron Tested for Photo Analysis, Aviation Weekly, 1961](/Readings/Klass_1961.pdf)
 - Read: [Undercover Algorithm, O'Connor, 2022](/Readings/OConnor_2022.pdf)
 - Lecture [Slides](/Slides/Perceptron_1.pdf)
 - Code:  [Training a Perceptron in Python](Perceptron.html)

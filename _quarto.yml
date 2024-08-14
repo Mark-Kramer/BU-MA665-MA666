@@ -2,6 +2,10 @@ project:
   type: website
   output-dir: docs
 
+render:
+  ignore:
+    - Dont-Sync-2024
+
 website:
   title: "BU MA665 MA666"
   navbar:
