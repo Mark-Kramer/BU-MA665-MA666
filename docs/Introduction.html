@@ -262,7 +262,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":1,"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\nd = np.array(df.iloc[:,0])\nt = np.array(df.iloc[:,1])\n\n# Print useful information about the data.\nprint(\"Sampling frequency is \" + str( 1/(t[2]-t[1]))  + ' Hz.')\nprint(\"Total duration of recording is \" + str(t[-1]) + ' s.')\nprint(\"Dimensions of data are \" + str(np.shape(d)) + ' data points.')\n\n# Choose an initial interval of time, from onset to 5 s,\ninitial_time_interval = t < 5        \n\n# ... and plot it.\nplt.plot(t[initial_time_interval], d[initial_time_interval])\nplt.xlabel('Time [s]')\nplt.ylabel('Data')\nplt.title('Initial interval of data');\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":2,"code":"4+9"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":3,"code":"4/3"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":4,"code":"4/10**2"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":5,"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport math"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":6,"code":"np.sin(2*np.pi)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":7,"code":"math.atan(2*np.pi)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":8,"code":"math.atan?"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":9,"code":"import numpy as np\na = np.array([[1, 2, 3, 4]])\nprint(a)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":10,"code":"a = np.array( [[1, 2, 3, 4]] )\nprint( a * 3 )\nprint( 4 * a )\nprint( a + 1 )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":11,"code":"import numpy as np\na = np.array([1,2,3,4])\na * a"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":12,"code":"import numpy as np\na = 2\nb = np.array( [[0, 4, 7, 6]] )\nc = np.array( [[1, 5, 6, 8]] )\n\nprint( b * c )\nprint( b / c + a)\nprint( np.multiply( b, c ))"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":13,"code":"a = np.array([[1,2,3,4]])\nprint(a.shape)\nprint(shape(a))"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":14,"code":"import numpy as np\n\np = np.array( [[1,2,3],[4,5,6]] )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":15,"code":"print( p )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":16,"code":"print( p + 2 )\nprint( 2 * p )\nprint( p * p )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":17,"code":"import numpy as np\na = np.array( [1, 2, 3, 4, 5] )\nb = np.array( [6, 7, 8, 9, 10] )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":18,"code":"print( \"a[1] = \" + str(a[1]) )\nprint( \"b[1] = \" + str(b[1]) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":19,"code":"c = np.array([a,b])\nprint( \"c = \\n\" + str(c) )    # \\n is a newline, or carriage return, which makes the printed matrix lineup better "},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":20,"code":"print( \"shape of c = \" + str( np.shape(c) ) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":21,"code":"print( \"c[0,3] = \" + str( c[0,3] ) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":22,"code":"print( \"c[0,:] = \" + str( c[0,:] ) )\nprint( \"2nd through 4th columns of the first row are c[0,1:4] = \" + str(c[0,1:4]) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":23,"code":"print(\"c[0, :4] = \" + str( c[0,:4]))\nprint(\"c[0, 1:] = \" + str( c[0,1:]))"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":24,"code":"c[0,::2]"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":25,"code":"a = np.arange(1,10)    # this creates a vector of increasing values from 1 to 9\na = 2*a \n\nprint( \"a = \" + str(a) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":26,"code":"a[a > 10]"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":27,"code":"lgIdx = a > 10\nlgIdx"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":28,"code":"a[lgIdx]"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":29,"code":"lgIdx.nonzero()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":30,"code":"a[ (a > 10).nonzero() ]"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":31,"code":"print(\"a = \" + str(a))\na[a > 10] = 100\nprint(\"a = \" + str(a))"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":32,"code":"b = np.array([[1,2,3],[4,5,6],[7,8,9]])\nprint( \"b = \\n\" + str(b) )\nprint( \" b > 5 is \\n\" + str(b > 5) )\nprint(\" b[b>5] is an array: \" + str(b[b>5]) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":33,"code":"import numpy as np\n\nx = np.linspace(0,10,11)   \nprint( \"x = \" + str(x) )\n\n#   The above line constructs a vector that starts at 0, ends at 10, and\n#   has 11 entries (takes steps of size 1 from 0 to 10). Let\n\ny = np.sin(x)\nprint( \"y = \" + str(y) )"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":34,"code":"import matplotlib.pyplot as plt\nx = ([1, 2, 3, 4])\ny = x\nplt.plot(x,y) \nplt.show()          # this is the plotting equivalent of print()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":35,"code":"x = np.linspace(0,10,11)   \ny = np.sin(x)\n\nplt.figure()\nplt.plot(x, y)\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":36,"code":"import numpy as np\nx = np.linspace(0,10, 101)\nprint(x)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":37,"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,y,'k')   # the 'k' we've added makes the curve black instead of blue\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":38,"code":"import numpy as np\nx = np.linspace(0,10, 101)\nz = np.cos(x)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":39,"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.plot(x,z)\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":40,"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,z)                     # plot z vs x.\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":41,"code":"plt.figure()\nplt.plot(x,z)                     # plot z vs x\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.xlabel('x')                   # x-axis label\nplt.ylabel('y or z')              # y-axis label\nplt.title('y vs x and z vs x')    # title\nplt.legend(('y','z'))             # make a legend labeling each line\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":42,"code":"plt.figure()\nplt.plot(x,y, label='y')     # sometimes it is easier to name a trace within the plot() call\nplt.plot(x,z, label='z')     # notice without a color matplotlib will assign one\nplt.xlabel('x', fontsize=14)\nplt.ylabel('y', fontsize=14)\nplt.title('y vs x', fontsize=18)\nplt.legend(fontsize=12)\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":43,"code":"import numpy as np\n\nprint(\"a Gaussian random number (mean=0, variance=1): \" + str( np.random.randn() ))\n\n# a uniform random number on [0,1)\nprint(\"a uniform random number from [0,1): \" + str(np.random.rand()))"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":44,"code":"r = np.random.randn(1000)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":45,"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.hist(r)\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":46,"code":"import numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.arange(0,10,0.1) # Define a vector x that ranges from 0 to 9.9 with step 0.1.\nk = 1                # Fix k=1,\ny = np.sin(x + k*np.pi/4)  # ... and define y at this k.\n\nplt.figure()               # Make a new figure,\nplt.plot(x,y)              # ... and plot y versus x.\n\nk = 2                # Let's repeat this, for k=2,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 3                      # Let's repeat this, for k=3,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 4                      # Let's repeat this, for k=4,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 5                      # Let's repeat this, for k=5,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":47,"code":"x = np.arange(0,10,0.1)     #First, define the vector x."},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":48,"code":"plt.figure()\nfor k in range(1,6):               \n    y = np.sin(x + k*np.pi/4) #Define y (note the variable 'k' in sin), also note we have indented here!\n    plt.plot(x,y)             #Plot y versus x\n     \n# no indentation now, so this code follows the loop\nplt.show()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":49,"code":"def my_square_function(x, c):\n    \"\"\"Square a vector and add a constant.\n\n    Arguments:\n    x -- vector to square\n    c -- constant to add to the square of x\n    \n    Returns:\n    x*x + c\n    \"\"\"\n    \n    return x * x + c"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":50,"code":"import numpy as np\nv = np.linspace(0.,10.,11)\nb = 2.5\n\n# Now let's run the code,\nv2 = my_square_function(v, b)\nprint(\"v = \" + str(v))\nprint(\"v*v+2.5 = \" + str(v2))"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":51,"code":"import pandas as pd"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":52,"code":"df = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\ndf.info()"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":53,"code":"print(df)"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":54,"code":"import numpy as np\nd = np.array(df.iloc[:,0])  #Get the values associated with the first column of the dataframe\nt = np.array(df.iloc[:,1])  #Get the values associated with the first column of the dataframe"},{"options":{"results":"markup","warning":"true","output":"true","message":"true","fig-height":5,"context":"interactive","dpi":72,"label":"","out-width":"700px","classes":"","autorun":"","fig-cap":"","out-height":"","comment":"","fig-width":7,"read-only":"false"},"id":55,"code":"import matplotlib.pyplot as plt\n\n# Choose a subset to plot\nt = t[0:500]\nd = d[0:500]\n\nplt.figure()\nplt.plot(t, d)\nplt.title('My plot')\nplt.xlabel('Time [s]')\nplt.ylabel('Voltage [mV]')\nplt.show()"}];
+globalThis.qpyodideCellDetails = [{"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\nd = np.array(df.iloc[:,0])\nt = np.array(df.iloc[:,1])\n\n# Print useful information about the data.\nprint(\"Sampling frequency is \" + str( 1/(t[2]-t[1]))  + ' Hz.')\nprint(\"Total duration of recording is \" + str(t[-1]) + ' s.')\nprint(\"Dimensions of data are \" + str(np.shape(d)) + ' data points.')\n\n# Choose an initial interval of time, from onset to 5 s,\ninitial_time_interval = t < 5        \n\n# ... and plot it.\nplt.plot(t[initial_time_interval], d[initial_time_interval])\nplt.xlabel('Time [s]')\nplt.ylabel('Data')\nplt.title('Initial interval of data');\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":1},{"code":"4+9","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":2},{"code":"4/3","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":3},{"code":"4/10**2","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":4},{"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport math","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":5},{"code":"np.sin(2*np.pi)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":6},{"code":"math.atan(2*np.pi)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":7},{"code":"import numpy as np\na = np.array([[1, 2, 3, 4]])\nprint(a)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":8},{"code":"a = np.array( [[1, 2, 3, 4]] )\nprint( a * 3 )\nprint( 4 * a )\nprint( a + 1 )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":9},{"code":"import numpy as np\na = np.array([1,2,3,4])\na * a","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":10},{"code":"import numpy as np\na = 2\nb = np.array( [[0, 4, 7, 6]] )\nc = np.array( [[1, 5, 6, 8]] )\n\nprint( b * c )\nprint( b / c + a)\nprint( np.multiply( b, c ))","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":11},{"code":"a = np.array([[1,2,3,4]])\nprint(a.shape)\nprint(np.shape(a))","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":12},{"code":"import numpy as np\n\np = np.array( [[1,2,3],[4,5,6]] )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":13},{"code":"print( p )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":14},{"code":"print( p + 2 )\nprint( 2 * p )\nprint( p * p )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":15},{"code":"import numpy as np\na = np.array( [1, 2, 3, 4, 5] )\nb = np.array( [6, 7, 8, 9, 10] )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":16},{"code":"print( \"a[1] = \" + str(a[1]) )\nprint( \"b[1] = \" + str(b[1]) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":17},{"code":"c = np.array([a,b])\nprint( \"c = \\n\" + str(c) )    # \\n is a newline, or carriage return, which makes the printed matrix lineup better ","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":18},{"code":"print( \"shape of c = \" + str( np.shape(c) ) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":19},{"code":"print( \"c[0,3] = \" + str( c[0,3] ) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":20},{"code":"print( \"c[0,:] = \" + str( c[0,:] ) )\nprint( \"2nd through 4th columns of the first row are c[0,1:4] = \" + str(c[0,1:4]) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":21},{"code":"print(\"c[0, :4] = \" + str( c[0,:4]))\nprint(\"c[0, 1:] = \" + str( c[0,1:]))","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":22},{"code":"c[0,::2]","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":23},{"code":"a = np.arange(1,10)    # this creates a vector of increasing values from 1 to 9\na = 2*a \n\nprint( \"a = \" + str(a) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":24},{"code":"a[a > 10]","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":25},{"code":"lgIdx = a > 10\nlgIdx","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":26},{"code":"a[lgIdx]","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":27},{"code":"lgIdx.nonzero()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":28},{"code":"a[ (a > 10).nonzero() ]","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":29},{"code":"print(\"a = \" + str(a))\na[a > 10] = 100\nprint(\"a = \" + str(a))","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":30},{"code":"b = np.array([[1,2,3],[4,5,6],[7,8,9]])\nprint( \"b = \\n\" + str(b) )\nprint( \" b > 5 is \\n\" + str(b > 5) )\nprint(\" b[b>5] is an array: \" + str(b[b>5]) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":31},{"code":"import numpy as np\n\nx = np.linspace(0,10,11)   \nprint( \"x = \" + str(x) )\n\n#   The above line constructs a vector that starts at 0, ends at 10, and\n#   has 11 entries (takes steps of size 1 from 0 to 10). Let\n\ny = np.sin(x)\nprint( \"y = \" + str(y) )","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":32},{"code":"import matplotlib.pyplot as plt\nx = ([1, 2, 3, 4])\ny = x\nplt.figure()\nplt.plot(x,y) \nplt.show()          # this is the plotting equivalent of print()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":33},{"code":"x = np.linspace(0,10,11)   \ny = np.sin(x)\n\nplt.figure()\nplt.plot(x, y)\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":34},{"code":"import numpy as np\nx = np.linspace(0,10, 101)\nprint(x)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":35},{"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,y,'k')   # the 'k' we've added makes the curve black instead of blue\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":36},{"code":"import numpy as np\nx = np.linspace(0,10, 101)\nz = np.cos(x)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":37},{"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.plot(x,z)\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":38},{"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,z)                     # plot z vs x.\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":39},{"code":"plt.figure()\nplt.plot(x,z)                     # plot z vs x\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.xlabel('x')                   # x-axis label\nplt.ylabel('y or z')              # y-axis label\nplt.title('y vs x and z vs x')    # title\nplt.legend(('y','z'))             # make a legend labeling each line\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":40},{"code":"plt.figure()\nplt.plot(x,y, label='y')     # sometimes it is easier to name a trace within the plot() call\nplt.plot(x,z, label='z')     # notice without a color matplotlib will assign one\nplt.xlabel('x', fontsize=14)\nplt.ylabel('y', fontsize=14)\nplt.title('y vs x', fontsize=18)\nplt.legend(fontsize=12)\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":41},{"code":"import numpy as np\n\nprint(\"a Gaussian random number (mean=0, variance=1): \" + str( np.random.randn() ))\n\n# a uniform random number on [0,1)\nprint(\"a uniform random number from [0,1): \" + str(np.random.rand()))","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":42},{"code":"r = np.random.randn(1000)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":43},{"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.hist(r)\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":44},{"code":"import numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.arange(0,10,0.1) # Define a vector x that ranges from 0 to 9.9 with step 0.1.\nk = 1                # Fix k=1,\ny = np.sin(x + k*np.pi/4)  # ... and define y at this k.\n\nplt.figure()               # Make a new figure,\nplt.plot(x,y)              # ... and plot y versus x.\n\nk = 2                # Let's repeat this, for k=2,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 3                      # Let's repeat this, for k=3,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 4                      # Let's repeat this, for k=4,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 5                      # Let's repeat this, for k=5,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":45},{"code":"x = np.arange(0,10,0.1)     #First, define the vector x.","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":46},{"code":"plt.figure()\nfor k in range(1,6):               \n    y = np.sin(x + k*np.pi/4) #Define y (note the variable 'k' in sin), also note we have indented here!\n    plt.plot(x,y)             #Plot y versus x\n     \n# no indentation now, so this code follows the loop\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":47},{"code":"def my_square_function(x, c):\n    \"\"\"Square a vector and add a constant.\n\n    Arguments:\n    x -- vector to square\n    c -- constant to add to the square of x\n    \n    Returns:\n    x*x + c\n    \"\"\"\n    \n    return x * x + c","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":48},{"code":"import numpy as np\nv = np.linspace(0.,10.,11)\nb = 2.5\n\n# Now let's run the code,\nv2 = my_square_function(v, b)\nprint(\"v = \" + str(v))\nprint(\"v*v+2.5 = \" + str(v2))","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":49},{"code":"import pandas as pd","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":50},{"code":"df = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\ndf.info()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":51},{"code":"print(df)","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":52},{"code":"import numpy as np\nd = np.array(df.iloc[:,0])  #Get the values associated with the first column of the dataframe\nt = np.array(df.iloc[:,1])  #Get the values associated with the first column of the dataframe","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":53},{"code":"import matplotlib.pyplot as plt\n\n# Choose a subset to plot\nt = t[0:500]\nd = d[0:500]\n\nplt.figure()\nplt.plot(t, d)\nplt.title('My plot')\nplt.xlabel('Time [s]')\nplt.ylabel('Voltage [mV]')\nplt.show()","options":{"output":"true","comment":"","read-only":"false","context":"interactive","results":"markup","out-width":"700px","label":"","autorun":"","warning":"true","classes":"","message":"true","dpi":72,"fig-height":5,"fig-width":7,"out-height":"","fig-cap":""},"id":54}];
 
 
 </script>
@@ -723,8 +723,12 @@ Note
 </div>
 </div>
 </div>
-<div id="qpyodide-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="cell-24" class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>math.atan?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 <p>You should see a description of the function pop up at the bottom of the window.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -743,13 +747,13 @@ Note
 <section id="example-4.-we-can-use-python-to-define-lists-of-numbers." class="level3">
 <h3 class="anchored" data-anchor-id="example-4.-we-can-use-python-to-define-lists-of-numbers.">Example 4. We can use Python to define lists of numbers.</h3>
 <p>In Python, there are several different data structures that are designed to store more than one element. Here we will focus on the <code>array</code> data structure, but if you are curious to know how and when to use other structures, there is a good explanation <a href="http://www.physics.nyu.edu/pine/pymanual/html/chap3/chap3_arrays.html">here</a>. Let’s define an array:</p>
-<div id="qpyodide-insertion-location-9"></div>
+<div id="qpyodide-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="example-5.-we-can-manipulate-arrays-by-scalars." class="level3">
 <h3 class="anchored" data-anchor-id="example-5.-we-can-manipulate-arrays-by-scalars.">Example 5. We can manipulate arrays by scalars.</h3>
 <p>A scalar is a single number. Consider,</p>
-<div id="qpyodide-insertion-location-10"></div>
+<div id="qpyodide-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -766,7 +770,7 @@ Note
 <section id="example-6.-we-can-manipulate-arrays-with-arrays." class="level3">
 <h3 class="anchored" data-anchor-id="example-6.-we-can-manipulate-arrays-with-arrays.">Example 6. We can manipulate arrays with arrays.</h3>
 <p>Let’s create an array and multiply it by itself,</p>
-<div id="qpyodide-insertion-location-11"></div>
+<div id="qpyodide-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -782,7 +786,7 @@ Note
 </section>
 <section id="example-7.-more-examples-of-manipulating-arrays-with-arrays." class="level3">
 <h3 class="anchored" data-anchor-id="example-7.-more-examples-of-manipulating-arrays-with-arrays.">Example 7. More examples of manipulating arrays with arrays.</h3>
-<div id="qpyodide-insertion-location-12"></div>
+<div id="qpyodide-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -801,7 +805,7 @@ Note
 <div id="cell-39" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>who</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>who</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Interactive namespace is empty.</code></pre>
@@ -810,7 +814,7 @@ Note
 <div id="cell-40" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>whos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>whos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Interactive namespace is empty.</code></pre>
@@ -833,12 +837,12 @@ Note
 <section id="example-9.-determine-the-dimensions-of-an-array" class="level3">
 <h3 class="anchored" data-anchor-id="example-9.-determine-the-dimensions-of-an-array">Example 9. Determine the dimensions of an array</h3>
 <p>To examine the dimensions of an array, we can ask for the <code>shape</code>,</p>
-<div id="qpyodide-insertion-location-13"></div>
+<div id="qpyodide-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We find that the shape of <code>a</code> is <code>(1,4)</code> or 1 row and 4 columns. Notice we have two options to execute the <code>shape</code> function:</p>
 <ul>
 <li><p>In <code>a.shape</code> we return the attribute <code>shape</code> of the variable <code>a</code>.</p></li>
-<li><p>In <code>shape(a)</code> we apply the function <code>shape</code> to the variable <code>a</code>.</p></li>
+<li><p>In <code>np.shape(a)</code> we apply the function <code>shape</code> from <code>numpy</code> to the variable <code>a</code>.</p></li>
 </ul>
 <p>The result is equivalent.</p>
 </section>
@@ -848,7 +852,7 @@ Note
 <div id="cell-46" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>reset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>reset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
@@ -865,7 +869,7 @@ Note
 <div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>who</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>who</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -885,10 +889,10 @@ Note
 <section id="example-11.-we-can-define-matrices-in-python." class="level3">
 <h3 class="anchored" data-anchor-id="example-11.-we-can-define-matrices-in-python.">Example 11. We can define matrices in Python.</h3>
 <p>A matrix is an array with more than one dimensio. Consider the following:</p>
-<div id="qpyodide-insertion-location-14"></div>
+<div id="qpyodide-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>This creates a matrix with two rows and three columns. Consider,</p>
-<div id="qpyodide-insertion-location-15"></div>
+<div id="qpyodide-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -901,16 +905,16 @@ Note
 </div>
 </div>
 <p>We can manipulate matrices like we manipulate vectors.</p>
-<div id="qpyodide-insertion-location-16"></div>
+<div id="qpyodide-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="example-12.-indexing-matrices-and-vectors." class="level3">
 <h3 class="anchored" data-anchor-id="example-12.-indexing-matrices-and-vectors.">Example 12. Indexing matrices and vectors.</h3>
 <p>Matrices and vectors are arrays of numbers, and sometimes we want to access individual elements or small subsets of these lists. That’s easy to do in Python. Consider,</p>
-<div id="qpyodide-insertion-location-17"></div>
+<div id="qpyodide-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Python indexes from 0 (like C, C++, Java, and unlike MATLAB and Fortran which start at 1). To access the 2nd element of <code>a</code> or <code>b</code>, type <code>a[1] / b[1]</code>. We’ll be a bit fancier with our printing now to distinguish variables. Calling <code>str(a)</code> converts the variable <code>a</code> to a string that can be printed easily. Adding two strings just concatenates them: <code>"hi" + " bye" = "hi bye".</code></p>
-<div id="qpyodide-insertion-location-18"></div>
+<div id="qpyodide-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -923,13 +927,13 @@ Note
 </div>
 </div>
 <p>We can combine <code>a</code> and <code>b</code> to form a matrix with <code>a</code> as the first row and <code>b</code> as the second. Note that we apply the function <code>array()</code> to the <em>list</em> <code>[a,b]</code>, which it converts to a matrix.</p>
-<div id="qpyodide-insertion-location-19"></div>
+<div id="qpyodide-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>To learn the size (or shape) of <code>c</code> we use <code>shape()</code>:</p>
-<div id="qpyodide-insertion-location-20"></div>
+<div id="qpyodide-insertion-location-19"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The shape of <code>c</code> is <code>[2 5]</code>. It has two rows and five columns. To access the individual element in the 1st row and 4th column of <code>c</code>, type <code>c[0,3]</code></p>
-<div id="qpyodide-insertion-location-21"></div>
+<div id="qpyodide-insertion-location-20"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="python-note">
 <p>We access matrices using ‘row, column’ notation. So <code>c[0,3]</code> means print the element in row 0, column 3 of <code>c</code>.</p>
@@ -951,20 +955,20 @@ Note
 <section id="slicing" class="level4">
 <h4 class="anchored" data-anchor-id="slicing">Slicing</h4>
 <p><em>Slicing</em> means that we want to look at a specific portion of a vector or matrix, for example, the first row of a matrix. We will continue with the matrix <code>c</code> from the previous example. The notation ‘<code>:</code>’ means ‘<em>all indices</em>’. To access all columns in the entire first row of <code>c</code>, type <code>c[0,:]</code>. To access the 2nd thru 4th columns of the first row of <code>c</code>, type <code>c[0,1:4]</code>.</p>
-<div id="qpyodide-insertion-location-22"></div>
+<div id="qpyodide-insertion-location-21"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="python-note">
 <p>The notation <code>1:4</code> means <em>all integers from 1 up to, but not including 4</em>, which in this case gives columns 1, 2, and 3.</p>
 </div>
 <p>Leaving out the number before the colon tells Python to start at index 0. Leaving out the number after the colon tells Python to continue all the way to the end.</p>
-<div id="qpyodide-insertion-location-23"></div>
+<div id="qpyodide-insertion-location-22"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We can also tell Python how to step through the indices. To access only the even columns of <code>c</code>, we can use the following:</p>
-<div id="qpyodide-insertion-location-24"></div>
+<div id="qpyodide-insertion-location-23"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>This code tells Python to start at 0, continue to the end, and step by 2. The result should be the values in row 0, columns 0, 2, and 4 of <code>c</code>. We could write this explicitly as <code>c[0,0:5:2]</code>.</p>
 <p>#### Selecting elements that satisfy a condition Sometimes we’re interested in locating particular values within a matrix or vector. As an example, let’s first define a vector.</p>
-<div id="qpyodide-insertion-location-25"></div>
+<div id="qpyodide-insertion-location-24"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -977,25 +981,25 @@ Note
 </div>
 </div>
 <p>Now let’s find all values in <code>a</code> that exceed 10.</p>
-<div id="qpyodide-insertion-location-26"></div>
+<div id="qpyodide-insertion-location-25"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>This is called logical indexing, let’s look at what <code>a&gt;10</code> returns:</p>
-<div id="qpyodide-insertion-location-27"></div>
+<div id="qpyodide-insertion-location-26"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>When we index <code>a</code> using this array <code>lgIdx</code> we get back only the entries in <code>a</code> corresponding to <code>True</code>, as above:</p>
-<div id="qpyodide-insertion-location-28"></div>
+<div id="qpyodide-insertion-location-27"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Sometimes we want to know the actual indices in a where <code>a &gt; 10</code>. We can get them using the <code>nonzero()</code> array method, which returns the index of all entries that were <code>True</code>, or non-zero.</p>
-<div id="qpyodide-insertion-location-29"></div>
+<div id="qpyodide-insertion-location-28"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="python-note">
 <p>The command <code>nonzero()</code> can be used as both a <em>function</em> and a <em>method</em>. A method is called by adding it after the object it is meant to operate on with a period in between ( <code>lgIdx.nonzero()</code> ). A function is called with the <em>argument</em> explicitly provided inside the parentheses ( <code>nonzero(lgIdx)</code> ). Basically, a function and a method do the same thing, but a function needs to be given an argument, while a method assumes that the argument is the object that the method is attached to. Note that if we use <code>nonzero()</code> as a function, we need to tell it to look in NumPy for the definition (i.e.&nbsp;add `` at the beginning of the function call).</p>
 </div>
 <p>Now we have another way to select the desired elements of <code>a</code>:</p>
-<div id="qpyodide-insertion-location-30"></div>
+<div id="qpyodide-insertion-location-29"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We can use these two types of indexing to change subsets of the values of <code>a</code>.</p>
-<div id="qpyodide-insertion-location-31"></div>
+<div id="qpyodide-insertion-location-30"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1008,7 +1012,7 @@ Note
 </div>
 </div>
 <p>We can perform these same logical operations for a matrix,</p>
-<div id="qpyodide-insertion-location-32"></div>
+<div id="qpyodide-insertion-location-31"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="python-note">
 <p>Notice that the last line collapses the <code>True</code> entries to an array, ordered by row and then by column. If you’ve used MATLAB, this is the opposite of what it does!</p>
@@ -1018,7 +1022,7 @@ Note
 <section id="example-14-plotting-data-in-python." class="level3">
 <h3 class="anchored" data-anchor-id="example-14-plotting-data-in-python.">Example 14: Plotting data in Python.</h3>
 <p>It’s not easy to look at lists of numbers and gain an intuitive feeling for their behavior, especially when the lists are long. In these cases, it’s better to visualize the lists of numbers by plotting them. Consider</p>
-<div id="qpyodide-insertion-location-33"></div>
+<div id="qpyodide-insertion-location-32"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1035,7 +1039,7 @@ Note
 <h4 class="anchored" data-anchor-id="matplotlib">matplotlib</h4>
 <p>To visualize <code>y</code> versus <code>x</code> let’s plot it. To do so, let’s first import some basic plotting routines from <code>matplotlib</code>, which provides a nice <a href="https://matplotlib.org/" rel="external">2D plotting library</a>. We’ll also tell Python to show <code>matplotlib</code> graphics inline, in this notebook.</p>
 <p>Let’s start by plotting a simple example for <code>x</code> and <code>y</code>,</p>
-<div id="qpyodide-insertion-location-34"></div>
+<div id="qpyodide-insertion-location-33"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1048,10 +1052,10 @@ Note
 </div>
 </div>
 <p>Now, let’s go back to the definitions of <code>x</code> and <code>y</code> that we started this example with and plot <code>y</code> versus <code>x</code>.</p>
-<div id="qpyodide-insertion-location-35"></div>
+<div id="qpyodide-insertion-location-34"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The plot of <code>x</code> versus <code>y</code> should look a bit jagged, and not smooth like a sinusoid. To make the curve smoother, let’s redefine <code>x</code> as,</p>
-<div id="qpyodide-insertion-location-36"></div>
+<div id="qpyodide-insertion-location-35"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1074,7 +1078,7 @@ Note
 </div>
 </div>
 <p>Now let’s replot the sine function.</p>
-<div id="qpyodide-insertion-location-37"></div>
+<div id="qpyodide-insertion-location-36"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1091,32 +1095,32 @@ Note
 <section id="example-15-what-if-we-want-to-compare-several-functions" class="level3">
 <h3 class="anchored" data-anchor-id="example-15-what-if-we-want-to-compare-several-functions">Example 15: What if we want to compare several functions?</h3>
 <p>Continuing the example in the previous section, let’s define a second vector</p>
-<div id="qpyodide-insertion-location-38"></div>
+<div id="qpyodide-insertion-location-37"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>and plot it:</p>
-<div id="qpyodide-insertion-location-39"></div>
+<div id="qpyodide-insertion-location-38"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We’d now like to compare the two variables <code>y</code> and <code>z</code>. To do this, let’s plot both vectors on the same figure, label the axes, and provide a legend,</p>
-<div id="qpyodide-insertion-location-40"></div>
+<div id="qpyodide-insertion-location-39"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Notice that we’ve included a third input to the function <code>plot</code>. Here the third input tells Python to draw the curve in a particular color: <code>'r'</code> for red. There are many options we can use to plot; to see more, check out the documentation for <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.plot.html" rel="external">plot</a>.</p>
 <p>We can also label the axes, give the figure a title, and provide a legend,</p>
-<div id="qpyodide-insertion-location-41"></div>
+<div id="qpyodide-insertion-location-40"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>To futher edit this plot, you might decide - for example - that the font size for the labels is too small. We can change the default with:</p>
-<div id="qpyodide-insertion-location-42"></div>
+<div id="qpyodide-insertion-location-41"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="example-16-we-can-make-random-numbers-in-python." class="level3">
 <h3 class="anchored" data-anchor-id="example-16-we-can-make-random-numbers-in-python.">Example 16: We can make random numbers in Python.</h3>
 <p>To generate a single Gaussian random number in Python, use the function in the NumPy <code>random</code> module.</p>
-<div id="qpyodide-insertion-location-43"></div>
+<div id="qpyodide-insertion-location-42"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Let’s generate a vector of 1000 Gaussian random numbers:</p>
-<div id="qpyodide-insertion-location-44"></div>
+<div id="qpyodide-insertion-location-43"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>… and look at a histogram of the vector:</p>
-<div id="qpyodide-insertion-location-45"></div>
+<div id="qpyodide-insertion-location-44"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1135,13 +1139,13 @@ Note
 <section id="example-17-repeating-commands-over-and-over-and-over-.-.-." class="level3">
 <h3 class="anchored" data-anchor-id="example-17-repeating-commands-over-and-over-and-over-.-.-.">Example 17: Repeating commands over and over and over . . .</h3>
 <p>Sometimes we’ll want to repeat the same command over and over again. For example, what if we want to plot <code>sin(x + k*pi/4)</code> where <code>k</code> varies from 1 to 5 in steps of 1; how do we do it? Consider the following:</p>
-<div id="qpyodide-insertion-location-46"></div>
+<div id="qpyodide-insertion-location-45"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>That’s horrible code! All I did was cut and paste the same thing four times. As a general rule, if you’re repeatedly cutting and pasting in code, what you’re doing is inefficient and typically error prone. There’s a much more elegant way to do this, and it involves making a <code>for</code> loop. Consider:</p>
-<div id="qpyodide-insertion-location-47"></div>
+<div id="qpyodide-insertion-location-46"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Now let’s declare a <code>for</code> loop where <code>k</code> successively takes the values 1, then 2, then 3, …, up to 5. Note, any code we want to execute as part of the loop must be indented one level. The first line of code that is not indented, in this case <code>show()</code> below, executes after the for loop completes</p>
-<div id="qpyodide-insertion-location-48"></div>
+<div id="qpyodide-insertion-location-47"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The small section of code above replaces all the cutting-and-pasting. Instead of cutting and pasting, we update the definition of <code>y</code> with different values of <code>k</code> and plot it within this for-loop.</p>
 <div class="callout callout-style-simple callout-none no-icon">
@@ -1175,7 +1179,7 @@ Note
 <p>If have a vector, <code>v</code>, and a constant, <code>b</code>, we would like to call:</p>
 <pre><code>vsq = my_square_function(v, b)</code></pre>
 <p>This won’t work! We first need to define <code>my_square_function</code>. Let’s do so now,</p>
-<div id="qpyodide-insertion-location-49"></div>
+<div id="qpyodide-insertion-location-48"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The function begins with the keyword <code>def</code> followed by the function name and the inputs in parentheses. Notice that this first line ends with a colon <code>:</code>. All of the function components that follow this first line should be <strong>indented one level</strong>. This is just like the <code>for</code> loop we applied earlier; the operations performed by the for loop were indented one leve.</p>
 <div class="python-note">
@@ -1184,7 +1188,7 @@ Note
 <p>The text inside triple quotes provides an optional documentation string that describes our function. While optional, including a ‘<em>doc string</em>’ is an important part of making your code understandable and reuseable.</p>
 <p>The keyword <code>return</code> exits the function, and in this case returns the expression <code>x * x + c</code>. Note that a return statement with no arguments returns <code>None</code>, indicating the absence of a value.</p>
 <p>With the function defined, let’s now call it. To do so we first define the inputs, and then run the function, as follows:</p>
-<div id="qpyodide-insertion-location-50"></div>
+<div id="qpyodide-insertion-location-49"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-simple callout-none no-icon">
 <div class="callout-body d-flex">
@@ -1201,18 +1205,18 @@ Note
 <h3 class="anchored" data-anchor-id="example-19-load-data-into-python">Example 19: Load data into Python</h3>
 <p>For our last example let’s load a data file on the web in the <code>.csv</code> format into Python.</p>
 <p>To do so, let’s first import the <code>pandas</code> module,</p>
-<div id="qpyodide-insertion-location-51"></div>
+<div id="qpyodide-insertion-location-50"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Now, let’s load a data file using the function <code>read_csv</code>,</p>
-<div id="qpyodide-insertion-location-52"></div>
+<div id="qpyodide-insertion-location-51"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The variable <code>df</code> that holds the loaded data is a Python <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">DataFrame</a>. We can think of it as a simple table that holds our data.</p>
 <p>Let’s print it,</p>
-<div id="qpyodide-insertion-location-53"></div>
+<div id="qpyodide-insertion-location-52"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>We see that the columns in the dataframe consist of two variables: <code>d</code> and <code>t</code>. Our collaborator who provided the data tells us that these correspond to the voltage recording (<code>d</code>) and a time axis (<code>t</code>) for her data.</p>
 <p>Let’s define variables to hold the data corresponding to each key,</p>
-<div id="qpyodide-insertion-location-54"></div>
+<div id="qpyodide-insertion-location-53"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1228,7 +1232,7 @@ Note
 </div>
 </div>
 <p>Now, let’s plot the LFP data versus the time axis,</p>
-<div id="qpyodide-insertion-location-55"></div>
+<div id="qpyodide-insertion-location-54"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
