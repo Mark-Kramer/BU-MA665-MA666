@@ -6,7 +6,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 
 ### Introduction
 - Read the [syllabus](/Readings/MA665_MA666_Syllabus.pdf)
-- Please complete items in the [Introduction](introduction.html)
+- Please complete items in the [Introduction](Introduction.html)
 
 ### Integrate \& Fire Neuron
 - Read:  [Abbott, Brain Res Bull, 1999, pages 303-4.](/Readings/Abbott_1999.pdf)
