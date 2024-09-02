@@ -7,7 +7,7 @@ render:
     - Dont-Sync-2024
 
 website:
-  title: "BU MA665 MA666"
+  title: "BU MA665+MA666"
   navbar:
     left:
       - href: index.qmd

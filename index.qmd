@@ -6,10 +6,19 @@ title: "BU MA665 + MA666 (Fall 2024)"
 
 ### Introduction
 - Read the [syllabus](/Readings/MA665_MA666_Syllabus.pdf)
-- Please complete items in the [Introduction](Introduction.html)
+- Read: [Wilson et al, *Good enough practices in scientific computing*, 2017](/Readings/Wilson_2017.pdf)
+- Read: [Riquelme and Gjorgjieva, *Towards readable code in neuroscience*, 2021](/Readings/Riquelme_2021.pdf)
+- Code: Set up Google [Colab](https://colab.google/)
+- Code: Install Python via [Anaconda](https://www.anaconda.com/)
+- Code: Set up [ChatGPT](https://chat.openai.com/auth/login)
+- Please complete items in the [Introduction to Python](Introduction.html)
+- *Advanced*: [100 numpy exercises](https://github.com/rougier/numpy-100)
+- *Advanced*: [Beautiful, Idiomatic Python](https://github.com/JeffPaine/beautiful_idiomatic_python)
+- *Advanced*: Make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to the Introduction [notebook](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Introduction.ipynb) to add a new exercise. Be sure to use follow syntax in [quarto](https://quarto.org/) with [quarto-pyodide](https://quarto.thecoatlessprofessor.com/pyodide/)
+
 
 ### Integrate \& Fire Neuron
-- Read:  [Abbott, Brain Res Bull, 1999, pages 303-4.](/Readings/Abbott_1999.pdf)
+- Read:  [Abbott, Brain Res Bull, 1999.](/Readings/Abbott_1999.pdf)
 - Read:  [Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_1.pdf)
 - Lecture [Slides](/Slides/IF_Lecture_1.pdf)
 - Code:  [Integrate & Fire Neuron in Python](IF.html)
@@ -17,7 +26,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 ### Hodgkin-Huxley Neuron
 - Read:  [Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
 - Read:  [Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
-- *Optional Advanced Read*: [Hodgkin and Huxley, J Physiol (Lond) (1952) vol. 117 (4) pp. 500-44.](/Readings/Hodgkin_Huxley_1952.pdf)
+- *Advanced*: [Hodgkin and Huxley, J Physiol, 1952.](/Readings/Hodgkin_Huxley_1952.pdf)
 - Lecture [Slides](/Slides/HH_Lecture_1.pdf)
 - Code:  [Hodgkin-Huxley Neuron in Python](HH.html)
 
