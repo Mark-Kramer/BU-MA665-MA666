@@ -20,14 +20,14 @@ title: "BU MA665 + MA666 (Fall 2024)"
 ### Integrate \& Fire Neuron
 - Read:  [Abbott, Brain Res Bull, 1999.](/Readings/Abbott_1999.pdf)
 - Read:  [Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.](/Readings/Koch_Chapter_1.pdf)
-- Lecture [Slides](/Slides/IF_Lecture_1.pdf)
+- Lecture [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Slides/IF_Lecture_1.pdf)
 - Code:  [Integrate & Fire Neuron in Python](IF.html)
 
 ### Hodgkin-Huxley Neuron
 - Read:  [Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.](/Readings/Izhikevich_Chapter_2.pdf)
 - Read:  [Hodgkin-Huxley 1-page cheat sheet](/Readings/Hodgkin-Huxley_Cheat_Sheet.pdf)
 - *Advanced*: [Hodgkin and Huxley, J Physiol, 1952.](/Readings/Hodgkin_Huxley_1952.pdf)
-- Lecture [Slides](/Slides/HH_Lecture_1.pdf)
+- Lecture [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Slides/HH_Lecture_1.pdf)
 - Code:  [Hodgkin-Huxley Neuron in Python](HH.html)
 
 ### Perceptron
