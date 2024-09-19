@@ -74,7 +74,7 @@
     "href": "Untitled.html",
     "title": "BU MA665+MA666",
     "section": "",
-    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n\n\nfrom HH_functions import HH\n\n\nI0 = 10\nT0 = 100\n\n\n[V,m,h,n,t] = HH(I0,T0)\n\n\nplt.figure()\nplt.plot(t,V,'k')\nplt.xlim([42, 56])\nplt.ylabel('V [mV]')\nplt.show()"
+    "text": "import numpy as np\nimport matplotlib.pyplot as plt\n\n\nfrom HH_functions import HH\n\n\nI0 = 10\nT0 = 100\n\n\n[V,m,h,n,t] = HH(I0,T0)\n\n\nplt.figure()\nplt.plot(t,V,'k')\nplt.xlim([35, 55])\nplt.ylabel('V [mV]')\nplt.show()"
   },
   {
     "objectID": "index.html",
