@@ -22,7 +22,7 @@ def HH(I0,T0):
     dt = 0.01;
     T  = int(np.ceil(T0/dt))  # [ms]
     gNa0 = 120   # [mS/cm^2]
-    ENa  = 115;  # [mV]
+    ENa  = 165;  # [mV]
     gK0  = 36;   # [mS/cm^2]
     EK   = -12;  # [mV]
     gL0  = 0.3;  # [mS/cm^2]
