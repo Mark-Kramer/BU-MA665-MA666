@@ -38,6 +38,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Code:  [Training a Perceptron in Python](Perceptron.html)
 
 ### Backpropagation
+- Read: [Lee or Delusions of Artificail Intelligence, 2023](/Readings/Labatut_2024.pdf)
 - Lecture [Slides](/Slides/Backpropagation_1.pdf)
 - Code:  [Backpropagation in a Simple Neural Network in Python](Backpropagation.html)
 
