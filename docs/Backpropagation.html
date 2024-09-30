@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -100,7 +66,388 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/monaco-editor@0.46.0/min/vs/editor/editor.main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  
+<style type="text/css">
+.monaco-editor pre {
+  background-color: unset !important;
+}
 
+.qpyodide-editor-toolbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.qpyodide-editor-toolbar-left-buttons, .qpyodide-editor-toolbar-right-buttons {
+  display: flex;
+}
+
+.qpyodide-non-interactive-loading-container.qpyodide-cell-needs-evaluation, .qpyodide-non-interactive-loading-container.qpyodide-cell-evaluated {
+  justify-content: center;
+  display: flex;
+  background-color: rgba(250, 250, 250, 0.65);
+  border: 1px solid rgba(233, 236, 239, 0.65);
+  border-radius: 0.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.qpyodide-r-project-logo {
+  color: #2767B0; /* R Project's blue color */
+}
+
+.qpyodide-icon-status-spinner {
+  color: #7894c4;
+}
+
+.qpyodide-icon-run-code {
+  color: #0d9c29
+}
+
+.qpyodide-output-code-stdout {
+  color: #111;
+}
+
+.qpyodide-output-code-stderr {
+  color: #db4133;
+}
+
+.qpyodide-editor {
+  border: 1px solid #EEEEEE;
+}
+
+.qpyodide-editor-toolbar {
+  background-color: #EEEEEE;
+  padding: 0.2rem 0.5rem;
+}
+
+.qpyodide-button {
+  background-color: #EEEEEE;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  color: #000;
+  border-color: #dee2e6;
+  border: 1px solid rgba(0,0,0,0);
+  padding: 0.375rem 0.75rem;
+  font-size: .9rem;
+  border-radius: 0.25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.qpyodide-button:hover {
+  color: #000;
+  background-color: #d9dce0;
+  border-color: #c8ccd0;
+}
+
+.qpyodide-button:disabled,.qpyodide-button.disabled,fieldset:disabled .qpyodide-button {
+  pointer-events: none;
+  opacity: .65
+}
+
+.qpyodide-button-reset {
+  color: #696969; /*#4682b4;*/
+}
+
+.qpyodide-button-copy {
+  color: #696969;
+}
+
+
+/* Custom styling for RevealJS Presentations*/
+
+/* Reset the style of the interactive area */
+.reveal div.qpyodide-interactive-area {
+  display: block;
+  box-shadow: none;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+} 
+
+/* Provide space to entries */
+.reveal div.qpyodide-output-code-area pre div {
+  margin: 1px 2px 1px 10px;
+}
+
+/* Collapse the inside code tags to avoid extra space between line outputs */
+.reveal pre div code.qpyodide-output-code-stdout, .reveal pre div code.qpyodide-output-code-stderr {
+  padding: 0;
+  display: contents;
+}
+
+.reveal pre div code.qpyodide-output-code-stdout {
+  color: #111;
+}
+
+.reveal pre div code.qpyodide-output-code-stderr {
+  color: #db4133;
+}
+
+
+/* Create a border around console and output (does not effect graphs) */
+.reveal div.qpyodide-console-area {
+  border: 1px solid #EEEEEE;
+  box-shadow: 2px 2px 10px #EEEEEE;
+}
+
+/* Cap output height and allow text to scroll */
+/* TODO: Is there a better way to fit contents/max it parallel to the monaco editor size? */
+.reveal div.qpyodide-output-code-area pre {
+  max-height: 400px;
+  overflow: scroll;
+}
+</style>
+<script type="module">
+// Document level settings ----
+
+// Determine if we need to install python packages
+globalThis.qpyodideInstallPythonPackagesList = [''];
+
+// Check to see if we have an empty array, if we do set to skip the installation.
+globalThis.qpyodideSetupPythonPackages = !(qpyodideInstallPythonPackagesList.indexOf("") !== -1);
+
+// Display a startup message?
+globalThis.qpyodideShowStartupMessage = true;
+
+// Describe the webR settings that should be used
+globalThis.qpyodideCustomizedPyodideOptions = {
+  "indexURL": "https://cdn.jsdelivr.net/pyodide/v0.26.1/full/",
+  "env": {
+    "HOME": "/home/pyodide",
+  }, 
+  stdout: (text) => {qpyodideAddToOutputArray(text, "out");},
+  stderr: (text) => {qpyodideAddToOutputArray(text, "error");}
+}
+
+// Store cell data
+globalThis.qpyodideCellDetails = [{"options":{"read-only":"false","context":"interactive","label":"","warning":"true","out-height":"","output":"true","message":"true","fig-height":5,"results":"markup","autorun":"","out-width":"700px","comment":"","classes":"","fig-cap":"","fig-width":7,"dpi":72},"id":1,"code":"import numpy as np\nimport matplotlib.pyplot as plt\nfrom scipy.io import loadmat"},{"options":{"read-only":"false","context":"interactive","label":"","warning":"true","out-height":"","output":"true","message":"true","fig-height":5,"results":"markup","autorun":"","out-width":"700px","comment":"","classes":"","fig-cap":"","fig-width":7,"dpi":72},"id":2,"code":"df = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/backpropagation_example_data.csv\")\n\n# Extract the variables from the loaded data\nin_true = np.array(df.iloc[:,0])  #Get the values associated with the first column of the dataframe\nout_true = np.array(df.iloc[:,1])  #Get the values associated with the second column of the dataframe"},{"options":{"read-only":"false","context":"interactive","label":"","warning":"true","out-height":"","output":"true","message":"true","fig-height":5,"results":"markup","autorun":"","out-width":"700px","comment":"","classes":"","fig-cap":"","fig-width":7,"dpi":72},"id":3,"code":"print(np.transpose([in_true, out_true]))"},{"options":{"read-only":"false","context":"interactive","label":"","warning":"true","out-height":"","output":"true","message":"true","fig-height":5,"results":"markup","autorun":"","out-width":"700px","comment":"","classes":"","fig-cap":"","fig-width":7,"dpi":72},"id":4,"code":"def sigmoid(x):\n    return 1/(1+np.exp(-x))     # Define the sigmoid anonymous function.\n\ndef feedforward(w, s0):         # Define feedforward solution.\n    x1 = w[0]*s0                # ... activity of first neuron,\n    s1 = sigmoid(x1)            # ... output of first neuron,\n    x2 = w[1]*s1                # ... activity of second neuron,\n    s2 = sigmoid(x2)            # ... output of second neuron,\n    out= w[2]                   # Output of neural network.\n    return out,s1,s2"},{"options":{"read-only":"false","context":"interactive","label":"","warning":"true","out-height":"","output":"true","message":"true","fig-height":5,"results":"markup","autorun":"","out-width":"700px","comment":"","classes":"","fig-cap":"","fig-width":7,"dpi":72},"id":5,"code":"w     = [0.5,0.5]                  # Choose initial values for the weights.\nalpha = 0.01                    # Set the learning constant.\n\nK = np.size(in_true);\nresults = np.zeros([K,3])        # Define a variable to hold the results of each iteration.    \n\nfor k in np.arange(K):\n    s0     = in_true[k]          # Define the input,\n    target = out_true[k]         # ... and the target output.\n    \n    #Step 2. Calculate feedforward solution to get output.\n    \n    #Step 3. Update the weights.\n    w0 = w[0]; w1 = w[1];\n    w[1] = \"SOMETHING\"\n    w[0] = \"SOMETHING\"\n    \n    # Save the results of this step. --------------------------------------\n    # Here we save the 3 weights, and the neural network output.\n    # results[k,:] = [w[0],w[1],  out]\n\n# Plot the NN weights and error during training \n# plt.clf()\n# plt.plot(results[:,1], label='w1')\n# plt.plot(results[:,0], label='w0')\n# plt.plot(results[:,2]-target, label='error')\n# plt.legend()                       #Include a legend,\n# plt.xlabel('Iteration number');    #... and axis label.\n\n# Print the NN weights\n# print(results[-1,0:2])"}];
+
+
+</script>
+<script type="module">
+// Declare startupMessageqpyodide globally
+globalThis.qpyodideStartupMessage = document.createElement("p");
+
+// Function to set the button text
+globalThis.qpyodideSetInteractiveButtonState = function(buttonText, enableCodeButton = true) {
+  document.querySelectorAll(".qpyodide-button-run").forEach((btn) => {
+    btn.innerHTML = buttonText;
+    btn.disabled = !enableCodeButton;
+  });
+}
+
+// Function to update the status message in non-interactive cells
+globalThis.qpyodideUpdateStatusMessage = function(message) {
+  document.querySelectorAll(".qpyodide-status-text.qpyodide-cell-needs-evaluation").forEach((elem) => {
+    elem.innerText = message;
+  });
+}
+
+// Function to update the status message
+globalThis.qpyodideUpdateStatusHeader = function(message) {
+
+  if (!qpyodideShowStartupMessage) return;
+
+  qpyodideStartupMessage.innerHTML = message;
+}
+
+// Status header update with customized spinner message
+globalThis.qpyodideUpdateStatusHeaderSpinner = function(message) {
+
+  qpyodideUpdateStatusHeader(`
+    <i class="fa-solid fa-spinner fa-spin qpyodide-icon-status-spinner"></i>
+    <span>${message}</span>
+  `);
+}
+
+
+// Function that attaches the document status message
+function qpyodideDisplayStartupMessage(showStartupMessage) {
+  if (!showStartupMessage) {
+    return;
+  }
+
+  // Get references to header elements
+  const headerHTML = document.getElementById("title-block-header");
+  const headerRevealJS = document.getElementById("title-slide");
+
+  // Create the outermost div element for metadata
+  const quartoTitleMeta = document.createElement("div");
+  quartoTitleMeta.classList.add("quarto-title-meta");
+
+  // Create the first inner div element
+  const firstInnerDiv = document.createElement("div");
+  firstInnerDiv.setAttribute("id", "qpyodide-status-message-area");
+
+  // Create the second inner div element for "Pyodide Status" heading and contents
+  const secondInnerDiv = document.createElement("div");
+  secondInnerDiv.setAttribute("id", "qpyodide-status-message-title");
+  secondInnerDiv.classList.add("quarto-title-meta-heading");
+  secondInnerDiv.innerText = "Pyodide Status";
+
+  // Create another inner div for contents
+  const secondInnerDivContents = document.createElement("div");
+  secondInnerDivContents.setAttribute("id", "qpyodide-status-message-body");
+  secondInnerDivContents.classList.add("quarto-title-meta-contents");
+
+  // Describe the Pyodide state
+  qpyodideStartupMessage.innerText = "🟡 Loading...";
+  qpyodideStartupMessage.setAttribute("id", "qpyodide-status-message-text");
+  // Add `aria-live` to auto-announce the startup status to screen readers
+  qpyodideStartupMessage.setAttribute("aria-live", "assertive");
+
+  // Append the startup message to the contents
+  secondInnerDivContents.appendChild(qpyodideStartupMessage);
+
+  // Combine the inner divs and contents
+  firstInnerDiv.appendChild(secondInnerDiv);
+  firstInnerDiv.appendChild(secondInnerDivContents);
+  quartoTitleMeta.appendChild(firstInnerDiv);
+
+  // Determine where to insert the quartoTitleMeta element
+  if (headerHTML || headerRevealJS) {
+    // Append to the existing "title-block-header" element or "title-slide" div
+    (headerHTML || headerRevealJS).appendChild(quartoTitleMeta);
+  } else {
+    // If neither headerHTML nor headerRevealJS is found, insert after "Pyodide-monaco-editor-init" script
+    const monacoScript = document.getElementById("qpyodide-monaco-editor-init");
+    const header = document.createElement("header");
+    header.setAttribute("id", "title-block-header");
+    header.appendChild(quartoTitleMeta);
+    monacoScript.after(header);
+  }
+}
+
+qpyodideDisplayStartupMessage(qpyodideShowStartupMessage);
+</script>
+<script type="module">
+// Create a logging setup
+globalThis.qpyodideMessageArray = []
+
+// Add messages to array
+globalThis.qpyodideAddToOutputArray = function(message, type) {
+  qpyodideMessageArray.push({ message, type });
+}
+
+// Function to reset the output array
+globalThis.qpyodideResetOutputArray = function() {
+  qpyodideMessageArray = [];
+}
+
+globalThis.qpyodideRetrieveOutput = function() {
+  return qpyodideMessageArray.map(entry => entry.message).join('\n');
+}
+
+// Start a timer
+const initializePyodideTimerStart = performance.now();
+
+// Encase with a dynamic import statement
+globalThis.qpyodideInstance = await import(
+  qpyodideCustomizedPyodideOptions.indexURL + "pyodide.mjs").then(
+   async({ loadPyodide }) => {
+
+    console.log("Start loading Pyodide");
+    
+    // Populate Pyodide options with defaults or new values based on `pyodide`` meta
+    let mainPyodide = await loadPyodide(
+      qpyodideCustomizedPyodideOptions
+    );
+    
+    // Setup a namespace for global scoping
+    // await loadedPyodide.runPythonAsync("globalScope = {}"); 
+    
+    // Update status to reflect the next stage of the procedure
+    qpyodideUpdateStatusHeaderSpinner("Initializing Python Packages");
+
+    // Load the `micropip` package to allow installation of packages.
+    await mainPyodide.loadPackage("micropip");
+    await mainPyodide.runPythonAsync(`import micropip`);
+
+    // Load the `pyodide_http` package to shim uses of `requests` and `urllib3`.
+    // This allows for `pd.read_csv(url)` to work flawlessly.
+    // Details: https://github.com/coatless-quarto/pyodide/issues/9
+    await mainPyodide.loadPackage("pyodide_http");
+    await mainPyodide.runPythonAsync(`
+    import pyodide_http
+    pyodide_http.patch_all()  # Patch all libraries
+    `);
+
+    // Load the `matplotlib` package with necessary environment hook
+    await mainPyodide.loadPackage("matplotlib");
+
+    // Set the backend for matplotlib to be interactive.
+    await mainPyodide.runPythonAsync(`
+    import matplotlib
+    matplotlib.use("module://matplotlib_pyodide.html5_canvas_backend")
+    from matplotlib import pyplot as plt
+    `);
+
+    // Unlock interactive buttons
+    qpyodideSetInteractiveButtonState(
+      `<i class="fa-solid fa-play qpyodide-icon-run-code"></i> <span>Run Code</span>`, 
+      true
+    );
+
+    // Set document status to viable
+    qpyodideUpdateStatusHeader(
+      "🟢 Ready!"
+    );
+
+    // Assign Pyodide into the global environment
+    globalThis.mainPyodide = mainPyodide;
+
+    console.log("Completed loading Pyodide");
+    return mainPyodide;
+  }
+);
+
+// Stop timer
+const initializePyodideTimerEnd = performance.now();
+
+// Create a function to retrieve the promise object.
+globalThis._qpyodideGetInstance = function() {
+    return qpyodideInstance;
+}
+
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -170,20 +517,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#steps-to-backpropagation" id="toc-steps-to-backpropagation" class="nav-link active" data-scroll-target="#steps-to-backpropagation"><span class="header-section-number">1</span> Steps to backpropagation</a></li>
-  <li><a href="#load-example-data" id="toc-load-example-data" class="nav-link" data-scroll-target="#load-example-data"><span class="header-section-number">2</span> Load example data</a></li>
-  <li><a href="#for-training-first-define-two-useful-functions" id="toc-for-training-first-define-two-useful-functions" class="nav-link" data-scroll-target="#for-training-first-define-two-useful-functions"><span class="header-section-number">3</span> For training, first define two useful functions:</a></li>
-  <li><a href="#now-train-the-neural-network-with-these-in_true-out_true-data." id="toc-now-train-the-neural-network-with-these-in_true-out_true-data." class="nav-link" data-scroll-target="#now-train-the-neural-network-with-these-in_true-out_true-data."><span class="header-section-number">4</span> Now, train the neural network with these (<code>in_true</code>, <code>out_true</code>) data.</a></li>
-  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges"><span class="header-section-number">5</span> Challenges</a></li>
+  <li><a href="#steps-to-backpropagation" id="toc-steps-to-backpropagation" class="nav-link active" data-scroll-target="#steps-to-backpropagation">Steps to backpropagation</a></li>
+  <li><a href="#load-example-data" id="toc-load-example-data" class="nav-link" data-scroll-target="#load-example-data">Load example data</a></li>
+  <li><a href="#for-training-first-define-two-useful-functions" id="toc-for-training-first-define-two-useful-functions" class="nav-link" data-scroll-target="#for-training-first-define-two-useful-functions">For training, first define two useful functions:</a></li>
+  <li><a href="#now-train-the-neural-network-with-these-in_true-out_true-data." id="toc-now-train-the-neural-network-with-these-in_true-out_true-data." class="nav-link" data-scroll-target="#now-train-the-neural-network-with-these-in_true-out_true-data.">Now, train the neural network with these (<code>in_true</code>, <code>out_true</code>) data.</a></li>
+  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges">Challenges</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+<script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.46.0/min/vs/loader.js"></script>
+<script type="module" id="qpyodide-monaco-editor-init">
+
+  // Configure the Monaco Editor's loader
+  require.config({
+    paths: {
+      'vs': 'https://cdn.jsdelivr.net/npm/monaco-editor@0.46.0/min/vs'
+    }
+  });
+</script>
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<div class="quarto-title-block"><div><h1 class="title">Backpropagation</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+<h1 class="title">Backpropagation</h1>
 </div>
 
 
@@ -201,16 +558,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>In this notebook, we’ll implement a quick representation of the backpropagation algorithm for the simple two node network.</p>
-<div id="cell-2" class="cell" data-execution_count="1">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.io <span class="im">import</span> loadmat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
-<section id="steps-to-backpropagation" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Steps to backpropagation</h1>
+<div id="qpyodide-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="steps-to-backpropagation" class="level1">
+<h1>Steps to backpropagation</h1>
 <p>We outlined 4 steps to perform backpropagation,</p>
 <ol type="1">
 <li>Choose random initial weights.</li>
@@ -220,108 +571,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Let’s now implement these steps in an example data set.</p>
 </section>
-<section id="load-example-data" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Load example data</h1>
-<p>The training data is <a href="./Data/backpropagation_example_data.mat">backpropagation_example_data.mat</a>. Get these data, and load them:</p>
-<div id="cell-5" class="cell" data-execution_count="2">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the .mat file</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> loadmat(<span class="st">'backpropagation_example_data.mat'</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract the variables from the loaded data</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>in_true  <span class="op">=</span> data[<span class="st">'in_true'</span>].squeeze()</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>out_true <span class="op">=</span> data[<span class="st">'out_true'</span>].squeeze()  <span class="co"># .squeeze() removes any unnecessary dimensions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<section id="load-example-data" class="level1">
+<h1>Load example data</h1>
+<p>The training data is <a href="./Data/backpropagation_example_data.csv">backpropagation_example_data.csv</a>. Get these data, and load them:</p>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Here we acquire two variables:</p>
 <p><code>in_true</code>: the true input to the hidden two-node neural network</p>
 <p><code>out_true</code>: the true output of the hidden two-ndoe neural network</p>
 <p>The two-node neural network is hidden because we don’t know the weights (<code>w[0]</code>, <code>w[1]</code>, and <code>w[2]</code>).</p>
 <p>Instead, all we observe are the pairs of inputs and outputs to this hidden neural network.</p>
 <p>Let’s look at some of these data:</p>
-<div id="cell-8" class="cell" data-execution_count="18">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(np.transpose([in_true, out_true]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>[[ -5.07721176   8.86495629]
- [ -4.42151036   8.78851213]
- [  8.43023852   6.07694085]
- ...
- [ -1.09949946   8.25391663]
- [  2.72521796   7.36458545]
- [-10.04105911   9.21913802]]</code></pre>
-</div>
-</div>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>These data were created by sending the inputs (<code>in_true</code>, the first column above) into a two-node neural network to produce the outputs (<code>out_true</code>, the second column above).</p>
 <p>Again, we do not know the weights of this network … that’s what we’d like to find.</p>
 <p>To do so, we’ll use these data to train a neural network through back propagation.</p>
 </section>
-<section id="for-training-first-define-two-useful-functions" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> For training, first define two useful functions:</h1>
-<div id="cell-11" class="cell" data-execution_count="4">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> sigmoid(x):</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">/</span>(<span class="dv">1</span><span class="op">+</span>np.exp(<span class="op">-</span>x))     <span class="co"># Define the sigmoid anonymous function.</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> feedforward(w, s0):         <span class="co"># Define feedforward solution.</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    x1 <span class="op">=</span> w[<span class="dv">0</span>]<span class="op">*</span>s0                <span class="co"># ... activity of first neuron,</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    s1 <span class="op">=</span> sigmoid(x1)            <span class="co"># ... output of first neuron,</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    x2 <span class="op">=</span> w[<span class="dv">1</span>]<span class="op">*</span>s1                <span class="co"># ... activity of second neuron,</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    s2 <span class="op">=</span> sigmoid(x2)            <span class="co"># ... output of second neuron,</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    out<span class="op">=</span> w[<span class="dv">2</span>]<span class="op">*</span>s2                <span class="co"># Output of neural network.</span></span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out,s1,s2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<section id="for-training-first-define-two-useful-functions" class="level1">
+<h1>For training, first define two useful functions:</h1>
+<div id="qpyodide-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="now-train-the-neural-network-with-these-in_true-out_true-data." class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Now, train the neural network with these (<code>in_true</code>, <code>out_true</code>) data.</h1>
-<div id="cell-13" class="cell" data-execution_count="14">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>w     <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>]                  <span class="co"># Choose initial values for the weights.</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="fl">0.01</span>                    <span class="co"># Set the learning constant.</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>K <span class="op">=</span> np.size(in_true)<span class="op">;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> np.zeros([K,<span class="dv">4</span>])        <span class="co"># Define a variable to hold the results of each iteration.    </span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> np.arange(K):</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    s0     <span class="op">=</span> in_true[k]          <span class="co"># Define the input,</span></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    target <span class="op">=</span> out_true[k]         <span class="co"># ... and the target output.</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Step 2. Calculate feedforward solution to get output.</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#Step 3. Update the weights.</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    w0 <span class="op">=</span> w[<span class="dv">0</span>]<span class="op">;</span> w1 <span class="op">=</span> w[<span class="dv">1</span>]<span class="op">;</span> w2 <span class="op">=</span> w[<span class="dv">2</span>]<span class="op">;</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    w[<span class="dv">2</span>] <span class="op">=</span> <span class="st">"SOMETHING"</span> </span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    w[<span class="dv">1</span>] <span class="op">=</span> <span class="st">"SOMETHING"</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    w[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"SOMETHING"</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save the results of this step. --------------------------------------</span></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Here we save the 3 weights, and the neural network output.</span></span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># results[k,:] = [w[0],w[1],w[2],  out]</span></span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the NN weights and error during training </span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.clf()</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,2], label='w2')</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,1], label='w1')</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,0], label='w0')</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(results[:,3]-target, label='error')</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.legend()                       #Include a legend,</span></span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.xlabel('Iteration number');    #... and axis label.</span></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the NN weights</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a><span class="co"># print(results[-1,0:3])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
+<section id="now-train-the-neural-network-with-these-in_true-out_true-data." class="level1">
+<h1>Now, train the neural network with these (<code>in_true</code>, <code>out_true</code>) data.</h1>
+<div id="qpyodide-insertion-location-5"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="challenges" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Challenges</h1>
+<section id="challenges" class="level1">
+<h1>Challenges</h1>
 <ol type="1">
-<li>Complete the code above to determine the weights (<code>w[0]</code>, <code>w[1]</code>, and <code>w[2]</code>) of the hidden two-node neural network.</li>
+<li>Use the chain rule to verify the expression for <span class="math inline">\(\dfrac{dC}{dw_0} = (out-target)s_2(1-s_2) w_1 s_1 (1-s_1) s_0\)</span>.</li>
+<li>Complete the code above to determine the weights (<code>w[0]</code> and <code>w[1]</code>) of the hidden two-node neural network.</li>
 </ol>
 
 
@@ -800,6 +1081,542 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script type="module">
+/**
+ * Factory function to create different types of cells based on options.
+ * @param {Object} cellData - JSON object containing code, id, and options.
+ * @returns {BaseCell} Instance of the appropriate cell class.
+ */
+globalThis.qpyodideCreateCell = function(cellData) {
+    switch (cellData.options.context) {
+        case 'interactive':
+            return new InteractiveCell(cellData);
+        case 'output':
+            return new OutputCell(cellData);
+        case 'setup':
+            return new SetupCell(cellData);
+        default:
+            return new InteractiveCell(cellData);
+            // throw new Error('Invalid cell type specified in options.');
+    }
+}  
+
+/**
+ * CellContainer class for managing a collection of cells.
+ * @class
+ */
+class CellContainer {
+    /**
+     * Constructor for CellContainer.
+     * Initializes an empty array to store cells.
+     * @constructor
+     */
+    constructor() {
+        this.cells = [];
+    }
+
+    /**
+     * Add a cell to the container.
+     * @param {BaseCell} cell - Instance of a cell (BaseCell or its subclasses).
+     */
+    addCell(cell) {
+        this.cells.push(cell);
+    }
+
+    /**
+     * Execute all cells in the container.
+     */
+    async executeAllCells() {
+        for (const cell of this.cells) {
+            await cell.executeCode();
+        }
+    }
+
+    /**
+     * Execute all cells in the container.
+     */
+    async autoRunExecuteAllCells() {
+        for (const cell of this.cells) {
+            await cell.autoRunExecuteCode();
+        }
+    }
+}
+  
+
+/**
+ * BaseCell class for handling code execution using Pyodide.
+ * @class
+ */
+class BaseCell {
+    /**
+     * Constructor for BaseCell.
+     * @constructor
+     * @param {Object} cellData - JSON object containing code, id, and options.
+     */
+    constructor(cellData) {
+        this.code = cellData.code;
+        this.id = cellData.id;
+        this.options = cellData.options;
+        this.insertionLocation = document.getElementById(`qpyodide-insertion-location-${this.id}`);
+        this.executionLock = false;
+    }
+
+    cellOptions() {
+        // Subclass this? 
+        console.log(this.options);
+        return this.options;
+    }
+
+    /**
+     * Execute the Python code using Pyodide.
+     * @returns {*} Result of the code execution.
+     */
+    async executeCode() {
+        // Execute code using Pyodide
+        const result = getPyodide().runPython(this.code);
+        return result;
+    }
+};
+
+/**
+ * InteractiveCell class for creating editable code editor with Monaco Editor.
+ * @class
+ * @extends BaseCell
+ */
+class InteractiveCell extends BaseCell {
+
+    /**
+     * Constructor for InteractiveCell.
+     * @constructor
+     * @param {Object} cellData - JSON object containing code, id, and options.
+     */
+    constructor(cellData) {
+        super(cellData);
+        this.editor = null;
+        this.setupElement();
+        this.setupMonacoEditor();
+    }
+
+    /**
+     * Set up the interactive cell elements
+     */
+    setupElement() {
+
+        // Create main div element
+        var mainDiv = document.createElement('div');
+        mainDiv.id = `qpyodide-interactive-area-${this.id}`;
+        mainDiv.className = `qpyodide-interactive-area`;
+        if (this.options.classes) {
+            mainDiv.className += " " + this.options.classes
+        }
+
+        // Add a unique cell identifier that users can customize
+        if (this.options.label) {
+            mainDiv.setAttribute('data-id', this.options.label);
+        }
+
+        // Create toolbar div
+        var toolbarDiv = document.createElement('div');
+        toolbarDiv.className = 'qpyodide-editor-toolbar';
+        toolbarDiv.id = `qpyodide-editor-toolbar-${this.id}`;
+
+        // Create a div to hold the left buttons
+        var leftButtonsDiv = document.createElement('div');
+        leftButtonsDiv.className = 'qpyodide-editor-toolbar-left-buttons';
+
+        // Create a div to hold the right buttons
+        var rightButtonsDiv = document.createElement('div');
+        rightButtonsDiv.className = 'qpyodide-editor-toolbar-right-buttons';
+
+        // Create Run Code button
+        var runCodeButton = document.createElement('button');
+        runCodeButton.className = 'btn btn-default qpyodide-button qpyodide-button-run';
+        runCodeButton.disabled = true;
+        runCodeButton.type = 'button';
+        runCodeButton.id = `qpyodide-button-run-${this.id}`;
+        runCodeButton.textContent = '🟡 Loading Pyodide...';
+        runCodeButton.title = `Run code (Shift + Enter)`;
+
+        // Append buttons to the leftButtonsDiv
+        leftButtonsDiv.appendChild(runCodeButton);
+
+        // Create Reset button
+        var resetButton = document.createElement('button');
+        resetButton.className = 'btn btn-light btn-xs qpyodide-button qpyodide-button-reset';
+        resetButton.type = 'button';
+        resetButton.id = `qpyodide-button-reset-${this.id}`;
+        resetButton.title = 'Start over';
+        resetButton.innerHTML = '<i class="fa-solid fa-arrows-rotate"></i>';
+
+        // Create Copy button
+        var copyButton = document.createElement('button');
+        copyButton.className = 'btn btn-light btn-xs qpyodide-button qpyodide-button-copy';
+        copyButton.type = 'button';
+        copyButton.id = `qpyodide-button-copy-${this.id}`;
+        copyButton.title = 'Copy code';
+        copyButton.innerHTML = '<i class="fa-regular fa-copy"></i>';
+
+        // Append buttons to the rightButtonsDiv
+        rightButtonsDiv.appendChild(resetButton);
+        rightButtonsDiv.appendChild(copyButton);
+
+        // Create console area div
+        var consoleAreaDiv = document.createElement('div');
+        consoleAreaDiv.id = `qpyodide-console-area-${this.id}`;
+        consoleAreaDiv.className = 'qpyodide-console-area';
+
+        // Create editor div
+        var editorDiv = document.createElement('div');
+        editorDiv.id = `qpyodide-editor-${this.id}`;
+        editorDiv.className = 'qpyodide-editor';
+
+        // Create output code area div
+        var outputCodeAreaDiv = document.createElement('div');
+        outputCodeAreaDiv.id = `qpyodide-output-code-area-${this.id}`;
+        outputCodeAreaDiv.className = 'qpyodide-output-code-area';
+        outputCodeAreaDiv.setAttribute('aria-live', 'assertive');
+
+        // Create pre element inside output code area
+        var preElement = document.createElement('pre');
+        preElement.style.visibility = 'hidden';
+        outputCodeAreaDiv.appendChild(preElement);
+
+        // Create output graph area div
+        var outputGraphAreaDiv = document.createElement('div');
+        outputGraphAreaDiv.id = `qpyodide-output-graph-area-${this.id}`;
+        outputGraphAreaDiv.className = 'qpyodide-output-graph-area';
+
+        // Append buttons to the toolbar
+        toolbarDiv.appendChild(leftButtonsDiv);
+        toolbarDiv.appendChild(rightButtonsDiv);
+
+        // Append all elements to the main div
+        mainDiv.appendChild(toolbarDiv);
+        consoleAreaDiv.appendChild(editorDiv);
+        consoleAreaDiv.appendChild(outputCodeAreaDiv);
+        mainDiv.appendChild(consoleAreaDiv);
+        mainDiv.appendChild(outputGraphAreaDiv);
+
+        // Insert the dynamically generated object at the document location.
+        this.insertionLocation.appendChild(mainDiv);
+    }
+
+    /**
+     * Set up Monaco Editor for code editing.
+     */
+    setupMonacoEditor() {
+
+        // Retrieve the previously created document elements
+        this.runButton = document.getElementById(`qpyodide-button-run-${this.id}`);
+        this.resetButton = document.getElementById(`qpyodide-button-reset-${this.id}`);
+        this.copyButton = document.getElementById(`qpyodide-button-copy-${this.id}`);
+        this.editorDiv = document.getElementById(`qpyodide-editor-${this.id}`);
+        this.outputCodeDiv = document.getElementById(`qpyodide-output-code-area-${this.id}`);
+        this.outputGraphDiv = document.getElementById(`qpyodide-output-graph-area-${this.id}`);
+        
+        // Store reference to the object
+        var thiz = this;
+
+        // Load the Monaco Editor and create an instance
+        require(['vs/editor/editor.main'], function () {
+            thiz.editor = monaco.editor.create(
+                thiz.editorDiv, {
+                    value: thiz.code,
+                    language: 'python',
+                    theme: 'vs-light',
+                    automaticLayout: true,           // Works wonderfully with RevealJS
+                    scrollBeyondLastLine: false,
+                    minimap: {
+                        enabled: false
+                    },
+                    fontSize: '17.5pt',              // Bootstrap is 1 rem
+                    renderLineHighlight: "none",     // Disable current line highlighting
+                    hideCursorInOverviewRuler: true,  // Remove cursor indictor in right hand side scroll bar
+                    readOnly: thiz.options['read-only'] ?? false
+                }
+            );
+        
+            // Store the official counter ID to be used in keyboard shortcuts
+            thiz.editor.__qpyodideCounter = thiz.id;
+        
+            // Store the official div container ID
+            thiz.editor.__qpyodideEditorId = `qpyodide-editor-${thiz.id}`;
+        
+            // Store the initial code value and options
+            thiz.editor.__qpyodideinitialCode = thiz.code;
+            thiz.editor.__qpyodideOptions = thiz.options;
+        
+            // Set at the model level the preferred end of line (EOL) character to LF.
+            // This prevent `\r\n` from being given to the Pyodide engine if the user is on Windows.
+            // See details in: https://github.com/coatless/quarto-Pyodide/issues/94
+            // Associated error text: 
+            // Error: <text>:1:7 unexpected input
+        
+            // Retrieve the underlying model
+            const model = thiz.editor.getModel();
+            // Set EOL for the model
+            model.setEOL(monaco.editor.EndOfLineSequence.LF);
+        
+            // Dynamically modify the height of the editor window if new lines are added.
+            let ignoreEvent = false;
+            const updateHeight = () => {
+            const contentHeight = thiz.editor.getContentHeight();
+            // We're avoiding a width change
+            //editorDiv.style.width = `${width}px`;
+            thiz.editorDiv.style.height = `${contentHeight}px`;
+                try {
+                    ignoreEvent = true;
+            
+                    // The key to resizing is this call
+                    thiz.editor.layout();
+                } finally {
+                    ignoreEvent = false;
+                }
+            };
+        
+            // Helper function to check if selected text is empty
+            function isEmptyCodeText(selectedCodeText) {
+                return (selectedCodeText === null || selectedCodeText === undefined || selectedCodeText === "");
+            }
+        
+            // Registry of keyboard shortcuts that should be re-added to each editor window
+            // when focus changes.
+            const addPyodideKeyboardShortCutCommands = () => {
+            // Add a keydown event listener for Shift+Enter to run all code in cell
+            thiz.editor.addCommand(monaco.KeyMod.Shift | monaco.KeyCode.Enter, () => {
+                // Retrieve all text inside the editor
+                thiz.runCode(thiz.editor.getValue());
+            });
+        
+            // Add a keydown event listener for CMD/Ctrl+Enter to run selected code
+            thiz.editor.addCommand(monaco.KeyMod.CtrlCmd | monaco.KeyCode.Enter, () => {
+                    // Get the selected text from the editor
+                    const selectedText = thiz.editor.getModel().getValueInRange(thiz.editor.getSelection());
+                    // Check if no code is selected
+                    if (isEmptyCodeText(selectedText)) {
+                        // Obtain the current cursor position
+                        let currentPosition = thiz.editor.getPosition();
+                        // Retrieve the current line content
+                        let currentLine = thiz.editor.getModel().getLineContent(currentPosition.lineNumber);
+                
+                        // Propose a new position to move the cursor to
+                        let newPosition = new monaco.Position(currentPosition.lineNumber + 1, 1);
+                
+                        // Check if the new position is beyond the last line of the editor
+                        if (newPosition.lineNumber > thiz.editor.getModel().getLineCount()) {
+                            // Add a new line at the end of the editor
+                            thiz.editor.executeEdits("addNewLine", [{
+                            range: new monaco.Range(newPosition.lineNumber, 1, newPosition.lineNumber, 1),
+                            text: "\n", 
+                            forceMoveMarkers: true,
+                            }]);
+                        }
+                        
+                        // Run the entire line of code.
+                        thiz.runCode(currentLine);
+                
+                        // Move cursor to new position
+                        thiz.editor.setPosition(newPosition);
+                    } else {
+                        // Code to run when Ctrl+Enter is pressed with selected code
+                        thiz.runCode(selectedText);
+                    }
+                });
+            }
+        
+            // Register an on focus event handler for when a code cell is selected to update
+            // what keyboard shortcut commands should work.
+            // This is a workaround to fix a regression that happened with multiple
+            // editor windows since Monaco 0.32.0 
+            // https://github.com/microsoft/monaco-editor/issues/2947
+            thiz.editor.onDidFocusEditorText(addPyodideKeyboardShortCutCommands);
+        
+            // Register an on change event for when new code is added to the editor window
+            thiz.editor.onDidContentSizeChange(updateHeight);
+        
+            // Manually re-update height to account for the content we inserted into the call
+            updateHeight();
+                
+        });
+
+        
+        // Add a click event listener to the run button
+        thiz.runButton.onclick = function () {
+            thiz.runCode(
+                thiz.editor.getValue()
+            );
+        };
+        
+        // Add a click event listener to the reset button
+        thiz.copyButton.onclick = function () {
+            // Retrieve current code data
+            const data = thiz.editor.getValue();
+            
+            // Write code data onto the clipboard.
+            navigator.clipboard.writeText(data || "");
+        };
+        
+        // Add a click event listener to the copy button
+        thiz.resetButton.onclick = function () {
+            thiz.editor.setValue(thiz.editor.__qpyodideinitialCode);
+        };
+    }
+
+    disableInteractiveCells() {
+        // Enable locking of execution for the cell
+        this.executionLock = true;
+
+        // Disallowing execution of other code cells
+        document.querySelectorAll(".qpyodide-button-run").forEach((btn) => {
+            btn.disabled = true;
+        });
+    }
+
+    enableInteractiveCells() {
+        // Remove locking of execution for the cell
+        this.executionLock = false;
+
+        // All execution of other code cells
+        document.querySelectorAll(".qpyodide-button-run").forEach((btn) => {
+            btn.disabled = false;
+        });
+    }
+
+    /**
+     * Execute the Python code inside the editor.
+     */
+    async runCode(code) {
+        
+        // Check if we have an execution lock
+        if (this.executeLock) return; 
+        
+        this.disableInteractiveCells();
+
+        // Force wait procedure
+        await mainPyodide;
+
+        // Clear the output stock
+        qpyodideResetOutputArray();
+
+        // Generate a new canvas element, avoid attaching until the end
+        let graphFigure = document.createElement("figure");
+        document.pyodideMplTarget = graphFigure;
+
+        console.log("Running code!");
+        // Obtain results from the base class
+        try {
+            // Always check to see if the user adds new packages
+            await mainPyodide.loadPackagesFromImports(code);
+
+            // Process result
+            const output = await mainPyodide.runPythonAsync(code);
+
+            // Add output
+            qpyodideAddToOutputArray(output, "stdout");
+        } catch (err) {
+            // Add error message
+            qpyodideAddToOutputArray(err, "stderr");
+            // TODO: There has to be a way to remove the Pyodide portion of the errors... 
+        }
+
+        const result = qpyodideRetrieveOutput();
+
+        // Nullify the output area of content
+        this.outputCodeDiv.innerHTML = "";
+        this.outputGraphDiv.innerHTML = "";        
+
+        // Design an output object for messages
+        const pre = document.createElement("pre");
+        if (/\S/.test(result)) {
+            // Display results as HTML elements to retain output styling
+            const div = document.createElement("div");
+            div.innerHTML = result;
+            pre.appendChild(div);
+        } else {
+            // If nothing is present, hide the element.
+            pre.style.visibility = "hidden";
+        }
+
+        // Add output under interactive div
+        this.outputCodeDiv.appendChild(pre);
+
+        // Place the graphics onto the page
+        if (graphFigure) {
+
+            if (this.options['fig-cap']) {
+                // Create figcaption element
+                const figcaptionElement = document.createElement('figcaption');
+                figcaptionElement.innerText = this.options['fig-cap'];
+                // Append figcaption to figure
+                graphFigure.appendChild(figcaptionElement);    
+            }
+
+            this.outputGraphDiv.appendChild(graphFigure);
+        }
+
+        // Re-enable execution
+        this.enableInteractiveCells();
+    }
+};
+
+/**
+ * OutputCell class for customizing and displaying output.
+ * @class
+ * @extends BaseCell
+ */
+class OutputCell extends BaseCell {
+    /**
+     * Constructor for OutputCell.
+     * @constructor
+     * @param {Object} cellData - JSON object containing code, id, and options.
+     */
+    constructor(cellData) {
+      super(cellData);
+    }
+  
+    /**
+     * Display customized output on the page.
+     * @param {*} output - Result to be displayed.
+     */
+    displayOutput(output) {
+        const results = this.executeCode();
+        return results;
+    }
+  }
+
+/**
+ * SetupCell class for suppressed output.
+ * @class
+ * @extends BaseCell
+ */
+class SetupCell extends BaseCell {
+    /**
+     * Constructor for SetupCell.
+     * @constructor
+     * @param {Object} cellData - JSON object containing code, id, and options.
+     */
+    constructor(cellData) {
+        super(cellData);
+    }
+
+    /**
+     * Execute the Python code without displaying the results.
+     */
+    runSetupCode() {
+        // Execute code without displaying output
+        this.executeCode();
+    }
+};
+</script>
+<script type="module">
+// Handle cell initialization initialization
+qpyodideCellDetails.map(
+    (entry) => {
+      // Handle the creation of the element
+      qpyodideCreateCell(entry);
+    }
+  );
+</script>
 
 
 
