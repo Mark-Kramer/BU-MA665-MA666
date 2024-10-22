@@ -54,7 +54,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 ### Introduction to Rhythms
 - Read: [Jell-O Test Finds Lifelike Signals, New York Times, 6 March 1976](/Readings/NYT_1976.pdf)
 - Read: [Neuronal Oscillations in Cortical Networks](/Readings/Buzsaki_Science_2004.pdf)
-- Lecture 1 [Slides](/Slides/Rhythms_1.pdf)
+- Lecture 1 [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Rhythms_1.pdf)
 - Lecture 2 [Slides](/Slides/Rhythms_2.pdf)
 - Code: [Rhythms Introduction](Rhythms_1.html)
 
