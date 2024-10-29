@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -279,10 +279,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="compute-the-power-spectrum-using-the-fft-function." class="level2">
 <h2 class="anchored" data-anchor-id="compute-the-power-spectrum-using-the-fft-function.">Compute the power spectrum using the FFT function.</h2>
 <div id="cell-20" class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x  <span class="op">=</span> EEG</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>xf <span class="op">=</span> np.fft.fft(x)                        <span class="co"># Compute Fourier transform of x</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Sxx <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> dt <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> T <span class="op">*</span> (xf <span class="op">*</span> xf.conj())  <span class="co"># Compute spectrum</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Sxx <span class="op">=</span> Sxx[<span class="dv">0</span>:<span class="bu">int</span>(N <span class="op">/</span> <span class="dv">2</span>)].real              <span class="co"># Ignore negative frequencies</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x   <span class="op">=</span> EEG</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>X   <span class="op">=</span> np.fft.fft(x)                        <span class="co"># Compute Fourier transform of x</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>Sxx <span class="op">=</span> <span class="st">"SOMETHING"</span>                          <span class="co"># Compute spectrum</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>Sxx <span class="op">=</span> Sxx[<span class="dv">0</span>:<span class="bu">int</span>(N <span class="op">/</span> <span class="dv">2</span>)].real               <span class="co"># Ignore negative frequencies</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Define the frequency axis</p>
 <div id="cell-22" class="cell">
@@ -330,8 +330,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Apply the Hanning taper and look at the spectrum.</p>
 <div id="cell-33" class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>xf_tapered  <span class="op">=</span> [???]               <span class="co"># Compute Fourier transform of x.</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Sxx_tapered <span class="op">=</span> [???]               <span class="co"># Compute the spectrum,</span></span>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>xf_tapered  <span class="op">=</span> <span class="st">"SOMETHING"</span>                        <span class="co"># Compute Fourier transform of x.</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>Sxx_tapered <span class="op">=</span> <span class="st">"SOMETHING"</span>                        <span class="co"># Compute the spectrum,</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>Sxx_tapered <span class="op">=</span> np.real(Sxx_tapered[:<span class="bu">int</span>(N <span class="op">/</span> <span class="dv">2</span>)])  <span class="co"># ... and ignore negative frequencies.</span></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
