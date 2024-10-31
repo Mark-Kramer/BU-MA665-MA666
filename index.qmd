@@ -67,6 +67,6 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Lecture Code 1: [Analyze Rhythms Lab 1 - Practicals](Analyzing_Rhythms_Lab_1.html)
 - **Lecture 2** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_2.pdf)
 - Lecture Code 2a: [Analyze Rhythms Lab 2a - Autocovariance of noise](Analyzing_Rhythms_Lab_2a.html)
-- Lecture Code 2b: [Analyze Rhythms Lab 2b - Autocovariance of noise](Analyzing_Rhythms_Lab_2b.html)
+- Lecture Code 2b: [Analyze Rhythms Lab 2b - Autocovariance of data](Analyzing_Rhythms_Lab_2b.html)
 - **Lecture 3** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_3.pdf)
 - Lecture Code 3: [Analyze Rhythms Lab 3 - Spikes](Analyzing_Rhythms_Lab_3.html)
