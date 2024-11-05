@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BU MA665 + MA666 (Fall 2024) – BU MA665+MA666</title>
+<title>Coherence Part 1 (Two noise signals) – BU MA665+MA666</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -89,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -136,21 +170,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ma665" id="toc-ma665" class="nav-link active" data-scroll-target="#ma665">MA665</a>
-  <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#integrate-fire-neuron" id="toc-integrate-fire-neuron" class="nav-link" data-scroll-target="#integrate-fire-neuron">Integrate &amp; Fire Neuron</a></li>
-  <li><a href="#hodgkin-huxley-neuron" id="toc-hodgkin-huxley-neuron" class="nav-link" data-scroll-target="#hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</a></li>
-  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
-  <li><a href="#backpropagation" id="toc-backpropagation" class="nav-link" data-scroll-target="#backpropagation">Backpropagation</a></li>
-  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a></li>
-  </ul></li>
-  <li><a href="#ma666" id="toc-ma666" class="nav-link" data-scroll-target="#ma666">MA666</a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-rhythms" id="toc-introduction-to-rhythms" class="nav-link" data-scroll-target="#introduction-to-rhythms">Introduction to Rhythms</a></li>
-  <li><a href="#analyzing-rhythms" id="toc-analyzing-rhythms" class="nav-link" data-scroll-target="#analyzing-rhythms">Analyzing Rhythms</a></li>
-  <li><a href="#coherence" id="toc-coherence" class="nav-link" data-scroll-target="#coherence">Coherence</a></li>
-  </ul></li>
+  <li><a href="#make-two-noise-signals" id="toc-make-two-noise-signals" class="nav-link active" data-scroll-target="#make-two-noise-signals">Make two noise signals</a></li>
+  <li><a href="#compute-the-cross-covariance" id="toc-compute-the-cross-covariance" class="nav-link" data-scroll-target="#compute-the-cross-covariance">Compute the cross-covariance</a></li>
+  <li><a href="#compute-the-coherence" id="toc-compute-the-coherence" class="nav-link" data-scroll-target="#compute-the-coherence">Compute the coherence</a></li>
   </ul>
 </nav>
     </div>
@@ -159,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BU MA665 + MA666 (Fall 2024)</h1>
+<h1 class="title">Coherence Part 1 (Two noise signals)</h1>
 </div>
 
 
@@ -176,114 +198,61 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="ma665" class="level1">
-<h1>MA665</h1>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Read the <a href="./Readings/MA665_MA666_Syllabus.pdf">syllabus</a></li>
-<li>Read: <a href="./Readings/Wilson_2017.pdf">Wilson et al, <em>Good enough practices in scientific computing</em>, 2017</a></li>
-<li>Read: <a href="./Readings/Riquelme_2021.pdf">Riquelme and Gjorgjieva, <em>Towards readable code in neuroscience</em>, 2021</a></li>
-<li>Code: Set up Google <a href="https://colab.google/">Colab</a></li>
-<li>Code: Install Python via <a href="https://www.anaconda.com/">Anaconda</a></li>
-<li>Code: Set up <a href="https://chat.openai.com/auth/login">ChatGPT</a></li>
-<li>Please complete items in the <a href="Introduction.html">Introduction to Python</a></li>
-<li><em>Advanced</em>: <a href="https://github.com/rougier/numpy-100">100 numpy exercises</a></li>
-<li><em>Advanced</em>: <a href="https://github.com/JeffPaine/beautiful_idiomatic_python">Beautiful, Idiomatic Python</a></li>
-<li><em>Advanced</em>: Make a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> to the Introduction <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Introduction.ipynb">notebook</a> to add a new exercise. Be sure to use follow syntax in <a href="https://quarto.org/">quarto</a> with <a href="https://quarto.thecoatlessprofessor.com/pyodide/">quarto-pyodide</a></li>
-</ul>
+<div id="cell-1" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load modules we'll need.</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.io <span class="im">import</span> loadmat</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.signal <span class="im">import</span> spectrogram</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="make-two-noise-signals" class="level2">
+<h2 class="anchored" data-anchor-id="make-two-noise-signals">Make two noise signals</h2>
+<div id="cell-3" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">1000</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>dt<span class="op">=</span> <span class="fl">0.001</span><span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> N<span class="op">*</span>dt<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.randn(N)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.randn(N)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> np.arange(<span class="dv">0</span>,N)<span class="op">*</span>dt</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>plt.plot(t,x)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>plt.plot(t,y)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Time [s]'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="integrate-fire-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="integrate-fire-neuron">Integrate &amp; Fire Neuron</h3>
-<ul>
-<li>Read: <a href="./Readings/Abbott_1999.pdf">Abbott, Brain Res Bull, 1999.</a></li>
-<li>Read: <a href="./Readings/Koch_Chapter_1.pdf">Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.</a></li>
-<li>Lecture <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Slides/IF_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="IF.html">Integrate &amp; Fire Neuron in Python</a></li>
-</ul>
+<section id="compute-the-cross-covariance" class="level2">
+<h2 class="anchored" data-anchor-id="compute-the-cross-covariance">Compute the cross-covariance</h2>
+<div id="cell-5" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cc_xy <span class="op">=</span> <span class="st">"SOMETHING"</span>                          <span class="co"># Compute the covariance.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>lags <span class="op">=</span> np.arange(<span class="op">-</span>N <span class="op">+</span> <span class="dv">1</span>, N)                  <span class="co"># Create a lag axis,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.plot(lags <span class="op">*</span> dt, cc_xy)                   <span class="co"># ... and plot the result.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="op">-</span><span class="fl">0.1</span>, <span class="dv">1</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Lag [s]'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Cross-covariance'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="hodgkin-huxley-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</h3>
-<ul>
-<li>Read: <a href="./Readings/Izhikevich_Chapter_2.pdf">Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.</a></li>
-<li>Read: <a href="./Readings/Hodgkin-Huxley_Cheat_Sheet.pdf">Hodgkin-Huxley 1-page cheat sheet</a></li>
-<li><em>Advanced</em>: <a href="./Readings/Hodgkin_Huxley_1952.pdf">Hodgkin and Huxley, J Physiol, 1952.</a></li>
-<li>Lecture <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Slides/HH_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="HH.html">Hodgkin-Huxley Neuron in Python</a></li>
-</ul>
-</section>
-<section id="perceptron" class="level3">
-<h3 class="anchored" data-anchor-id="perceptron">Perceptron</h3>
-<ul>
-<li>Read: <a href="./Readings/NYT_1958.pdf">Electronic Brain Teaches Itself, New York Times, 13 July 1958</a></li>
-<li>Read: <a href="./Readings/Klass_1961.pdf">Perceptron Tested for Photo Analysis, Aviation Weekly, 1961</a></li>
-<li>Read: <a href="./Readings/OConnor_2022.pdf">Undercover Algorithm, O’Connor, 2022</a></li>
-<li>Lecture <a href="./Slides/Perceptron_1.pdf">Slides</a></li>
-<li>Code: <a href="Perceptron.html">Training a Perceptron in Python</a></li>
-</ul>
-</section>
-<section id="backpropagation" class="level3">
-<h3 class="anchored" data-anchor-id="backpropagation">Backpropagation</h3>
-<ul>
-<li>Read: <a href="./Readings/Labatut_2024.pdf">Lee or Delusions of Artificail Intelligence, 2023</a></li>
-<li>Watch: <a href="https://vimeo.com/132700334">Inside an artificial brain</a></li>
-<li>Lecture <a href="./Slides/Backpropagation_1.pdf">Slides</a></li>
-<li>Code: <a href="Backpropagation.html">Backpropagation in a Simple Neural Network in Python</a></li>
-</ul>
-</section>
-<section id="regression" class="level3">
-<h3 class="anchored" data-anchor-id="regression">Regression</h3>
-<ul>
-<li>Read: Chapter 3 of <a href="https://link.springer.com/book/10.1007/978-1-4614-7138-7">An Introduction to Statistical Learning</a> (<em>Free via BU Library</em>)</li>
-<li>Lecture <a href="./Slides/Regression_1.pdf">Slides</a></li>
-<li>Code: <a href="Regression.html">Regression Example in Python</a></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="ma666" class="level1">
-<h1>MA666</h1>
-<section id="introduction-to-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-rhythms">Introduction to Rhythms</h3>
-<ul>
-<li>Read: <a href="./Readings/NYT_1976.pdf">Jell-O Test Finds Lifelike Signals, New York Times, 6 March 1976</a></li>
-<li>Read: <a href="./Readings/Buzsaki_Science_2004.pdf">Neuronal Oscillations in Cortical Networks</a></li>
-<li>Lecture 1 <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Rhythms_1.pdf">Slides</a></li>
-<li>Lecture 2 <a href="./Slides/Rhythms_2.pdf">Slides</a></li>
-<li>Code: <a href="Rhythms_1.html">Rhythms Introduction</a></li>
-</ul>
-</section>
-<section id="analyzing-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-rhythms">Analyzing Rhythms</h3>
-<ul>
-<li>Read: <a href="./Readings/Kramer_SFN_Short_Course.pdf">Kramer, SFN Short Course Document.</a></li>
-<li>Advanced Read: <a href="./Readings/Kramer_Eden_Chapter_3.pdf">Chapter 3 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Advanced Read: <a href="./Readings/Kramer_Eden_Chapter_4.pdf">Chapter 4 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Very Advanced Read: <a href="https://www.cambridge.org/core/books/spectral-analysis-for-physical-applications/A9195239A8965A2C53D43EB2D1B80A33">Chapter 4 @ Percival &amp; Walden, Spectral Analysis for Physical Applications.</a></li>
-<li><strong>Lecture 1</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_1.pdf">Slides</a></li>
-<li>Lecture Code 1: <a href="Analyzing_Rhythms_Lab_1.html">Analyze Rhythms Lab 1 - Practicals</a></li>
-<li><strong>Lecture 2</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_2.pdf">Slides</a></li>
-<li>Lecture Code 2a: <a href="Analyzing_Rhythms_Lab_2a.html">Analyze Rhythms Lab 2a - Autocovariance of noise</a></li>
-<li>Lecture Code 2b: <a href="Analyzing_Rhythms_Lab_2b.html">Analyze Rhythms Lab 2b - Autocovariance of data</a></li>
-<li><strong>Lecture 3</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_3.pdf">Slides</a></li>
-<li>Lecture Code 3: <a href="Analyzing_Rhythms_Lab_3.html">Analyze Rhythms Lab 3 - Spikes</a></li>
-<li><strong>Homework</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_1_Spectra.pdf">Spectra Homework</a></li>
-</ul>
-</section>
-<section id="coherence" class="level3">
-<h3 class="anchored" data-anchor-id="coherence">Coherence</h3>
-<ul>
-<li>Read: <a href="./Readings/Kramer_Eden_Chapter_5.pdf">Chapter 5 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Read: <a href="./Readings/Fries_TINS_2005.pdf">Fries, <em>A mechanism for cognitive dynamics: neuronal communication through neuronal coherence</em>, TINS, 2005</a></li>
-<li>Extra Read: <a href="./Readings/Cohen_Chapter_25.pdf">Chapter 25 @ M. X. Cohen, Analyzing&nbsp;neural&nbsp;time&nbsp;series&nbsp;data, 2014.</a></li>
-<li>Extra Read: <a href="./Readings/Cohen_Chapter_26.pdf">Chapter 26 @ M. X. Cohen, Analyzing&nbsp;neural&nbsp;time&nbsp;series&nbsp;data, 2014.</a></li>
-<li><strong>Lecture 1</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Coherence_Lecture_1.pdf">Slides</a></li>
-<li>Lecture Code 1: <a href="Coherence_Lab_Part_1.html">Coherence Lab 1</a></li>
-<li>Lecture Code 2: <a href="Coherence_Lab_Part_2.html">Coherence Lab 2</a></li>
-</ul>
+<section id="compute-the-coherence" class="level2">
+<h2 class="anchored" data-anchor-id="compute-the-coherence">Compute the coherence</h2>
+<div id="cell-7" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Xf <span class="op">=</span> np.fft.fft(x <span class="op">-</span> x.mean())           <span class="co"># Compute Fourier transform of x</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Yf <span class="op">=</span> np.fft.fft(y <span class="op">-</span> y.mean())           <span class="co"># Compute Fourier transform of y</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the spectra</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>Sxx <span class="op">=</span> ???  <span class="co"># Spectrum of E1 trials</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Syy <span class="op">=</span> ???  <span class="co"># ... and E2 trials</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Sxy <span class="op">=</span> ???  <span class="co"># ... and the cross spectrum</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the coherence.</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>cohr <span class="op">=</span> ???</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a frequency axis.</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> np.fft.fftfreq(N, dt)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the result.</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>plt.plot(f, cohr.real)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -376,6 +345,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
