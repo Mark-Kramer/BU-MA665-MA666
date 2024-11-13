@@ -77,6 +77,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Read: [Fries, *A mechanism for cognitive dynamics: neuronal communication through neuronal coherence*, TINS, 2005](/Readings/Fries_TINS_2005.pdf)
 - Extra Read: [Chapter 25 @ M. X. Cohen, Analyzing neural time series data, 2014.](/Readings/Cohen_Chapter_25.pdf)
 - Extra Read: [Chapter 26 @ M. X. Cohen, Analyzing neural time series data, 2014.](/Readings/Cohen_Chapter_26.pdf)
+- Advanced Read: [Lepage et al, *The Dependence of Spike Field Coherence on Expected Intensity*, 2011.](/Readings/Lepage_Neural_Comp_2011.pdf) 
 - **Lecture 1** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Coherence_Lecture_1.pdf)
 - Lecture Code 1: [Coherence Lab 1](Coherence_Lab_Part_1.html)
 - Lecture Code 2: [Coherence Lab 2](Coherence_Lab_Part_2.html)
