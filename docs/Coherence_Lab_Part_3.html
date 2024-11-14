@@ -286,10 +286,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="compare-the-spike-field-coherence-for-original-and-thinned-data." class="level3">
 <h3 class="anchored" data-anchor-id="compare-the-spike-field-coherence-for-original-and-thinned-data.">Compare the spike-field coherence for original and thinned data.</h3>
 <div id="cell-13" class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[cohr, f, SYY, SNN, SYN] <span class="op">=</span> coherence(n,y,t)                          <span class="co"># Coherence for original spike train.</span></span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>[cohr, f, SYY, SNN, SYN] <span class="op">=</span> <span class="st">"SOMETHING"</span>  <span class="co"># Coherence for original spike train.</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.plot(f,cohr, <span class="st">'b'</span>)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[cohr, f, SYY, SNN, SYN] <span class="op">=</span> coherence(thinned_spike_train(n,<span class="fl">0.5</span>),y,t) <span class="co"># ... and for the thinned spike train.</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>[cohr, f, SYY, SNN, SYN] <span class="op">=</span> <span class="st">"SOMETHING"</span>  <span class="co"># ... and for the thinned spike train.</span></span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.plot(f,cohr, <span class="st">'r'</span>)</span>
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">40</span>, <span class="dv">50</span>])</span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>plt.legend([<span class="st">'Original'</span>, <span class="st">'Thinned'</span>])</span>
@@ -300,19 +300,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="repeat-for-different-thinning-factors." class="level3">
 <h3 class="anchored" data-anchor-id="repeat-for-different-thinning-factors.">Repeat for different thinning factors.</h3>
 <div id="cell-15" class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.figure(<span class="dv">1</span>)<span class="op">;</span> plt.clf()<span class="op">;</span> plt.figure(<span class="dv">2</span>)<span class="op">;</span> plt.clf()</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>counter<span class="op">=</span><span class="dv">1</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> thinner <span class="kw">in</span> np.arange(<span class="dv">0</span>,<span class="dv">1</span>,<span class="fl">0.25</span>):</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    thinned <span class="op">=</span> thinned_spike_train(n,thinner)</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    [cohr, f, SYY, SNN, SYN] <span class="op">=</span> coherence(thinned,y,t) <span class="co"># ... and for the thinned spike train.</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    plt.figure(<span class="dv">1</span>)</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    plt.plot(f,cohr,label<span class="op">=</span><span class="bu">str</span>(thinner))</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.figure(<span class="dv">1</span>)</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">40</span>, <span class="dv">50</span>])</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequency [Hz]'</span>)</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Coherence'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.figure()<span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> thin_factor <span class="kw">in</span> <span class="st">"SOMETHING</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="er">    thinned = "SOMETHING"                  # Make the thinned spike train</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    [cohr, f, SYY, SNN, SYN] <span class="op">=</span><span class="st">"SOMETHING"</span>  <span class="co"># ... and compute the coherence</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    plt.plot(f,cohr,label<span class="op">=</span><span class="bu">str</span>(thin_factor))    <span class="co"># </span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">40</span>, <span class="dv">50</span>])</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Frequency [Hz]'</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Coherence'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <hr>
 </section>
