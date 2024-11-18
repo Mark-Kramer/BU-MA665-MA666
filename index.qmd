@@ -84,3 +84,12 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - **Lecture 2** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Coherence_Lecture_2.pdf)
 - Lecture Code 3: [Coherence Lab 3](Coherence_Lab_Part_3.html)
 - **Homework (Due 11/21/2024)** [Coherence Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_2_Coherence.pdf)
+
+### Cross-frequency coupling
+- Read: [Chapter 7 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Readings/Kramer_Eden_Chapter_8.pdf)
+- Read: [Canolty et al., *High Gamma Power Is Phase-Locked to Theta Oscillations in Human Neocortex*, 2006](Readings/Canolty_2006.pdf)
+- Extra Read: [Tort et al, J Neurophysiol, 2010.](/Readings/Tort_J_Neurophysiol_2010.pdf)
+- Extra Read: [Hyafil et al, Trends Neurosci, 2015.](/Readings/Hyafil_TINS_2015.pdf)
+- **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/CFC_Lecture.pdf)
+- Lecture Code: [Cross-frequency Coupling Lab](CFC_Lab.html)
+- **Homework (Due 11/26/2024)** [CFC Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_3_CFC.pdf)
