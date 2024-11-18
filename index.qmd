@@ -93,3 +93,10 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/CFC_Lecture.pdf)
 - Lecture Code: [Cross-frequency Coupling Lab](CFC_Lab.html)
 - **Homework (Due 11/26/2024)** [CFC Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_3_CFC.pdf)
+
+### Gamma rhythms
+- Read: [Chapter 30 (PING) @ Borgers, An Introduction to Modeling Neuronal Dynamics, 2017](/Readings/Borgers_PING_2017.pdf)
+- Read: [Chapter 31 (ING) @ Borgers, An Introduction to Modeling Neuronal Dynamics, 2017](/Readings/Borgers_ING_2017.pdf)
+- Extra Read: [Whittington et al, *Inhibition-based rhythms*, Int J Psychophys, 2000](/Readings/Whittington_2000.pdf)
+- **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Gamma_Lecture.pdf)
+- Lecture Code: [Gamma Lab](Gamma_Lab.html)

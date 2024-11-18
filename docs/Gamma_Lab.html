@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>BU MA665 + MA666 (Fall 2024) – BU MA665+MA666</title>
+<title>Gamma rhythms models – BU MA665+MA666</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -89,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -136,22 +170,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#ma665" id="toc-ma665" class="nav-link active" data-scroll-target="#ma665">MA665</a>
+  <li><a href="#ing" id="toc-ing" class="nav-link active" data-scroll-target="#ing">ING</a>
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#integrate-fire-neuron" id="toc-integrate-fire-neuron" class="nav-link" data-scroll-target="#integrate-fire-neuron">Integrate &amp; Fire Neuron</a></li>
-  <li><a href="#hodgkin-huxley-neuron" id="toc-hodgkin-huxley-neuron" class="nav-link" data-scroll-target="#hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</a></li>
-  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
-  <li><a href="#backpropagation" id="toc-backpropagation" class="nav-link" data-scroll-target="#backpropagation">Backpropagation</a></li>
-  <li><a href="#regression" id="toc-regression" class="nav-link" data-scroll-target="#regression">Regression</a></li>
-  </ul></li>
-  <li><a href="#ma666" id="toc-ma666" class="nav-link" data-scroll-target="#ma666">MA666</a>
-  <ul class="collapse">
-  <li><a href="#introduction-to-rhythms" id="toc-introduction-to-rhythms" class="nav-link" data-scroll-target="#introduction-to-rhythms">Introduction to Rhythms</a></li>
-  <li><a href="#analyzing-rhythms" id="toc-analyzing-rhythms" class="nav-link" data-scroll-target="#analyzing-rhythms">Analyzing Rhythms</a></li>
-  <li><a href="#coherence" id="toc-coherence" class="nav-link" data-scroll-target="#coherence">Coherence</a></li>
-  <li><a href="#cross-frequency-coupling" id="toc-cross-frequency-coupling" class="nav-link" data-scroll-target="#cross-frequency-coupling">Cross-frequency coupling</a></li>
-  <li><a href="#gamma-rhythms" id="toc-gamma-rhythms" class="nav-link" data-scroll-target="#gamma-rhythms">Gamma rhythms</a></li>
+  <li><a href="#begin-with-the-inhibitory-synapse-turned-off." id="toc-begin-with-the-inhibitory-synapse-turned-off." class="nav-link" data-scroll-target="#begin-with-the-inhibitory-synapse-turned-off.">Begin with the inhibitory synapse turned off.</a></li>
+  <li><a href="#turn-on-the-inhibitory-synapse." id="toc-turn-on-the-inhibitory-synapse." class="nav-link" data-scroll-target="#turn-on-the-inhibitory-synapse.">Turn on the inhibitory synapse.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -161,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">BU MA665 + MA666 (Fall 2024)</h1>
+<h1 class="title">Gamma rhythms models</h1>
 </div>
 
 
@@ -178,137 +200,91 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="ma665" class="level1">
-<h1>MA665</h1>
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<ul>
-<li>Read the <a href="./Readings/MA665_MA666_Syllabus.pdf">syllabus</a></li>
-<li>Read: <a href="./Readings/Wilson_2017.pdf">Wilson et al, <em>Good enough practices in scientific computing</em>, 2017</a></li>
-<li>Read: <a href="./Readings/Riquelme_2021.pdf">Riquelme and Gjorgjieva, <em>Towards readable code in neuroscience</em>, 2021</a></li>
-<li>Code: Set up Google <a href="https://colab.google/">Colab</a></li>
-<li>Code: Install Python via <a href="https://www.anaconda.com/">Anaconda</a></li>
-<li>Code: Set up <a href="https://chat.openai.com/auth/login">ChatGPT</a></li>
-<li>Please complete items in the <a href="Introduction.html">Introduction to Python</a></li>
-<li><em>Advanced</em>: <a href="https://github.com/rougier/numpy-100">100 numpy exercises</a></li>
-<li><em>Advanced</em>: <a href="https://github.com/JeffPaine/beautiful_idiomatic_python">Beautiful, Idiomatic Python</a></li>
-<li><em>Advanced</em>: Make a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request</a> to the Introduction <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Introduction.ipynb">notebook</a> to add a new exercise. Be sure to use follow syntax in <a href="https://quarto.org/">quarto</a> with <a href="https://quarto.thecoatlessprofessor.com/pyodide/">quarto-pyodide</a></li>
-</ul>
+<div id="1b99eed7-54f1-43c5-8d53-08bdad332e37" class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="ing" class="level1">
+<h1>ING</h1>
+<p>Define the ING model. It’s the <a href="https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/HH_functions.py">HH model</a>, with an update to include the inhibitory synaptic dynamics.</p>
+<div id="9dcf6187-08f2-40ac-b95e-fade63ec64c5" class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> alphaM(V):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="fl">2.5</span><span class="op">-</span><span class="fl">0.1</span><span class="op">*</span>(V<span class="op">+</span><span class="dv">65</span>)) <span class="op">/</span> (np.exp(<span class="fl">2.5</span><span class="op">-</span><span class="fl">0.1</span><span class="op">*</span>(V<span class="op">+</span><span class="dv">65</span>)) <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> betaM(V):</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">4</span><span class="op">*</span>np.exp(<span class="op">-</span>(V<span class="op">+</span><span class="dv">65</span>)<span class="op">/</span><span class="dv">18</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> alphaH(V):</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.07</span><span class="op">*</span>np.exp(<span class="op">-</span>(V<span class="op">+</span><span class="dv">65</span>)<span class="op">/</span><span class="dv">20</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> betaH(V):</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span><span class="op">/</span>(np.exp(<span class="fl">3.0</span><span class="op">-</span><span class="fl">0.1</span><span class="op">*</span>(V<span class="op">+</span><span class="dv">65</span>))<span class="op">+</span><span class="dv">1</span>)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> alphaN(V):</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="fl">0.1</span><span class="op">-</span><span class="fl">0.01</span><span class="op">*</span>(V<span class="op">+</span><span class="dv">65</span>)) <span class="op">/</span> (np.exp(<span class="dv">1</span><span class="op">-</span><span class="fl">0.1</span><span class="op">*</span>(V<span class="op">+</span><span class="dv">65</span>)) <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> betaN(V):</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.125</span><span class="op">*</span>np.exp(<span class="op">-</span>(V<span class="op">+</span><span class="dv">65</span>)<span class="op">/</span><span class="dv">80</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ing(I0,gI,tauI,T0):</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    dt <span class="op">=</span> <span class="fl">0.01</span><span class="op">;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    T  <span class="op">=</span> <span class="bu">int</span>(np.ceil(T0<span class="op">/</span>dt))  <span class="co"># [ms]</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    gNa0 <span class="op">=</span> <span class="dv">120</span>   <span class="co"># [mS/cm^2]</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    ENa  <span class="op">=</span> <span class="dv">125</span><span class="op">;</span>  <span class="co"># [mV]</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    gK0  <span class="op">=</span> <span class="dv">36</span><span class="op">;</span>   <span class="co"># [mS/cm^2]</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    EK   <span class="op">=</span> <span class="op">-</span><span class="dv">12</span><span class="op">;</span>  <span class="co"># [mV]</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    gL0  <span class="op">=</span> <span class="fl">0.3</span><span class="op">;</span>  <span class="co"># [mS/cm^2]</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    EL   <span class="op">=</span> <span class="fl">10.6</span><span class="op">;</span> <span class="co"># [mV]</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> np.arange(<span class="dv">0</span>,T)<span class="op">*</span>dt</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    V <span class="op">=</span> np.zeros([T,<span class="dv">1</span>])</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> np.zeros([T,<span class="dv">1</span>])</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    h <span class="op">=</span> np.zeros([T,<span class="dv">1</span>])</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    n <span class="op">=</span> np.zeros([T,<span class="dv">1</span>])</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Initialize variables to hold the synapse results</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    s <span class="op">=</span> np.zeros(T)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    V[<span class="dv">0</span>]<span class="op">=-</span><span class="fl">70.0</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    m[<span class="dv">0</span>]<span class="op">=</span><span class="fl">0.05</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    h[<span class="dv">0</span>]<span class="op">=</span><span class="fl">0.54</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    n[<span class="dv">0</span>]<span class="op">=</span><span class="fl">0.34</span></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    s[<span class="dv">0</span>]<span class="op">=</span><span class="fl">0.0</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,T<span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        V[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> V[i] <span class="op">+</span> dt<span class="op">*</span>(gNa0<span class="op">*</span>m[i]<span class="op">**</span><span class="dv">3</span><span class="op">*</span>h[i]<span class="op">*</span>(ENa<span class="op">-</span>(V[i]<span class="op">+</span><span class="dv">65</span>)) <span class="op">+</span> gK0<span class="op">*</span>n[i]<span class="op">**</span><span class="dv">4</span><span class="op">*</span>(EK<span class="op">-</span>(V[i]<span class="op">+</span><span class="dv">65</span>)) <span class="op">+</span> gL0<span class="op">*</span>(EL<span class="op">-</span>(V[i]<span class="op">+</span><span class="dv">65</span>)) <span class="op">+</span> I0 <span class="op">+</span> gI<span class="op">*</span>s[i]<span class="op">*</span>(<span class="op">-</span><span class="dv">80</span> <span class="op">-</span> V[i]))</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        m[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> m[i] <span class="op">+</span> dt<span class="op">*</span>(alphaM(V[i])<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>m[i]) <span class="op">-</span> betaM(V[i])<span class="op">*</span>m[i])<span class="op">;</span></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        h[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> h[i] <span class="op">+</span> dt<span class="op">*</span>(alphaH(V[i])<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>h[i]) <span class="op">-</span> betaH(V[i])<span class="op">*</span>h[i])<span class="op">;</span></span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        n[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> n[i] <span class="op">+</span> dt<span class="op">*</span>(alphaN(V[i])<span class="op">*</span>(<span class="dv">1</span><span class="op">-</span>n[i]) <span class="op">-</span> betaN(V[i])<span class="op">*</span>n[i])<span class="op">;</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        s[i<span class="op">+</span><span class="dv">1</span>] <span class="op">=</span> s[i] <span class="op">+</span> dt <span class="op">*</span> (((<span class="dv">1</span> <span class="op">+</span> np.tanh(V[i] <span class="op">/</span> <span class="dv">10</span>)) <span class="op">/</span> <span class="dv">2</span>) <span class="op">*</span> (<span class="dv">1</span> <span class="op">-</span> s[i]) <span class="op">/</span> <span class="fl">0.5</span> <span class="op">-</span> s[i] <span class="op">/</span> tauI)  <span class="co"># Update s</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> V,s,t</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="begin-with-the-inhibitory-synapse-turned-off." class="level2">
+<h2 class="anchored" data-anchor-id="begin-with-the-inhibitory-synapse-turned-off.">Begin with the inhibitory synapse turned off.</h2>
+<div id="df62753f-e49d-4e77-9631-04138b547018" class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>I0   <span class="op">=</span> <span class="dv">30</span><span class="op">;</span>    <span class="co">#Set the input drive to excite the cell.</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>gI   <span class="op">=</span> <span class="dv">0</span><span class="op">;</span>     <span class="co">#Turn off inhibitory synapse, to start.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tauI <span class="op">=</span> <span class="dv">10</span><span class="op">;</span>    <span class="co">#Set decay time of inhibitory synapse to 10ms.</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>T0   <span class="op">=</span> <span class="dv">100</span><span class="op">;</span>   <span class="co">#Simulate for 100 ms.</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>[V,s,t] <span class="op">=</span> ing(I0,gI,tauI,T0)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.plot(t,V)<span class="op">;</span> plt.xlabel(<span class="st">'Time [ms]'</span>)<span class="op">;</span> plt.ylabel(<span class="st">'Voltage [mV]'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="integrate-fire-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="integrate-fire-neuron">Integrate &amp; Fire Neuron</h3>
-<ul>
-<li>Read: <a href="./Readings/Abbott_1999.pdf">Abbott, Brain Res Bull, 1999.</a></li>
-<li>Read: <a href="./Readings/Koch_Chapter_1.pdf">Chapter 1, pages 5-12 @ C. Koch, Biophysics of computation, 1998.</a></li>
-<li>Lecture <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Slides/IF_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="IF.html">Integrate &amp; Fire Neuron in Python</a></li>
-</ul>
-</section>
-<section id="hodgkin-huxley-neuron" class="level3">
-<h3 class="anchored" data-anchor-id="hodgkin-huxley-neuron">Hodgkin-Huxley Neuron</h3>
-<ul>
-<li>Read: <a href="./Readings/Izhikevich_Chapter_2.pdf">Chapter 2, pages 25-42 @ E. Izhikevich, Dynamical Systems in Neuroscience, 2007.</a></li>
-<li>Read: <a href="./Readings/Hodgkin-Huxley_Cheat_Sheet.pdf">Hodgkin-Huxley 1-page cheat sheet</a></li>
-<li><em>Advanced</em>: <a href="./Readings/Hodgkin_Huxley_1952.pdf">Hodgkin and Huxley, J Physiol, 1952.</a></li>
-<li>Lecture <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/tree/master/Slides/HH_Lecture_1.pdf">Slides</a></li>
-<li>Code: <a href="HH.html">Hodgkin-Huxley Neuron in Python</a></li>
-</ul>
-</section>
-<section id="perceptron" class="level3">
-<h3 class="anchored" data-anchor-id="perceptron">Perceptron</h3>
-<ul>
-<li>Read: <a href="./Readings/NYT_1958.pdf">Electronic Brain Teaches Itself, New York Times, 13 July 1958</a></li>
-<li>Read: <a href="./Readings/Klass_1961.pdf">Perceptron Tested for Photo Analysis, Aviation Weekly, 1961</a></li>
-<li>Read: <a href="./Readings/OConnor_2022.pdf">Undercover Algorithm, O’Connor, 2022</a></li>
-<li>Lecture <a href="./Slides/Perceptron_1.pdf">Slides</a></li>
-<li>Code: <a href="Perceptron.html">Training a Perceptron in Python</a></li>
-</ul>
-</section>
-<section id="backpropagation" class="level3">
-<h3 class="anchored" data-anchor-id="backpropagation">Backpropagation</h3>
-<ul>
-<li>Read: <a href="./Readings/Labatut_2024.pdf">Lee or Delusions of Artificail Intelligence, 2023</a></li>
-<li>Watch: <a href="https://vimeo.com/132700334">Inside an artificial brain</a></li>
-<li>Lecture <a href="./Slides/Backpropagation_1.pdf">Slides</a></li>
-<li>Code: <a href="Backpropagation.html">Backpropagation in a Simple Neural Network in Python</a></li>
-</ul>
-</section>
-<section id="regression" class="level3">
-<h3 class="anchored" data-anchor-id="regression">Regression</h3>
-<ul>
-<li>Read: Chapter 3 of <a href="https://link.springer.com/book/10.1007/978-1-4614-7138-7">An Introduction to Statistical Learning</a> (<em>Free via BU Library</em>)</li>
-<li>Lecture <a href="./Slides/Regression_1.pdf">Slides</a></li>
-<li>Code: <a href="Regression.html">Regression Example in Python</a></li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="ma666" class="level1">
-<h1>MA666</h1>
-<section id="introduction-to-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="introduction-to-rhythms">Introduction to Rhythms</h3>
-<ul>
-<li>Read: <a href="./Readings/NYT_1976.pdf">Jell-O Test Finds Lifelike Signals, New York Times, 6 March 1976</a></li>
-<li>Read: <a href="./Readings/Buzsaki_Science_2004.pdf">Neuronal Oscillations in Cortical Networks</a></li>
-<li>Lecture 1 <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Rhythms_1.pdf">Slides</a></li>
-<li>Lecture 2 <a href="./Slides/Rhythms_2.pdf">Slides</a></li>
-<li>Code: <a href="Rhythms_1.html">Rhythms Introduction</a></li>
-</ul>
-</section>
-<section id="analyzing-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="analyzing-rhythms">Analyzing Rhythms</h3>
-<ul>
-<li>Read: <a href="./Readings/Kramer_SFN_Short_Course.pdf">Kramer, SFN Short Course Document.</a></li>
-<li>Advanced Read: <a href="./Readings/Kramer_Eden_Chapter_3.pdf">Chapter 3 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Advanced Read: <a href="./Readings/Kramer_Eden_Chapter_4.pdf">Chapter 4 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Very Advanced Read: <a href="https://www.cambridge.org/core/books/spectral-analysis-for-physical-applications/A9195239A8965A2C53D43EB2D1B80A33">Chapter 4 @ Percival &amp; Walden, Spectral Analysis for Physical Applications.</a></li>
-<li><strong>Lecture 1</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_1.pdf">Slides</a></li>
-<li>Lecture Code 1: <a href="Analyzing_Rhythms_Lab_1.html">Analyze Rhythms Lab 1 - Practicals</a></li>
-<li><strong>Lecture 2</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_2.pdf">Slides</a></li>
-<li>Lecture Code 2a: <a href="Analyzing_Rhythms_Lab_2a.html">Analyze Rhythms Lab 2a - Autocovariance of noise</a></li>
-<li>Lecture Code 2b: <a href="Analyzing_Rhythms_Lab_2b.html">Analyze Rhythms Lab 2b - Autocovariance of data</a></li>
-<li><strong>Lecture 3</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_3.pdf">Slides</a></li>
-<li>Lecture Code 3: <a href="Analyzing_Rhythms_Lab_3.html">Analyze Rhythms Lab 3 - Spikes</a></li>
-<li><strong>Homework (Due 11/14/2024)</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_1_Spectra.pdf">Spectra Homework</a></li>
-</ul>
-</section>
-<section id="coherence" class="level3">
-<h3 class="anchored" data-anchor-id="coherence">Coherence</h3>
-<ul>
-<li>Read: <a href="./Readings/Kramer_Eden_Chapter_5.pdf">Chapter 5 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Read: <a href="./Readings/Fries_TINS_2005.pdf">Fries, <em>A mechanism for cognitive dynamics: neuronal communication through neuronal coherence</em>, TINS, 2005</a></li>
-<li>Extra Read: <a href="./Readings/Cohen_Chapter_25.pdf">Chapter 25 @ M. X. Cohen, Analyzing&nbsp;neural&nbsp;time&nbsp;series&nbsp;data, 2014.</a></li>
-<li>Extra Read: <a href="./Readings/Cohen_Chapter_26.pdf">Chapter 26 @ M. X. Cohen, Analyzing&nbsp;neural&nbsp;time&nbsp;series&nbsp;data, 2014.</a></li>
-<li>Advanced Read: <a href="./Readings/Lepage_Neural_Comp_2011.pdf">Lepage et al, <em>The Dependence of Spike Field Coherence on Expected Intensity</em>, 2011.</a></li>
-<li><strong>Lecture 1</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Coherence_Lecture_1.pdf">Slides</a></li>
-<li>Lecture Code 1: <a href="Coherence_Lab_Part_1.html">Coherence Lab 1</a></li>
-<li>Lecture Code 2: <a href="Coherence_Lab_Part_2.html">Coherence Lab 2</a></li>
-<li><strong>Lecture 2</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Coherence_Lecture_2.pdf">Slides</a></li>
-<li>Lecture Code 3: <a href="Coherence_Lab_Part_3.html">Coherence Lab 3</a></li>
-<li><strong>Homework (Due 11/21/2024)</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_2_Coherence.pdf">Coherence Homework</a></li>
-</ul>
-</section>
-<section id="cross-frequency-coupling" class="level3">
-<h3 class="anchored" data-anchor-id="cross-frequency-coupling">Cross-frequency coupling</h3>
-<ul>
-<li>Read: <a href="./Readings/Kramer_Eden_Chapter_8.pdf">Chapter 7 @ Kramer &amp; Eden, Case studies in neural data analysis, 2016.</a></li>
-<li>Read: <a href="Readings/Canolty_2006.pdf">Canolty et al., <em>High Gamma Power Is Phase-Locked to Theta Oscillations in Human Neocortex</em>, 2006</a></li>
-<li>Extra Read: <a href="./Readings/Tort_J_Neurophysiol_2010.pdf">Tort et al, J Neurophysiol, 2010.</a></li>
-<li>Extra Read: <a href="./Readings/Hyafil_TINS_2015.pdf">Hyafil et al, Trends Neurosci, 2015.</a></li>
-<li><strong>Lecture</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/CFC_Lecture.pdf">Slides</a></li>
-<li>Lecture Code: <a href="CFC_Lab.html">Cross-frequency Coupling Lab</a></li>
-<li><strong>Homework (Due 11/26/2024)</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_3_CFC.pdf">CFC Homework</a></li>
-</ul>
-</section>
-<section id="gamma-rhythms" class="level3">
-<h3 class="anchored" data-anchor-id="gamma-rhythms">Gamma rhythms</h3>
-<ul>
-<li>Read: <a href="./Readings/Borgers_PING_2017.pdf">Chapter 30 (PING) @ Borgers, An Introduction to Modeling Neuronal Dynamics, 2017</a></li>
-<li>Read: <a href="./Readings/Borgers_ING_2017.pdf">Chapter 31 (ING) @ Borgers, An Introduction to Modeling Neuronal Dynamics, 2017</a></li>
-<li>Extra Read: <a href="./Readings/Whittington_2000.pdf">Whittington et al, <em>Inhibition-based rhythms</em>, Int J Psychophys, 2000</a></li>
-<li><strong>Lecture</strong> <a href="https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Gamma_Lecture.pdf">Slides</a></li>
-<li>Lecture Code: <a href="Gamma_Lab.html">Gamma Lab</a></li>
-</ul>
+<section id="turn-on-the-inhibitory-synapse." class="level2">
+<h2 class="anchored" data-anchor-id="turn-on-the-inhibitory-synapse.">Turn on the inhibitory synapse.</h2>
+<div id="a5c0fb13-de44-4987-9972-473b4837b120" class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>gI <span class="op">=</span> <span class="dv">20</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>[V,s,t] <span class="op">=</span> ing(I0,gI,tauI,T0)<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">1</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.plot(t,V)<span class="op">;</span> plt.xlabel(<span class="st">'Time [ms]'</span>)<span class="op">;</span> plt.ylabel(<span class="st">'Voltage [mV]'</span>)<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.plot(t,s,<span class="st">'r'</span>)<span class="op">;</span> plt.xlabel(<span class="st">'Time [ms]'</span>)<span class="op">;</span> plt.ylabel(<span class="st">'Inhibitory synaptic gate'</span>)<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Q:</strong> How does the spiking frequency change?</p>
+<p><strong>Q:</strong> How do the synapses evolve?</p>
+<p><strong>Q:</strong> This model captures 3 experimental observations we discussed in class. To generate gamma, 1) The cell needs sufficient excitatory drive, 2) The GABA synapse is critical, and 3) Altering the decay time of the inhibitory synapse changes the gamma frequency.</p>
+<p>Show that all three observations are captured by this model.</p>
 
 
 </section>
@@ -404,6 +380,57 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       container: window.document.getElementById('quarto-embedded-source-code-modal')
     });
     clipboardModal.on('success', onCopySuccess);
+  }
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
