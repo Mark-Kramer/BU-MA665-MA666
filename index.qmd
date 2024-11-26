@@ -103,6 +103,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 
 ### Bursting rhythms
 - Extra Read: [Traub et al, *Fast Rhythmic Bursting Can Be Induced...*, 2003](/Readings/Traub_J_Neurophysiol_2003.pdf)
+- Extra Read: [Roopun et al, *A beta2-frequency (20–30 Hz) oscillation...*, 2006](/Readings/Roopun_PNAS_2006.pdf)
 - **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Beta_Lecture.pdf)
 - Lecture Code: [Bursting Lab](Bursting_Lab.html)
 - **Homework (Due 12/10/2024)** [Rhythm Model Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_4_Models.pdf)
