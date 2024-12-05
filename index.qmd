@@ -114,3 +114,10 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Extra Read: [Spyropoulos et al, *Spontaneous variability in gamma dynamics...*, 2022](/Readings/Spyropoulos_2022.pdf)
 - **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Simple_Model_Lecture.pdf)
 - Lecture Code: [SHO Lab](SHO_Lab.html)
+
+### Aperiodic exponent
+- Read: [Donoghue et al., *Parameterizing neural power spectra...*, 2020](/Readings/Donoghue_2020.pdf)
+- Extra Read: [Gao et al., *Inferring synaptic excitation/inhibition balance...*, 2017](/Readings/Gao_2017.pdf)
+- Extra Read: [Kramer & Chu, *A General, Noise-Driven Mechanism...*, 2024](/Readings/Kramer_2024.pdf)
+- **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Aperiodic_Exponent_Lecture.pdf)
+- Lecture Code: [Aperiodic Exponent Lab](Aperiodic_Exponent_Lab.html)
