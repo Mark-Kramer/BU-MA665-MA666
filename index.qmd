@@ -1,5 +1,5 @@
 ---
-title: "BU MA665 + MA666 (Fall 2024)"
+title: "BU MA665 + MA666 (Fall 2025)"
 ---
 
 # MA665
@@ -8,14 +8,10 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Read the [syllabus](/Readings/MA665_MA666_Syllabus.pdf)
 - Read: [Wilson et al, *Good enough practices in scientific computing*, 2017](/Readings/Wilson_2017.pdf)
 - Read: [Riquelme and Gjorgjieva, *Towards readable code in neuroscience*, 2021](/Readings/Riquelme_2021.pdf)
-- Code: Set up Google [Colab](https://colab.google/)
-- Code: Install Python via [Anaconda](https://www.anaconda.com/)
-- Code: Set up [ChatGPT](https://chat.openai.com/auth/login)
-- Please complete items in the [Introduction to Python](Introduction.html)
+- Code: Set up [ChatGPT](https://www.bu.edu/aida/ai-tools/terriergpt/)
+- Please confirm you can complete the items in [Introduction to Python](Introduction.html)
 - *Advanced*: [100 numpy exercises](https://github.com/rougier/numpy-100)
 - *Advanced*: [Beautiful, Idiomatic Python](https://github.com/JeffPaine/beautiful_idiomatic_python)
-- *Advanced*: Make a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) to the Introduction [notebook](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Introduction.ipynb) to add a new exercise. Be sure to use follow syntax in [quarto](https://quarto.org/) with [quarto-pyodide](https://quarto.thecoatlessprofessor.com/pyodide/)
-
 
 ### Integrate \& Fire Neuron
 - Read:  [Abbott, Brain Res Bull, 1999.](/Readings/Abbott_1999.pdf)
@@ -48,6 +44,7 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Lecture [Slides](/Slides/Regression_1.pdf)
 - Code:  [Regression Example in Python](Regression.html)
 
+<!--
 ---
 # MA666
 
@@ -121,3 +118,4 @@ title: "BU MA665 + MA666 (Fall 2024)"
 - Extra Read: [Kramer & Chu, *A General, Noise-Driven Mechanism...*, 2024](/Readings/Kramer_2024.pdf)
 - **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Aperiodic_Exponent_Lecture.pdf)
 - Lecture Code: [Aperiodic Exponent Lab](Aperiodic_Exponent_Lab.html)
+-->
