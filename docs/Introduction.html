@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.8.22">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -21,8 +21,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +34,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -64,15 +65,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cd7454b418030687c631a6a7286fbe16.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-5b4ad623e5705c0698d39aec6f10cf02.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -262,7 +265,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\nd = np.array(df.iloc[:,0])\nt = np.array(df.iloc[:,1])\n\n# Print useful information about the data.\nprint(\"Sampling frequency is \" + str( 1/(t[2]-t[1]))  + ' Hz.')\nprint(\"Total duration of recording is \" + str(t[-1]) + ' s.')\nprint(\"Dimensions of data are \" + str(np.shape(d)) + ' data points.')\n\n# Choose an initial interval of time, from onset to 5 s,\ninitial_time_interval = t < 5        \n\n# ... and plot it.\nplt.plot(t[initial_time_interval], d[initial_time_interval])\nplt.xlabel('Time [s]')\nplt.ylabel('Data')\nplt.title('Initial interval of data');\nplt.show()","id":1,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"4+9","id":2,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"4/3","id":3,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"4/10**2","id":4,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport math","id":5,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"np.sin(2*np.pi)","id":6,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"math.atan(2*np.pi)","id":7,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\na = np.array([[1, 2, 3, 4]])\nprint(a)","id":8,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"a = np.array( [[1, 2, 3, 4]] )\nprint( a * 3 )\nprint( 4 * a )\nprint( a + 1 )","id":9,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\na = np.array([1,2,3,4])\na * a","id":10,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\na = 2\nb = np.array( [[0, 4, 7, 6]] )\nc = np.array( [[1, 5, 6, 8]] )\n\nprint( b * c )\nprint( b / c + a)\nprint( np.multiply( b, c ))","id":11,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"a = np.array([[1,2,3,4]])\nprint(a.shape)\nprint(np.shape(a))","id":12,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\n\np = np.array( [[1,2,3],[4,5,6]] )","id":13,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print( p )","id":14,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print( p + 2 )\nprint( 2 * p )\nprint( p * p )","id":15,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\na = np.array( [1, 2, 3, 4, 5] )\nb = np.array( [6, 7, 8, 9, 10] )","id":16,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print( \"a[1] = \" + str(a[1]) )\nprint( \"b[1] = \" + str(b[1]) )","id":17,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"c = np.array([a,b])\nprint( \"c = \\n\" + str(c) )    # \\n is a newline, or carriage return, which makes the printed matrix lineup better ","id":18,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print( \"shape of c = \" + str( np.shape(c) ) )","id":19,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print( \"c[0,3] = \" + str( c[0,3] ) )","id":20,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print( \"c[0,:] = \" + str( c[0,:] ) )\nprint( \"2nd through 4th columns of the first row are c[0,1:4] = \" + str(c[0,1:4]) )","id":21,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print(\"c[0, :4] = \" + str( c[0,:4]))\nprint(\"c[0, 1:] = \" + str( c[0,1:]))","id":22,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"c[0,::2]","id":23,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"a = np.arange(1,10)    # this creates a vector of increasing values from 1 to 9\na = 2*a \n\nprint( \"a = \" + str(a) )","id":24,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"a[a > 10]","id":25,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"lgIdx = a > 10\nlgIdx","id":26,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"a[lgIdx]","id":27,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"lgIdx.nonzero()","id":28,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"a[ (a > 10).nonzero() ]","id":29,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print(\"a = \" + str(a))\na[a > 10] = 100\nprint(\"a = \" + str(a))","id":30,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"b = np.array([[1,2,3],[4,5,6],[7,8,9]])\nprint( \"b = \\n\" + str(b) )\nprint( \" b > 5 is \\n\" + str(b > 5) )\nprint(\" b[b>5] is an array: \" + str(b[b>5]) )","id":31,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\n\nx = np.linspace(0,10,11)   \nprint( \"x = \" + str(x) )\n\n#   The above line constructs a vector that starts at 0, ends at 10, and\n#   has 11 entries (takes steps of size 1 from 0 to 10). Let\n\ny = np.sin(x)\nprint( \"y = \" + str(y) )","id":32,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import matplotlib.pyplot as plt\nx = ([1, 2, 3, 4])\ny = x\nplt.figure()\nplt.plot(x,y) \nplt.show()          # this is the plotting equivalent of print()","id":33,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"x = np.linspace(0,10,11)   \ny = np.sin(x)\n\nplt.figure()\nplt.plot(x, y)\nplt.show()","id":34,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nx = np.linspace(0,10, 101)\nprint(x)","id":35,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,y,'k')   # the 'k' we've added makes the curve black instead of blue\nplt.show()","id":36,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nx = np.linspace(0,10, 101)\nz = np.cos(x)","id":37,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.plot(x,z)\nplt.show()","id":38,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,z)                     # plot z vs x.\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.show()","id":39,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"plt.figure()\nplt.plot(x,z)                     # plot z vs x\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.xlabel('x')                   # x-axis label\nplt.ylabel('y or z')              # y-axis label\nplt.title('y vs x and z vs x')    # title\nplt.legend(('y','z'))             # make a legend labeling each line\nplt.show()","id":40,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"plt.figure()\nplt.plot(x,y, label='y')     # sometimes it is easier to name a trace within the plot() call\nplt.plot(x,z, label='z')     # notice without a color matplotlib will assign one\nplt.xlabel('x', fontsize=14)\nplt.ylabel('y', fontsize=14)\nplt.title('y vs x', fontsize=18)\nplt.legend(fontsize=12)\nplt.show()","id":41,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\n\nprint(\"a Gaussian random number (mean=0, variance=1): \" + str( np.random.randn() ))\n\n# a uniform random number on [0,1)\nprint(\"a uniform random number from [0,1): \" + str(np.random.rand()))","id":42,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"r = np.random.randn(1000)","id":43,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.hist(r)\nplt.show()","id":44,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nsample = np.random.choice(r, size=5)\nprint(\"5 random samples from vector r : \" + str(sample))","id":45,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.arange(0,10,0.1) # Define a vector x that ranges from 0 to 9.9 with step 0.1.\nk = 1                # Fix k=1,\ny = np.sin(x + k*np.pi/4)  # ... and define y at this k.\n\nplt.figure()               # Make a new figure,\nplt.plot(x,y)              # ... and plot y versus x.\n\nk = 2                # Let's repeat this, for k=2,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 3                      # Let's repeat this, for k=3,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 4                      # Let's repeat this, for k=4,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 5                      # Let's repeat this, for k=5,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nplt.show()","id":46,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"x = np.arange(0,10,0.1)     #First, define the vector x.","id":47,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"plt.figure()\nfor k in range(1,6):               \n    y = np.sin(x + k*np.pi/4) #Define y (note the variable 'k' in sin), also note we have indented here!\n    plt.plot(x,y)             #Plot y versus x\n     \n# no indentation now, so this code follows the loop\nplt.show()","id":48,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"def my_square_function(x, c):\n    \"\"\"Square a vector and add a constant.\n\n    Arguments:\n    x -- vector to square\n    c -- constant to add to the square of x\n    \n    Returns:\n    x*x + c\n    \"\"\"\n    \n    return x * x + c","id":49,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nv = np.linspace(0.,10.,11)\nb = 2.5\n\n# Now let's run the code,\nv2 = my_square_function(v, b)\nprint(\"v = \" + str(v))\nprint(\"v*v+2.5 = \" + str(v2))","id":50,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import pandas as pd","id":51,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"df = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\ndf.info()","id":52,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print(df)","id":53,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nd = np.array(df.iloc[:,0])  #Get the values associated with the first column of the dataframe\nt = np.array(df.iloc[:,1])  #Get the values associated with the first column of the dataframe","id":54,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import matplotlib.pyplot as plt\n\n# Choose a subset to plot\nt = t[0:500]\nd = d[0:500]\n\nplt.figure()\nplt.plot(t, d)\nplt.title('My plot')\nplt.xlabel('Time [s]')\nplt.ylabel('Voltage [mV]')\nplt.show()","id":55,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt","id":56,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"mu = np.mean(d)\nsd = np.std(d)","id":57,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"samps = np.random.normal(mu, sd, 500)","id":58,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"plt.figure()\nplt.hist(samps)\nplt.hist(d)\nplt.show()","id":59,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt","id":60,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"\ndef Fib(n):\n    #First establish base cases, or cases that are pre-defined by the question.\n    if n<= 0:\n        print(\"Incorrect input\")\n    # First Fibonacci number is 0\n    elif n == 1:\n        return 0\n    # Second Fibonacci number is 1\n    elif n == 2:\n        return 1\n    else:\n        return Fib(n-1)+Fib(n-2)","id":61,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"Fib(20)","id":62,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"def is_balanced(s):\n    # If string is empty, it's balanced\n    if not s:\n        return True\n    \n    # If the first character is a closing parenthesis, it's unbalanced\n    if s[0] == ')':\n        return False\n    \n    # Recursive step: Find the matching closing parenthesis for the first opening parenthesis\n    else:\n        balance = 0\n        # If the parentheses are balanced, there should be equal closing and opening parantheses. This will be represented by balance=0\n        for i in range(len(s)):\n            if s[i] == '(':\n                balance += 1\n            elif s[i] == ')':\n                balance -= 1\n            \n            if balance == 0:\n                # Recursively check the substring inside the matched pair\n                # and the substring after the matched pair\n                return is_balanced(s[1:i]) and is_balanced(s[i+1:])\n        \n        # if balance !=0, not balanced.\n        return False\n    ","id":63,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print(is_balanced(\"(()())\")) ","id":64,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}},{"code":"print(is_balanced(\"())\"))","id":65,"options":{"classes":"","out-height":"","warning":"true","message":"true","out-width":"700px","context":"interactive","read-only":"false","results":"markup","autorun":"","fig-height":5,"fig-width":7,"label":"","comment":"","fig-cap":"","output":"true","dpi":72}}];
+globalThis.qpyodideCellDetails = [{"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport pandas as pd\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\nd = np.array(df.iloc[:,0])\nt = np.array(df.iloc[:,1])\n\n# Print useful information about the data.\nprint(\"Sampling frequency is \" + str( 1/(t[2]-t[1]))  + ' Hz.')\nprint(\"Total duration of recording is \" + str(t[-1]) + ' s.')\nprint(\"Dimensions of data are \" + str(np.shape(d)) + ' data points.')\n\n# Choose an initial interval of time, from onset to 5 s,\ninitial_time_interval = t < 5        \n\n# ... and plot it.\nplt.plot(t[initial_time_interval], d[initial_time_interval])\nplt.xlabel('Time [s]')\nplt.ylabel('Data')\nplt.title('Initial interval of data');\nplt.show()","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"4+9","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"4/3","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"4/10**2","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nimport matplotlib.pyplot as plt\nimport math","id":5,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"np.sin(2*np.pi)","id":6,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"math.atan(2*np.pi)","id":7,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\na = np.array([[1, 2, 3, 4]])\nprint(a)","id":8,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = np.array( [[1, 2, 3, 4]] )\nprint( a * 3 )\nprint( 4 * a )\nprint( a + 1 )","id":9,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\na = np.array([1,2,3,4])\na * a","id":10,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\na = 2\nb = np.array( [[0, 4, 7, 6]] )\nc = np.array( [[1, 5, 6, 8]] )\n\nprint( b * c )\nprint( b / c + a)\nprint( np.multiply( b, c ))","id":11,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = np.array([[1,2,3,4]])\nprint(a.shape)\nprint(np.shape(a))","id":12,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\n\np = np.array( [[1,2,3],[4,5,6]] )","id":13,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print( p )","id":14,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print( p + 2 )\nprint( 2 * p )\nprint( p * p )","id":15,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\na = np.array( [1, 2, 3, 4, 5] )\nb = np.array( [6, 7, 8, 9, 10] )","id":16,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print( \"a[1] = \" + str(a[1]) )\nprint( \"b[1] = \" + str(b[1]) )","id":17,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"c = np.array([a,b])\nprint( \"c = \\n\" + str(c) )    # \\n is a newline, or carriage return, which makes the printed matrix lineup better ","id":18,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print( \"shape of c = \" + str( np.shape(c) ) )","id":19,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print( \"c[0,3] = \" + str( c[0,3] ) )","id":20,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print( \"c[0,:] = \" + str( c[0,:] ) )\nprint( \"2nd through 4th columns of the first row are c[0,1:4] = \" + str(c[0,1:4]) )","id":21,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print(\"c[0, :4] = \" + str( c[0,:4]))\nprint(\"c[0, 1:] = \" + str( c[0,1:]))","id":22,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"c[0,::2]","id":23,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = np.arange(1,10)    # this creates a vector of increasing values from 1 to 9\na = 2*a \n\nprint( \"a = \" + str(a) )","id":24,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a[a > 10]","id":25,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"lgIdx = a > 10\nlgIdx","id":26,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a[lgIdx]","id":27,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"lgIdx.nonzero()","id":28,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a[ (a > 10).nonzero() ]","id":29,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print(\"a = \" + str(a))\na[a > 10] = 100\nprint(\"a = \" + str(a))","id":30,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"b = np.array([[1,2,3],[4,5,6],[7,8,9]])\nprint( \"b = \\n\" + str(b) )\nprint( \" b > 5 is \\n\" + str(b > 5) )\nprint(\" b[b>5] is an array: \" + str(b[b>5]) )","id":31,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\n\nx = np.linspace(0,10,11)   \nprint( \"x = \" + str(x) )\n\n#   The above line constructs a vector that starts at 0, ends at 10, and\n#   has 11 entries (takes steps of size 1 from 0 to 10). Let\n\ny = np.sin(x)\nprint( \"y = \" + str(y) )","id":32,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\nx = ([1, 2, 3, 4])\ny = x\nplt.figure()\nplt.plot(x,y) \nplt.show()          # this is the plotting equivalent of print()","id":33,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"x = np.linspace(0,10,11)   \ny = np.sin(x)\n\nplt.figure()\nplt.plot(x, y)\nplt.show()","id":34,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nx = np.linspace(0,10, 101)\nprint(x)","id":35,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,y,'k')   # the 'k' we've added makes the curve black instead of blue\nplt.show()","id":36,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nx = np.linspace(0,10, 101)\nz = np.cos(x)","id":37,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.plot(x,z)\nplt.show()","id":38,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"y = np.sin(x)\nplt.figure()\nplt.plot(x,z)                     # plot z vs x.\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.show()","id":39,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"plt.figure()\nplt.plot(x,z)                     # plot z vs x\nplt.plot(x,y,'r')                 # plot y vs x in red\nplt.xlabel('x')                   # x-axis label\nplt.ylabel('y or z')              # y-axis label\nplt.title('y vs x and z vs x')    # title\nplt.legend(('y','z'))             # make a legend labeling each line\nplt.show()","id":40,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"plt.figure()\nplt.plot(x,y, label='y')     # sometimes it is easier to name a trace within the plot() call\nplt.plot(x,z, label='z')     # notice without a color matplotlib will assign one\nplt.xlabel('x', fontsize=14)\nplt.ylabel('y', fontsize=14)\nplt.title('y vs x', fontsize=18)\nplt.legend(fontsize=12)\nplt.show()","id":41,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\n\nprint(\"a Gaussian random number (mean=0, variance=1): \" + str( np.random.randn() ))\n\n# a uniform random number on [0,1)\nprint(\"a uniform random number from [0,1): \" + str(np.random.rand()))","id":42,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"r = np.random.randn(1000)","id":43,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\nplt.figure()\nplt.hist(r)\nplt.show()","id":44,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nsample = np.random.choice(r, size=5)\nprint(\"5 random samples from vector r : \" + str(sample))","id":45,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nimport matplotlib.pyplot as plt\n\nx = np.arange(0,10,0.1) # Define a vector x that ranges from 0 to 9.9 with step 0.1.\nk = 1                # Fix k=1,\ny = np.sin(x + k*np.pi/4)  # ... and define y at this k.\n\nplt.figure()               # Make a new figure,\nplt.plot(x,y)              # ... and plot y versus x.\n\nk = 2                # Let's repeat this, for k=2,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 3                      # Let's repeat this, for k=3,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 4                      # Let's repeat this, for k=4,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nk = 5                      # Let's repeat this, for k=5,\ny = np.sin(x + k*np.pi/4)  # ... and redefine y at this k,\nplt.plot(x,y)              # ... and plot it.\n\nplt.show()","id":46,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"x = np.arange(0,10,0.1)     #First, define the vector x.","id":47,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"plt.figure()\nfor k in range(1,6):               \n    y = np.sin(x + k*np.pi/4) #Define y (note the variable 'k' in sin), also note we have indented here!\n    plt.plot(x,y)             #Plot y versus x\n     \n# no indentation now, so this code follows the loop\nplt.show()","id":48,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"def my_square_function(x, c):\n    \"\"\"Square a vector and add a constant.\n\n    Arguments:\n    x -- vector to square\n    c -- constant to add to the square of x\n    \n    Returns:\n    x*x + c\n    \"\"\"\n    \n    return x * x + c","id":49,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nv = np.linspace(0.,10.,11)\nb = 2.5\n\n# Now let's run the code,\nv2 = my_square_function(v, b)\nprint(\"v = \" + str(v))\nprint(\"v*v+2.5 = \" + str(v2))","id":50,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import pandas as pd","id":51,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"df = pd.read_csv(\"https://raw.githubusercontent.com/Mark-Kramer/BU-MA665-MA666/master/Data/Rhythms_1.csv\")\ndf.info()","id":52,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print(df)","id":53,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nd = np.array(df.iloc[:,0])  #Get the values associated with the first column of the dataframe\nt = np.array(df.iloc[:,1])  #Get the values associated with the first column of the dataframe","id":54,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\n\n# Choose a subset to plot\nt = t[0:500]\nd = d[0:500]\n\nplt.figure()\nplt.plot(t, d)\nplt.title('My plot')\nplt.xlabel('Time [s]')\nplt.ylabel('Voltage [mV]')\nplt.show()","id":55,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt","id":56,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"mu = np.mean(d)\nsd = np.std(d)","id":57,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"samps = np.random.normal(mu, sd, 500)","id":58,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"plt.figure()\nplt.hist(samps)\nplt.hist(d)\nplt.show()","id":59,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import numpy as np\nimport pandas as pd\nimport matplotlib.pyplot as plt","id":60,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"\ndef Fib(n):\n    #First establish base cases, or cases that are pre-defined by the question.\n    if n<= 0:\n        print(\"Incorrect input\")\n    # First Fibonacci number is 0\n    elif n == 1:\n        return 0\n    # Second Fibonacci number is 1\n    elif n == 2:\n        return 1\n    else:\n        return Fib(n-1)+Fib(n-2)","id":61,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"Fib(20)","id":62,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"def is_balanced(s):\n    # If string is empty, it's balanced\n    if not s:\n        return True\n    \n    # If the first character is a closing parenthesis, it's unbalanced\n    if s[0] == ')':\n        return False\n    \n    # Recursive step: Find the matching closing parenthesis for the first opening parenthesis\n    else:\n        balance = 0\n        # If the parentheses are balanced, there should be equal closing and opening parantheses. This will be represented by balance=0\n        for i in range(len(s)):\n            if s[i] == '(':\n                balance += 1\n            elif s[i] == ')':\n                balance -= 1\n            \n            if balance == 0:\n                # Recursively check the substring inside the matched pair\n                # and the substring after the matched pair\n                return is_balanced(s[1:i]) and is_balanced(s[i+1:])\n        \n        # if balance !=0, not balanced.\n        return False\n    ","id":63,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print(is_balanced(\"(()())\")) ","id":64,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print(is_balanced(\"())\"))","id":65,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Compute autocorrelation of d\ncentered_signal = d - d.mean()\nautocorr_unnormalized = np.correlate(centered_signal, centered_signal, mode='full')\n\n# Compute proper normalization for unbiased estimator\nn_samples = len(d) - abs(np.arange(-(len(d) - 1), len(d)))\nautocorr = autocorr_unnormalized / d.var() / n_samples","id":66,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"print(\"Number of samples:\", len(d))\nprint(\"Number of lags computed:\", autocorr.shape)","id":67,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# Compute lags\nsample_rate = 100 # Hz\nlargest_lag = (len(d) - 1) / sample_rate\nlags = np.linspace(-largest_lag, largest_lag, len(autocorr))\n\n# Plot autocorrelation\nplt.figure()\nplt.plot(lags, autocorr)\nplt.show()","id":68,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -467,7 +470,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -486,13 +489,15 @@ window.Quarto = {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">BU MA665+MA666</span>
     </a>
@@ -575,6 +580,7 @@ window.Quarto = {
   <li><a href="#example-20-load-data-into-python" id="toc-example-20-load-data-into-python" class="nav-link" data-scroll-target="#example-20-load-data-into-python">Example 20: Load data into Python</a></li>
   <li><a href="#example-21-compute-statistics-and-compare-courtesy-of-mateouma" id="toc-example-21-compute-statistics-and-compare-courtesy-of-mateouma" class="nav-link" data-scroll-target="#example-21-compute-statistics-and-compare-courtesy-of-mateouma">Example 21: Compute statistics and compare (courtesy of mateouma)</a></li>
   <li><a href="#example-22-recursion-courtsey-of-marieshi" id="toc-example-22-recursion-courtsey-of-marieshi" class="nav-link" data-scroll-target="#example-22-recursion-courtsey-of-marieshi">Example 22: Recursion (courtsey of marieshi)</a></li>
+  <li><a href="#example-23-compute-lagged-autocorrelation-courtsey-of-kaijfox" id="toc-example-23-compute-lagged-autocorrelation-courtsey-of-kaijfox" class="nav-link" data-scroll-target="#example-23-compute-lagged-autocorrelation-courtsey-of-kaijfox">Example 23: Compute lagged autocorrelation (courtsey of kaijfox)</a></li>
   </ul>
 </nav>
     </div>
@@ -730,7 +736,7 @@ Note
 <div id="cell-24" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>math.atan?</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>math.atan?</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p>You should see a description of the function pop up at the bottom of the window.</p>
@@ -809,7 +815,7 @@ Note
 <div id="cell-39" class="cell" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>who</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>who</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Interactive namespace is empty.</code></pre>
@@ -818,7 +824,7 @@ Note
 <div id="cell-40" class="cell" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>whos</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>whos</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>Interactive namespace is empty.</code></pre>
@@ -856,7 +862,7 @@ Note
 <div id="cell-46" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>reset</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>reset</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="callout callout-style-simple callout-none no-icon">
@@ -873,7 +879,7 @@ Note
 <div id="cell-48" class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>who</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>who</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1296,296 +1302,323 @@ Note
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qpyodide-insertion-location-65"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="example-23-compute-lagged-autocorrelation-courtsey-of-kaijfox" class="level3">
+<h3 class="anchored" data-anchor-id="example-23-compute-lagged-autocorrelation-courtsey-of-kaijfox">Example 23: Compute lagged autocorrelation (courtsey of <a href="https://github.com/kaijfox">kaijfox</a>)</h3>
+<p>Numpy and other libraries (e.g., <code>scipy</code> and <code>pandas</code>) contain a number of useful statistical functions. Let’s use the <code>np.correlate</code> function to compute the autocorrelation of the signal in <code>d</code> from Example 20 and then plot our results.</p>
+<div id="qpyodide-insertion-location-66"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>The <code>correlate</code> function accepts two one-dimensional arrays – for which we pass <code>centered_signal</code> twice to compute the <em>auto</em>correlation – and a <code>mode</code> which determines how edges of the sequence will be handled. This is described in the <a href="https://numpy.org/doc/stable/reference/generated/numpy.correlate.html">documentation</a> for <code>np.correlate</code>.</p>
+<p>The equation in this documentation tells us that <code>correlate</code> it does not center the signals provided or normalize its output. For this reason we need provide <code>centered_signal</code> to <code>correlate</code> instead of <code>d</code> itself, and we need to normalize the output using the variance (<code>d.var()</code>) and number of samples. (which we compute as the array <code>n_samples</code>).</p>
+<p>The output of <code>correlate</code> is another 1 dimensional array, each entry of which contains the correlation at a different forward or backward lag:</p>
+<div id="qpyodide-insertion-location-67"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>To display the autocorrelation result, we must compute the lags corresponding to each entry of the <code>autocorr</code> array. Then we can use the normal plotting functions:</p>
+<div id="qpyodide-insertion-location-68"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="callout callout-style-simple callout-none no-icon">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Q:</strong> Could you use the function like <code>np.linspace</code> and <code>np.sin</code> from previous examples create an array containing a sinusoid function at a particular frequency and sampling rate? Could you calculate the autocorrelation of this signal?</p>
+</div>
+</div>
+</div>
 
 
 </section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
-      }
-    }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
-  const viewSource = window.document.getElementById('quarto-view-source') ||
-                     window.document.getElementById('quarto-code-tools-source');
-  if (viewSource) {
-    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
-    viewSource.addEventListener("click", function(e) {
-      if (sourceUrl) {
-        // rstudio viewer pane
-        if (/\bcapabilities=\b/.test(window.location)) {
-          window.open(sourceUrl);
-        } else {
-          window.location.href = sourceUrl;
-        }
-      } else {
-        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
-        modal.show();
-      }
-      return false;
-    });
-  }
-  function toggleCodeHandler(show) {
-    return function(e) {
-      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
-      for (let i=0; i<detailsSrc.length; i++) {
-        const details = detailsSrc[i].parentElement;
-        if (show) {
-          details.open = true;
-        } else {
-          details.removeAttribute("open");
-        }
-      }
-      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
-      const fromCls = show ? "hidden" : "unhidden";
-      const toCls = show ? "unhidden" : "hidden";
-      for (let i=0; i<cellCodeDivs.length; i++) {
-        const codeDiv = cellCodeDivs[i];
-        if (codeDiv.classList.contains(fromCls)) {
-          codeDiv.classList.remove(fromCls);
-          codeDiv.classList.add(toCls);
-        } 
-      }
-      return false;
-    }
-  }
-  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
-  if (hideAllCode) {
-    hideAllCode.addEventListener("click", toggleCodeHandler(false));
-  }
-  const showAllCode = window.document.getElementById("quarto-show-all-code");
-  if (showAllCode) {
-    showAllCode.addEventListener("click", toggleCodeHandler(true));
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
     };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
         }
       }
+      return false;
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
         }
-        return container.innerHTML
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1593,185 +1626,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <script type="module">
 /**
