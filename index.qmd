@@ -44,8 +44,6 @@ title: "BU MA665 + MA666 (Fall 2025)"
 - Lecture [Slides](/Slides/Regression_1.pdf)
 - Code:  [Regression Example in Python](Regression.html)
 
-<!--
----
 # MA666
 
 ### Introduction to Rhythms
@@ -118,4 +116,3 @@ title: "BU MA665 + MA666 (Fall 2025)"
 - Extra Read: [Kramer & Chu, *A General, Noise-Driven Mechanism...*, 2024](/Readings/Kramer_2024.pdf)
 - **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Aperiodic_Exponent_Lecture.pdf)
 - Lecture Code: [Aperiodic Exponent Lab](Aperiodic_Exponent_Lab.html)
--->
