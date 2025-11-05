@@ -102,12 +102,13 @@ title: "BU MA665 + MA666 (Fall 2025)"
 - Lecture Code: [Bursting Lab](Bursting_Lab.html)
 <!-- - **Homework (Due 12/10/2024)** [Rhythm Model Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_4_Models.pdf) -->
 
-### A simple model
+<!-- ### A simple model
 - Extra Read: [Kramer et al, *Golden rhythms as a theoretical framework...*, 2022](/Readings/Kramer_2022.pdf)
 - Extra Read: [Roopun et al, *Temporal interactions between cortical rhythms...*, 2008](/Readings/Roopun_2008.pdf)
 - Extra Read: [Spyropoulos et al, *Spontaneous variability in gamma dynamics...*, 2022](/Readings/Spyropoulos_2022.pdf)
 - **Lecture** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Simple_Model_Lecture.pdf)
 - Lecture Code: [SHO Lab](SHO_Lab.html)
+-->
 
 ### Aperiodic exponent
 - Read: [Donoghue et al., *Parameterizing neural power spectra...*, 2020](/Readings/Donoghue_2020.pdf)
