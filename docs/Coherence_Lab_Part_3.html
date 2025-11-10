@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -374,8 +374,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="repeat-coherence-calculation-for-many-realizations" class="level3">
 <h3 class="anchored" data-anchor-id="repeat-coherence-calculation-for-many-realizations">Repeat coherence calculation for many realizations</h3>
 <div id="cell-26" class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>baseline_A <span class="op">=</span> <span class="fl">2.0</span><span class="op">;</span>  coupling_A <span class="op">=</span> <span class="fl">0.5</span>   <span class="co"># Fix the rates and coupling to field for each neuron.</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>baseline_B <span class="op">=</span> <span class="fl">1.0</span><span class="op">;</span>  coupling_B <span class="op">=</span> <span class="fl">0.5</span></span>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>baseline_A <span class="op">=</span> <span class="fl">1.0</span><span class="op">;</span>  coupling_A <span class="op">=</span> <span class="fl">1.0</span>   <span class="co"># Fix the rates and coupling to field for each neuron.</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>baseline_B <span class="op">=</span> <span class="fl">0.5</span><span class="op">;</span>  coupling_B <span class="op">=</span> <span class="fl">1.0</span></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>cohr_A <span class="op">=</span> np.zeros([<span class="dv">501</span>,<span class="dv">100</span>])</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>cohr_B <span class="op">=</span> np.zeros([<span class="dv">501</span>,<span class="dv">100</span>])</span>
 <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> np.arange(<span class="dv">100</span>):              <span class="co"># For 100 realizations, simulate the neurons &amp; compute coherence.</span></span>
