@@ -64,7 +64,7 @@ title: "BU MA665 + MA666 (Fall 2025)"
 - Lecture Code 2b: [Analyze Rhythms Lab 2b - Autocovariance of data](Analyzing_Rhythms_Lab_2b.html)
 - **Lecture 3** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Analyzing_Rhythms_Lecture_3.pdf)
 - Lecture Code 3: [Analyze Rhythms Lab 3 - Spikes](Analyzing_Rhythms_Lab_3.html)
-- **Homework (Due 11/13/2024)** [Spectra Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_1_Spectra.pdf)
+- **Homework (Due 11/13/2025)** [Spectra Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_1_Spectra.pdf)
 
 ### Coherence
 - Read: [Chapter 5 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Readings/Kramer_Eden_Chapter_5.pdf)
@@ -77,7 +77,7 @@ title: "BU MA665 + MA666 (Fall 2025)"
 - Lecture Code 2: [Coherence Lab 2](Coherence_Lab_Part_2.html)
 - **Lecture 2** [Slides](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/Coherence_Lecture_2.pdf)
 - Lecture Code 3: [Coherence Lab 3](Coherence_Lab_Part_3.html)
-<!-- - **Homework (Due 11/21/2024)** [Coherence Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_2_Coherence.pdf) -->
+- **Homework (Due 11/20/2025)** [Coherence Homework](https://github.com/Mark-Kramer/BU-MA665-MA666/blob/master/Slides/MA666_Homework_2_Coherence.pdf)
 
 ### Cross-frequency coupling
 - Read: [Chapter 7 @ Kramer & Eden, Case studies in neural data analysis, 2016.](/Readings/Kramer_Eden_Chapter_8.pdf)
